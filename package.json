@@ -1,0 +1,33 @@
+{
+	"repository": {
+		"url": "https://github.com/aureooms/js-random.git",
+		"type": "git"
+	},
+	"description": "randomness code bricks for JavaScript",
+	"name": "aureooms-js-random",
+	"bugs": {
+		"url": "https://github.com/aureooms/js-random/issues"
+	},
+	"license": "AGPL-3.0",
+	"scripts": {
+		"doc": "./node_modules/.bin/groc",
+		"test": "./node_modules/.bin/aureooms-node-package-test",
+		"build": "./node_modules/.bin/aureooms-node-package-build"
+	},
+	"keywords": [
+		"bricks",
+		"javascript",
+		"js",
+		"randint",
+		"random",
+		"randomness"
+	],
+	"version": "0.0.0",
+	"devDependencies": {
+		"aureooms-node-package": "^1.0.0"
+	},
+	"author": "aureooms",
+	"dependencies": {},
+	"main": "js/dist/random.js",
+	"homepage": "http://aureooms.github.io/js-random/"
+}

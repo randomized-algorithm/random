@@ -1,0 +1,19 @@
+{
+	"version": "0.0.0",
+	"description": "randomness code bricks for JavaScript",
+	"name": "aureooms-js-random",
+	"homepage": "http://aureooms.github.io/js-random/",
+	"main": "js/dist/random.js",
+	"ignore": [
+		"js/index.js",
+		"js/src",
+		"test",
+		"pkg.json",
+		"package.json",
+		".groc.json",
+		".travis.yml",
+		".gitignore",
+		"README.md"
+	],
+	"license": "AGPL-3.0"
+}

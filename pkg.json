@@ -1,0 +1,17 @@
+{
+	"code": {
+		"test": [
+			"test",
+			"js"
+		],
+		"main": [
+			"js",
+			"dist",
+			"random.js"
+		]
+	},
+	"out": "js/dist/",
+	"ns": "random",
+	"debug": false,
+	"src": "js/src/"
+}
