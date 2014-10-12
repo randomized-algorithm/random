@@ -21,6 +21,86 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
       },
       "depth": 1,
       "outline": []
+    }, {
+      "type": "file",
+      "data": {
+        "language": {
+          "nameMatchers": [".js"],
+          "pygmentsLexer": "javascript",
+          "multiLineComment": ["/*", "*", "*/"],
+          "singleLineComment": ["//"],
+          "ignorePrefix": "}",
+          "foldPrefix": "^",
+          "name": "JavaScript"
+        },
+        "sourcePath": "/home/genius/dev/js/js-random/js/src/fisheryates.js",
+        "projectPath": "js/src/fisheryates.js",
+        "targetPath": "fisheryates",
+        "pageTitle": "fisheryates",
+        "title": "fisheryates"
+      },
+      "depth": 1,
+      "outline": []
+    }, {
+      "type": "file",
+      "data": {
+        "language": {
+          "nameMatchers": [".js"],
+          "pygmentsLexer": "javascript",
+          "multiLineComment": ["/*", "*", "*/"],
+          "singleLineComment": ["//"],
+          "ignorePrefix": "}",
+          "foldPrefix": "^",
+          "name": "JavaScript"
+        },
+        "sourcePath": "/home/genius/dev/js/js-random/js/src/randfloat.js",
+        "projectPath": "js/src/randfloat.js",
+        "targetPath": "randfloat",
+        "pageTitle": "randfloat",
+        "title": "randfloat"
+      },
+      "depth": 1,
+      "outline": []
+    }, {
+      "type": "file",
+      "data": {
+        "language": {
+          "nameMatchers": [".js"],
+          "pygmentsLexer": "javascript",
+          "multiLineComment": ["/*", "*", "*/"],
+          "singleLineComment": ["//"],
+          "ignorePrefix": "}",
+          "foldPrefix": "^",
+          "name": "JavaScript"
+        },
+        "sourcePath": "/home/genius/dev/js/js-random/js/src/randint.js",
+        "projectPath": "js/src/randint.js",
+        "targetPath": "randint",
+        "pageTitle": "randint",
+        "title": "randint"
+      },
+      "depth": 1,
+      "outline": []
+    }, {
+      "type": "file",
+      "data": {
+        "language": {
+          "nameMatchers": [".js"],
+          "pygmentsLexer": "javascript",
+          "multiLineComment": ["/*", "*", "*/"],
+          "singleLineComment": ["//"],
+          "ignorePrefix": "}",
+          "foldPrefix": "^",
+          "name": "JavaScript"
+        },
+        "sourcePath": "/home/genius/dev/js/js-random/js/src/shuffle.js",
+        "projectPath": "js/src/shuffle.js",
+        "targetPath": "shuffle",
+        "pageTitle": "shuffle",
+        "title": "shuffle"
+      },
+      "depth": 1,
+      "outline": []
     }
   ];
 
