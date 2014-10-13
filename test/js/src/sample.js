@@ -29,7 +29,7 @@ one = function ( type, sample ) {
 
 		test( name, function () {
 
-			var it, msg;
+			var it, msg, _a, _b;
 
 			array.copy( a, 0, n, b, 0 );
 			sample( k, b, i, j );
@@ -39,12 +39,14 @@ one = function ( type, sample ) {
 				deepEqual( b[it], a[it], msg );
 			}
 
-			for ( it = i ; it < i + k ; ++it ) {
-				msg = util.format( "b[%d] in a", it );
-				ok( operator.contains( a, b[it] ), msg );
-			}
+			_a = Array.prototype.slice.call( a, i, j ).sort( operator.sub );
+			_b = Array.prototype.slice.call( b, i, j ).sort( operator.sub );
 
-			for ( it = i + k ; it < n ; ++it ) {
+			msg = "shuffled region contains same elements as original";
+
+			deepEqual( _b, _a, msg );
+
+			for ( it = j ; it < n ; ++it ) {
 				msg = util.format( "b[%d] === a[%d]", it, it );
 				deepEqual( b[it], a[it], msg );
 			}
@@ -57,6 +59,7 @@ one = function ( type, sample ) {
 	range( n - 20, 20, n );
 	range( n - 20, 0, n - 20 );
 	range( n - 20, 10, n - 10 );
+	range( n - 30, 10, n - 10 );
 
 
 
