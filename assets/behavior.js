@@ -13,7 +13,7 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
           "commentsOnly": true,
           "name": "Markdown"
         },
-        "sourcePath": "/home/genius/dev/js/js-random/README.md",
+        "sourcePath": "/home/aureooms/dev/js/js-random/README.md",
         "projectPath": "README.md",
         "targetPath": "index",
         "pageTitle": "index",
@@ -33,7 +33,7 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
           "foldPrefix": "^",
           "name": "JavaScript"
         },
-        "sourcePath": "/home/genius/dev/js/js-random/js/src/fisheryates.js",
+        "sourcePath": "/home/aureooms/dev/js/js-random/js/src/fisheryates.js",
         "projectPath": "js/src/fisheryates.js",
         "targetPath": "fisheryates",
         "pageTitle": "fisheryates",
@@ -53,7 +53,7 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
           "foldPrefix": "^",
           "name": "JavaScript"
         },
-        "sourcePath": "/home/genius/dev/js/js-random/js/src/randfloat.js",
+        "sourcePath": "/home/aureooms/dev/js/js-random/js/src/randfloat.js",
         "projectPath": "js/src/randfloat.js",
         "targetPath": "randfloat",
         "pageTitle": "randfloat",
@@ -73,7 +73,7 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
           "foldPrefix": "^",
           "name": "JavaScript"
         },
-        "sourcePath": "/home/genius/dev/js/js-random/js/src/randint.js",
+        "sourcePath": "/home/aureooms/dev/js/js-random/js/src/randint.js",
         "projectPath": "js/src/randint.js",
         "targetPath": "randint",
         "pageTitle": "randint",
@@ -93,7 +93,7 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
           "foldPrefix": "^",
           "name": "JavaScript"
         },
-        "sourcePath": "/home/genius/dev/js/js-random/js/src/shuffle.js",
+        "sourcePath": "/home/aureooms/dev/js/js-random/js/src/shuffle.js",
         "projectPath": "js/src/shuffle.js",
         "targetPath": "shuffle",
         "pageTitle": "shuffle",
@@ -325,7 +325,7 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
       if (metaInfo.documentPath === 'index') {
         sourceURL = metaInfo.githubURL;
       } else {
-        sourceURL = "" + metaInfo.githubURL + "/blob/master/" + metaInfo.projectPath;
+        sourceURL = metaInfo.githubURL + "/blob/master/" + metaInfo.projectPath;
       }
       nav$.find('.tools').prepend("<li class=\"github\">\n  <a href=\"" + sourceURL + "\" title=\"View source on GitHub\">\n    View source on GitHub\n  </a>\n</li>");
     }
