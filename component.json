@@ -1,0 +1,11 @@
+{
+	"description": "randomness code bricks for JavaScript",
+	"version": "0.0.3",
+	"repo": "aureooms/js-random",
+	"scripts": [
+		"js/dist/random.js"
+	],
+	"name": "aureooms-js-random",
+	"license": "AGPL-3.0",
+	"main": "js/dist/random.js"
+}
