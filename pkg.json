@@ -11,7 +11,7 @@
 		]
 	},
 	"out": "js/dist/",
-	"ns": "random",
+	"name": "random",
 	"debug": false,
 	"src": "js/src/"
 }
