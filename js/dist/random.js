@@ -3,87 +3,101 @@
 	'use strict';
 
 
-/* js/src/fisheryates.js */
+/* js/src/000-kernel */
+/* js/src/000-kernel/fisheryates.js */
 
 /**
  * Sample array using Fisher-Yates method.
  */
 
-var __fisheryates__ = function ( randint ) {
+var _fisheryates = function ( randint ) {
 
-	var fisheryates = function ( n, a, i, j ) {
+	var fisheryates = function ( n , a , i , j ) {
 
-		var k, p, tmp;
+		var k , p , tmp ;
 
 		// we will swap at most n elements
 
-		k = i + n;
+		k = i + n ;
 
 		for ( ; i < k ; ++i ) {
 
 			// choose any index p in the remaining array
 
-			p = randint( i, j );
+			p = randint( i , j ) ;
 
 
 			// swap element at index p with first element in the array
 
-			tmp  = a[i];
-			a[i] = a[p];
-			a[p] = tmp;
+			tmp  = a[i] ;
+			a[i] = a[p] ;
+			a[p] =  tmp ;
 
 		}
 
-	};
+	} ;
 
-	return fisheryates;
+	return fisheryates ;
 
-};
+} ;
 
-exports.__fisheryates__ = __fisheryates__;
-exports.__sample__ = __fisheryates__;
+exports._fisheryates = _fisheryates ;
 
-/* js/src/randfloat.js */
+/* js/src/000-kernel/shuffle.js */
+
+/**
+ * Shuffle array by sampling the complete array.
+ */
+
+var _shuffle = function ( sample ) {
+
+	var shuffle = function ( a , i , j ) {
+		sample( j - i , a , i , j ) ;
+	} ;
+
+	return shuffle ;
+
+} ;
+
+exports._shuffle = _shuffle ;
+
+/* js/src/001-api */
+/* js/src/001-api/000-randfloat.js */
 
 /**
  * Returns a floating point number in interval [i, j[ (i included, j excluded)
  * according to a uniform distribution.
  */
 
-var randfloat = function ( i, j ) {
-	return i + Math.random() * (j - i);
-};
+var randfloat = function ( i , j ) {
+	return i + Math.random( ) * ( j - i ) ;
+} ;
 
-exports.randfloat = randfloat;
+exports.randfloat = randfloat ;
 
-/* js/src/randint.js */
+/* js/src/001-api/001-randint.js */
 
 /**
  * Returns an integer in interval [i, j[ (i included, j excluded)
  * according to a uniform distribution.
  */
 
-var randint = function ( i, j ) {
-	return i + Math.floor( Math.random() * (j - i) );
-};
+var randint = function ( i , j ) {
+	return i + Math.floor( Math.random( ) * ( j - i ) ) ;
+} ;
 
-exports.randint = randint;
+exports.randint = randint ;
 
-/* js/src/shuffle.js */
+/* js/src/001-api/002-sample.js */
 
-/**
- * Shuffle array by sampling the complete array.
- */
+var sample = _fisheryates( randint ) ;
 
-var __shuffle__ = function ( sample ) {
+exports.sample = sample ;
 
-	var shuffle = function ( a, i, j ) {
-		sample(j - i, a, i, j);
-	};
+/* js/src/001-api/003-shuffle.js */
 
-	return shuffle;
-};
+var shuffle = _shuffle( sample ) ;
 
-exports.__shuffle__ = __shuffle__;
+exports.shuffle = shuffle ;
 
 })(typeof exports === 'undefined' ? this['random'] = {} : exports);

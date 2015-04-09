@@ -4,8 +4,8 @@
  * according to a uniform distribution.
  */
 
-var randfloat = function ( i, j ) {
-	return i + Math.random() * (j - i);
-};
+var randfloat = function ( i , j ) {
+	return i + Math.random( ) * ( j - i ) ;
+} ;
 
-exports.randfloat = randfloat;
+exports.randfloat = randfloat ;

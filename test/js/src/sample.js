@@ -79,8 +79,8 @@ types = [
 ];
 
 algorithms = [
-	random.__fisheryates__( random.randint ),
-	random.__sample__( random.randint )
+	random._fisheryates( random.randint ),
+	random.sample
 ];
 
 types.forEach( function ( type ) {
