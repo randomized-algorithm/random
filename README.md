@@ -1,7 +1,7 @@
 [js-random](http://aureooms.github.io/js-random)
 ==
 
-randomness code bricks for JavaScript
+Randomness code bricks for JavaScript.
 
 [![NPM license](http://img.shields.io/npm/l/aureooms-js-random.svg?style=flat)](https://raw.githubusercontent.com/aureooms/js-random/master/LICENSE)
 [![NPM version](http://img.shields.io/npm/v/aureooms-js-random.svg?style=flat)](https://www.npmjs.org/package/aureooms-js-random)
@@ -13,3 +13,35 @@ randomness code bricks for JavaScript
 [![Code Climate](http://img.shields.io/codeclimate/github/aureooms/js-random.svg?style=flat)](https://codeclimate.com/github/aureooms/js-random)
 [![NPM downloads per month](http://img.shields.io/npm/dm/aureooms-js-random.svg?style=flat)](https://www.npmjs.org/package/aureooms-js-random)
 [![GitHub issues](http://img.shields.io/github/issues/aureooms/js-random.svg?style=flat)](https://github.com/aureooms/js-random/issues)
+
+Can be managed through [bower](https://github.com/bower/bower),
+[component](https://github.com/componentjs/component), or
+[npm](https://github.com/npm/npm).
+
+```js
+let random = require( "aureooms-js-random" ) ;
+```
+
+Example usage:
+
+```js
+random.randfloat( 0 , 1 ) ; // 0.19876947347074747
+random.randfloat( 0 , 1 ) ; // 0.23755912738852203
+
+random.randint( 0 , 100 ) ; // 57
+random.randint( 0 , 100 ) ; // 31
+
+let a = [ 0 , 1 , 2 , 3 ] ;
+
+random.sample( 1 , a , 0 , 4 ) ;
+a ; // [ 0 , 1 , 2 , 3 ]
+
+random.sample( 1 , a , 0 , 4 ) ;
+a ; // [ 1 , 0 , 2 , 3 ]
+
+random.shuffle( a , 0 , 4 ) ;
+a ; // [ 1 , 3 , 0 , 2 ]
+
+random.shuffle( a , 0 , 4 ) ;
+a ; // [ 3 , 2 , 1 , 0 ]
+```
