@@ -24,11 +24,11 @@
 	],
 	"version": "1.0.1",
 	"devDependencies": {
-		"aureooms-node-package": "^4.0.1",
-		"aureooms-js-type": "^1.0.1",
-		"aureooms-js-operator": "^1.0.1",
-		"aureooms-js-array": "^2.0.2",
-		"aureooms-js-mem": "^1.0.1"
+		"aureooms-node-package": "^4.2.5",
+		"aureooms-js-type": "^1.0.2",
+		"aureooms-js-operator": "^1.0.2",
+		"aureooms-js-array": "^2.2.1",
+		"aureooms-js-mem": "^1.0.2"
 	},
 	"author": "aureooms",
 	"dependencies": {},

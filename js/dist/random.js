@@ -1,6 +1,8 @@
-(function(exports, undefined){
+( function ( ) {
 
-	'use strict';
+'use strict' ;
+
+var definition = function ( exports , undefined ) {
 
 
 /* js/src/000-kernel */
@@ -100,4 +102,16 @@ var shuffle = _shuffle( sample ) ;
 
 exports.shuffle = shuffle ;
 
-})(typeof exports === 'undefined' ? this['random'] = {} : exports);
+return exports ;
+} ;
+if ( typeof exports === "object" ) {
+	definition( exports ) ;
+}
+else if ( typeof define === "function" && define.amd ) {
+	define( "aureooms-js-random" , [ ] , function ( ) { return definition( { } ) ; } ) ;
+}
+else if ( typeof window === "object" && typeof window.document === "object" ) {
+	definition( window["random"] = { } ) ;
+}
+else console.error( "unable to detect type of module to define for aureooms-js-random") ;
+} )( ) ;
