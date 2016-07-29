@@ -90,13 +90,37 @@ var randint = function ( i , j ) {
 
 exports.randint = randint ;
 
-/* js/src/001-api/002-sample.js */
+/* js/src/001-api/002-randrange.js */
+
+/**
+ * Return a randomly selected element from range(start, stop, step).
+ */
+
+var randrange = function ( start , stop , step ) {
+
+	// TODO handle empty ranges
+
+	if ( stop === undefined ) return randint( 0 , start ) ;
+	if ( step === undefined ) step = 1 ;
+
+	if ( stop >= start ) {
+		return start + step * randint( 0 , Math.floor( ( stop - start ) / step ) ) ;
+	}
+	else {
+		return start + step * randint( 0 , Math.floor( ( start - stop ) / -step ) ) ;
+	}
+
+} ;
+
+exports.randrange = randrange ;
+
+/* js/src/001-api/003-sample.js */
 
 var sample = _fisheryates( randint ) ;
 
 exports.sample = sample ;
 
-/* js/src/001-api/003-shuffle.js */
+/* js/src/001-api/004-shuffle.js */
 
 var shuffle = _shuffle( sample ) ;
 
