@@ -1,7 +1,9 @@
-[js-random](http://aureooms.github.io/js-random)
+[@aureooms/js-random](https://aureooms.github.io/js-random)
 ==
 
-Randomness code bricks for JavaScript.
+<img src="https://cdn.rawgit.com/aureooms/js-random/master/media/sketch.png" width="864">
+
+Randomness algorithms for JavaScript.
 
 [![NPM license](http://img.shields.io/npm/l/aureooms-js-random.svg?style=flat)](https://raw.githubusercontent.com/aureooms/js-random/master/LICENSE)
 [![NPM version](http://img.shields.io/npm/v/aureooms-js-random.svg?style=flat)](https://www.npmjs.org/package/aureooms-js-random)

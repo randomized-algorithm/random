@@ -3,7 +3,7 @@
 		"url": "https://github.com/aureooms/js-random.git",
 		"type": "git"
 	},
-	"description": "randomness code bricks for JavaScript",
+	"description": "Randomness algorithms for JavaScript",
 	"name": "aureooms-js-random",
 	"bugs": {
 		"url": "https://github.com/aureooms/js-random/issues"
