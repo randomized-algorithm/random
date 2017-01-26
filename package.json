@@ -1,7 +1,7 @@
 {
   "name": "aureooms-js-random",
   "description": "Randomness algorithms for JavaScript",
-  "version": "1.0.2",
+  "version": "2.0.0",
   "author": "Aurélien Ooms <aurelien.ooms@gmail.com>",
   "ava": {
     "require": [
