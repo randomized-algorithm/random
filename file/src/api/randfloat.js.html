@@ -2,8 +2,8 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <base data-ice="baseUrl">
-  <title data-ice="title">aureooms/js-random API Document</title>
+  <base data-ice="baseUrl" href="../../../">
+  <title data-ice="title">src/api/randfloat.js | aureooms/js-random API Document</title>
   <link type="text/css" rel="stylesheet" href="css/style.css">
   <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
   <script src="script/prettify/prettify.js"></script>
@@ -45,22 +45,19 @@
 </div>
 </nav>
 
-<div class="content" data-ice="content"><div data-ice="index" class="github-markdown"><h1 id="-aureooms-js-random-https-aureooms-github-io-js-random-"><a href="https://aureooms.github.io/js-random">@aureooms/js-random</a></h1>
-<p><img src="https://cdn.rawgit.com/aureooms/js-random/master/media/sketch.png" width="864"></p>
-<p>Randomness algorithms for JavaScript.
-See <a href="https://aureooms.github.io/js-random">docs</a>.
-Parent is <a href="https://aureooms.github.io/js-algorithms">@aureooms/js-algorithms</a>.</p>
-<p><a href="https://raw.githubusercontent.com/aureooms/js-random/master/LICENSE"><img src="http://img.shields.io/npm/l/aureooms-js-random.svg?style=flat" alt="NPM license"></a>
-<a href="https://www.npmjs.org/package/aureooms-js-random"><img src="http://img.shields.io/npm/v/aureooms-js-random.svg?style=flat" alt="NPM version"></a>
-<a href="https://travis-ci.org/aureooms/js-random"><img src="http://img.shields.io/travis/aureooms/js-random.svg?style=flat" alt="Build Status"></a>
-<a href="https://coveralls.io/r/aureooms/js-random"><img src="http://img.shields.io/coveralls/aureooms/js-random.svg?style=flat" alt="Coverage Status"></a>
-<a href="https://david-dm.org/aureooms/js-random#info=dependencies"><img src="http://img.shields.io/david/aureooms/js-random.svg?style=flat" alt="Dependencies Status"></a>
-<a href="https://david-dm.org/aureooms/js-random#info=devDependencies"><img src="http://img.shields.io/david/dev/aureooms/js-random.svg?style=flat" alt="devDependencies Status"></a>
-<a href="https://codeclimate.com/github/aureooms/js-random"><img src="http://img.shields.io/codeclimate/github/aureooms/js-random.svg?style=flat" alt="Code Climate"></a>
-<a href="https://www.npmjs.org/package/aureooms-js-random"><img src="http://img.shields.io/npm/dm/aureooms-js-random.svg?style=flat" alt="NPM downloads per month"></a>
-<a href="https://github.com/aureooms/js-random/issues"><img src="http://img.shields.io/github/issues/aureooms/js-random.svg?style=flat" alt="GitHub issues"></a>
-<a href="https://aureooms.github.io/js-random/source.html"><img src="https://aureooms.github.io/js-random/badge.svg" alt="Documentation"></a></p>
-</div>
+<div class="content" data-ice="content"><h1 data-ice="title">src/api/randfloat.js</h1>
+<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">
+/**
+ * Returns a floating point number in interval [i, j[ (i included, j excluded)
+ * according to a uniform distribution.
+ */
+
+export function randfloat ( i , j ) {
+	return i + Math.random( ) * ( j - i ) ;
+}
+
+</code></pre>
+
 </div>
 
 <footer class="footer">
