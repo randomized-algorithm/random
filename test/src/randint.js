@@ -4,7 +4,7 @@ import * as random from '../../src';
 
 import util from "util" ;
 
-import type from "aureooms-js-type" ;
+import type from "@aureooms/js-type" ;
 
 
 

@@ -4,9 +4,9 @@ import * as random from '../../src';
 
 import util from "util" ;
 
-import mem from "aureooms-js-mem" ;
-import * as array from "aureooms-js-array" ;
-import operator from "aureooms-js-operator" ;
+import mem from "@aureooms/js-mem" ;
+import * as array from "@aureooms/js-array" ;
+import operator from "@aureooms/js-operator" ;
 
 
 function one ( type, sample ) {
