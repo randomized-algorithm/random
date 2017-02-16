@@ -4,7 +4,7 @@ import * as random from '../../src';
 
 import util from "util" ;
 
-import mem from "@aureooms/js-mem" ;
+import * as mem from "@aureooms/js-memory" ;
 import * as array from "@aureooms/js-array" ;
 import operator from "@aureooms/js-operator" ;
 
@@ -13,7 +13,7 @@ function one ( type, shuffle ) {
 
 	var calloc, a, b, n, range;
 
-	calloc = mem.__calloc__( type );
+	calloc = mem._calloc( type );
 
 	n = 100;
 
