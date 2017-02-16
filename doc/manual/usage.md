@@ -8,7 +8,7 @@ import 'babel-polyfill' ;
 
 Then
 ```js
-const random = require( 'aureooms-js-random' ) ;
+const random = require( '@aureooms/js-random' ) ;
 // or
-import * as random from 'aureooms-js-random' ;
+import * as random from '@aureooms/js-random' ;
 ```
