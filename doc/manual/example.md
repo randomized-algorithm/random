@@ -1,3 +1,4 @@
+# Examples
 ```js
 import { randint , randfloat , sample , shuffle } from '@aureooms/js-random' ;
 
