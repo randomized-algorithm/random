@@ -9,46 +9,42 @@ import * as array from "@aureooms/js-array" ;
 import operator from "@aureooms/js-operator" ;
 
 
-function one ( type, shuffle ) {
+function one ( type, shuffle_name, shuffle ) {
 
-	var calloc, a, b, n, range;
+	const type_name = type.toString().split(' ')[1].slice(0,-2) ;
 
-	calloc = mem._calloc( type );
+	const calloc = mem._calloc( type );
 
-	n = 100;
+	const n = 100;
 
-	a = calloc( n );
-	b = calloc( n );
+	const a = calloc( n );
+	const b = calloc( n );
 
 	array.iota( a, 0, n, 0 );
 
-	range = function ( i, j ) {
+	const range = function ( i, j ) {
 
-		var name;
+		const name = util.format( "shuffle ( %s , %s , %s, %s )", type_name , shuffle_name , i, j );
 
-		name = util.format( "shuffle ( %s, %s )", i, j );
-
-test( name, t => {
-
-			var it, msg, _a, _b;
+		test( name, t => {
 
 			array.copy( a, 0, n, b, 0 );
 			shuffle( b, i, j );
 
-			for ( it = 0 ; it < i ; ++it ) {
-				msg = util.format( "b[%d] === a[%d]", it, it );
+			for ( let it = 0 ; it < i ; ++it ) {
+				const msg = util.format( "b[%d] === a[%d]", it, it );
 				t.deepEqual( b[it], a[it], msg );
 			}
 
-			_a = Array.prototype.slice.call( a, i, j ).sort( operator.sub );
-			_b = Array.prototype.slice.call( b, i, j ).sort( operator.sub );
+			const _a = Array.prototype.slice.call( a, i, j ).sort( operator.sub );
+			const _b = Array.prototype.slice.call( b, i, j ).sort( operator.sub );
 
-			msg = "shuffled region contains same elements as original";
+			const msg = "shuffled region contains same elements as original";
 
 			t.deepEqual( _b, _a, msg );
 
-			for ( it = j ; it < n ; ++it ) {
-				msg = util.format( "b[%d] === a[%d]", it, it );
+			for ( let it = j ; it < n ; ++it ) {
+				const msg = util.format( "b[%d] === a[%d]", it, it );
 				t.deepEqual( b[it], a[it], msg );
 			}
 
@@ -60,9 +56,6 @@ test( name, t => {
 	range( 20, n );
 	range( 0, n - 20 );
 	range( 10, n - 10 );
-	range( 10, n - 10 );
-
-
 
 };
 
@@ -80,16 +73,16 @@ const types = [
 ];
 
 const algorithms = [
-	random._shuffle( random._fisheryates( random.randint ) ),
-	random._shuffle( random.sample ),
-	random.shuffle
+	[ 'shuffle based on Fisher-Yates' , random._shuffle( random._fisheryates( random.randint ) ) ],
+	[ 'shuffle based on random.sample' , random._shuffle( random.sample ) ],
+	[ 'API' , random.shuffle ],
 ];
 
 types.forEach( function ( type ) {
 
-	algorithms.forEach( function ( algorithm ) {
+	algorithms.forEach( function ( [name, algorithm] ) {
 
-		one( type, algorithm );
+		one( type, name, algorithm );
 
 	});
 
