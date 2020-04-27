@@ -7,7 +7,12 @@
     "require": [
       "@babel/polyfill",
       "@babel/register"
-    ]
+    ],
+    "files": [
+      "test/src/**/*"
+    ],
+    "timeout": "1m",
+    "concurrency": 8
   },
   "babel": {
     "presets": [
@@ -30,7 +35,7 @@
     "@aureooms/js-memory": "4.0.0",
     "@aureooms/js-operator": "1.0.2",
     "@aureooms/js-type": "1.0.4",
-    "ava": "0.25.0",
+    "ava": "3.8.1",
     "babel-cli": "6.26.0",
     "babel-polyfill": "6.26.0",
     "babel-preset-env": "1.7.0",
@@ -46,8 +51,7 @@
     "esdoc-inject-script-plugin": "1.0.0",
     "esdoc-inject-style-plugin": "1.0.0",
     "esdoc-standard-plugin": "1.0.0",
-    "np": "6.2.1",
-    "xo": "0.29.1"
+    "np": "6.2.1"
   },
   "homepage": "http://aureooms.github.io/js-random/",
   "keywords": [
@@ -70,7 +74,7 @@
     "build": "babel src -d lib",
     "cover": "nyc --reporter=lcov npm test",
     "prepublish": "npm run build",
-    "test": "ava ./test/src --concurrency 8",
+    "test": "ava",
     "esdoc": "esdoc"
   }
 }
