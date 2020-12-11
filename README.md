@@ -1,7 +1,12 @@
 :game_die: [@aureooms/js-random](https://aureooms.github.io/js-random)
 ==
 
-<img src="https://cdn.rawgit.com/aureooms/js-random/main/media/sketch.png" width="864">
+<p align="center">
+<a href="https://xkcd.com/1210">
+<img src="https://imgs.xkcd.com/comics/im_so_random.png" width="600">
+</a><br/>
+© <a href="https://xkcd.com">xkcd.com</a>
+</p>
 
 Randomness algorithms for JavaScript.
 See [docs](https://aureooms.github.io/js-random).
