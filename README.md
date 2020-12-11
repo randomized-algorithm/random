@@ -12,6 +12,15 @@ Randomness algorithms for JavaScript.
 See [docs](https://aureooms.github.io/js-random).
 Parent is [@aureooms/js-algorithms](https://aureooms.github.io/js-algorithms).
 
+```js
+import {
+	randint , // randint(i, j) -> [i, j[ \cap ZZ
+	randfloat , // randfloat(i, j) -> [i, j[
+	sample , // /!\ in-place
+	shuffle , // /!\ in-place
+} from '@aureooms/js-random' ;
+```
+
 [![License](https://img.shields.io/github/license/aureooms/js-random.svg)](https://raw.githubusercontent.com/aureooms/js-random/main/LICENSE)
 [![Version](https://img.shields.io/npm/v/@aureooms/js-random.svg)](https://www.npmjs.org/package/@aureooms/js-random)
 [![Build](https://img.shields.io/travis/aureooms/js-random/main.svg)](https://travis-ci.org/aureooms/js-random/branches)
