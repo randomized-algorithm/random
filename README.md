@@ -1,4 +1,4 @@
-[@aureooms/js-random](https://aureooms.github.io/js-random)
+:game_die: [@aureooms/js-random](https://aureooms.github.io/js-random)
 ==
 
 <img src="https://cdn.rawgit.com/aureooms/js-random/main/media/sketch.png" width="864">
