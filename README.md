@@ -19,5 +19,5 @@ Parent is [@aureooms/js-algorithms](https://aureooms.github.io/js-algorithms).
 [![Code maintainability](https://img.shields.io/codeclimate/maintainability/aureooms/js-random.svg)](https://codeclimate.com/github/aureooms/js-random/trends/churn)
 [![Code coverage (cov)](https://img.shields.io/codecov/c/gh/aureooms/js-random/main.svg)](https://codecov.io/gh/aureooms/js-random)
 [![Code technical debt](https://img.shields.io/codeclimate/tech-debt/aureooms/js-random.svg)](https://codeclimate.com/github/aureooms/js-random/trends/technical_debt)
-[![Documentation](http://aureooms.github.io/js-random//badge.svg)](http://aureooms.github.io/js-random//source.html)
+[![Documentation](https://aureooms.github.io/js-random//badge.svg)](https://aureooms.github.io/js-random//source.html)
 [![Package size](https://img.shields.io/bundlephobia/minzip/@aureooms/js-random)](https://bundlephobia.com/result?p=@aureooms/js-random)
