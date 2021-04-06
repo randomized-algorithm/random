@@ -69,7 +69,6 @@
     "@aureooms/js-functools": "2.0.3",
     "@aureooms/js-itertools": "5.0.1",
     "@aureooms/js-memory": "4.0.0",
-    "@aureooms/js-operator": "1.0.2",
     "@aureooms/js-type": "1.0.4",
     "@babel/core": "7.13.10",
     "@babel/preset-env": "7.13.10",

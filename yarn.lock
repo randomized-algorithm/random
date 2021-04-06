@@ -42,11 +42,6 @@
   resolved "https://registry.yarnpkg.com/@aureooms/js-memory/-/js-memory-4.0.0.tgz#db87dc64b948f672d73b434ebde047b05869712c"
   integrity sha1-24fcZLlI9nLXO0NOveBHsFhpcSw=
 
-"@aureooms/js-operator@1.0.2":
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/@aureooms/js-operator/-/js-operator-1.0.2.tgz#0786d77d9977823ae7bc04360a315c45bb4c1e65"
-  integrity sha1-B4bXfZl3gjrnvAQ2CjFcRbtMHmU=
-
 "@aureooms/js-type@1.0.4":
   version "1.0.4"
   resolved "https://registry.yarnpkg.com/@aureooms/js-type/-/js-type-1.0.4.tgz#7f9de5f5f8506ff9c8958731744b7427b62e92b7"
