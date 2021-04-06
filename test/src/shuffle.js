@@ -1,53 +1,56 @@
 import test from 'ava';
-import * as random from '../../src/index.js';
+import {
+	shuffle,
+	_shuffle,
+	sample,
+	_fisheryates,
+	randint,
+} from '../../src/index.js';
 
-import * as mem from '@aureooms/js-memory';
-import * as array from '@aureooms/js-array';
-import operator from '@aureooms/js-operator';
+import {_calloc} from '@aureooms/js-memory';
+import {iota, copy} from '@aureooms/js-array';
+import {increasing} from '@aureooms/js-compare';
 
-function one(type, shuffle_name, shuffle) {
-	const type_name = type.toString().split(' ')[1].slice(0, -2);
-
-	const calloc = mem._calloc(type);
-
-	const n = 100;
+const macro = (t, type, _, shuffle, n, i, j) => {
+	const calloc = _calloc(type);
 
 	const a = calloc(n);
 	const b = calloc(n);
 
-	array.iota(a, 0, n, 0);
+	iota(a, 0, n, 0);
 
-	const range = function (i, j) {
-		const name = `shuffle ( ${type_name}, ${shuffle_name}, ${i}, ${j} )`;
+	copy(a, 0, n, b, 0);
+	shuffle(b, i, j);
 
-		test(name, (t) => {
-			array.copy(a, 0, n, b, 0);
-			shuffle(b, i, j);
+	for (let it = 0; it < i; ++it) {
+		const msg = `b[${it}] === a[${it}]`;
+		t.deepEqual(b[it], a[it], msg);
+	}
 
-			for (let it = 0; it < i; ++it) {
-				const msg = `b[${it}] === a[${it}]`;
-				t.deepEqual(b[it], a[it], msg);
-			}
+	const _a = Array.prototype.slice.call(a, i, j).sort(increasing);
+	const _b = Array.prototype.slice.call(b, i, j).sort(increasing);
 
-			const _a = Array.prototype.slice.call(a, i, j).sort(operator.sub);
-			const _b = Array.prototype.slice.call(b, i, j).sort(operator.sub);
+	const msg = 'shuffled region contains same elements as original';
 
-			const msg = 'shuffled region contains same elements as original';
+	t.deepEqual(_b, _a, msg);
 
-			t.deepEqual(_b, _a, msg);
+	for (let it = j; it < n; ++it) {
+		const msg = `b[${it}] === a[${it}]`;
+		t.deepEqual(b[it], a[it], msg);
+	}
+};
 
-			for (let it = j; it < n; ++it) {
-				const msg = `b[${it}] === a[${it}]`;
-				t.deepEqual(b[it], a[it], msg);
-			}
-		});
-	};
+macro.title = (title, type, shuffle_name, _, n, i, j) =>
+	title || `[${n}] shuffle ( ${type.name}, ${shuffle_name}, ${i}, ${j} )`;
 
-	range(0, n);
-	range(20, n);
-	range(0, n - 20);
-	range(10, n - 10);
-}
+const n = 100;
+
+const params = [
+	[n, 0, n],
+	[n, 20, n],
+	[n, 0, n - 20],
+	[n, 10, n - 10],
+];
 
 const types = [
 	Array,
@@ -63,16 +66,15 @@ const types = [
 ];
 
 const algorithms = [
-	[
-		'shuffle based on Fisher-Yates',
-		random._shuffle(random._fisheryates(random.randint)),
-	],
-	['shuffle based on random.sample', random._shuffle(random.sample)],
-	['API', random.shuffle],
+	['shuffle based on Fisher-Yates', _shuffle(_fisheryates(randint))],
+	['shuffle based on sample', _shuffle(sample)],
+	['API', shuffle],
 ];
 
 for (const type of types) {
 	for (const [name, algorithm] of algorithms) {
-		one(type, name, algorithm);
+		for (const [n, i, j] of params) {
+			test(macro, type, name, algorithm, n, i, j);
+		}
 	}
 }
