@@ -12,6 +12,10 @@ Randomness algorithms for JavaScript.
 See [docs](https://aureooms.github.io/js-random).
 Parent is [@aureooms/js-algorithms](https://aureooms.github.io/js-algorithms).
 
+> :warning: Depending on your environment, the code may require
+> `regeneratorRuntime` to be defined, for instance by importing
+> [regenerator-runtime/runtime](https://www.npmjs.com/package/regenerator-runtime).
+
 ```js
 import {
 	randint , // randint(i, j) -> [i, j[ \cap ZZ

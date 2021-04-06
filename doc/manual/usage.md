@@ -1,6 +1,9 @@
 # Usage
-The code needs a ES2015+ polyfill to work, for example
-[regenerator-runtime/runtime](https://babeljs.io/docs/usage/polyfill).
+
+> :warning: Depending on your environment, the code may require
+> `regeneratorRuntime` to be defined, for instance by importing
+> [regenerator-runtime/runtime](https://www.npmjs.com/package/regenerator-runtime).
+
 ```js
 require( 'regenerator-runtime/runtime' ) ;
 // or
@@ -9,7 +12,7 @@ import 'regenerator-runtime/runtime.js' ;
 
 Then
 ```js
-const random = require( '@aureooms/js-random' ) ;
+const { ... } = require( '@aureooms/js-random' ) ;
 // or
-import * as random from '@aureooms/js-random' ;
+import { ... } from '@aureooms/js-random' ;
 ```
