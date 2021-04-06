@@ -1,34 +1,25 @@
-
 /**
  * Sample array using Fisher-Yates method.
  */
 
-export function _fisheryates ( randint ) {
+export function _fisheryates(randint) {
+	const fisheryates = function (n, a, i, j) {
+		// We will swap at most n elements
 
-	const fisheryates = function ( n , a , i , j ) {
+		const k = i + n;
 
-		// we will swap at most n elements
+		for (; i < k; ++i) {
+			// Choose any index p in the remaining array
 
-		const k = i + n ;
+			const p = randint(i, j);
 
-		for ( ; i < k ; ++i ) {
+			// Swap element at index p with first element in the array
 
-			// choose any index p in the remaining array
-
-			const p = randint( i , j ) ;
-
-
-			// swap element at index p with first element in the array
-
-			const tmp  = a[i] ;
-			a[i] = a[p] ;
-			a[p] =  tmp ;
-
+			const tmp = a[i];
+			a[i] = a[p];
+			a[p] = tmp;
 		}
+	};
 
-	} ;
-
-	return fisheryates ;
-
+	return fisheryates;
 }
-

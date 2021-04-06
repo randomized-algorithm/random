@@ -1,41 +1,33 @@
 import test from 'ava';
-import * as random from "../../src/index.js";
+import {randrange} from '../../src/index.js';
 
+import type from '@aureooms/js-type';
 
-import util from "util" ;
+test('randrange only stop', (t) => {
+	let r;
 
-import type from "@aureooms/js-type" ;
+	const n = 5000;
+	let rj = n;
 
-
-
-test( "randrange only stop", t => {
-
-	var i, n, r, rj, check;
-
-	n = 5000;
-	rj = n;
-
-	check = function () {
-		t.truthy( r < rj, util.format( "%s < %s", r, rj ) );
-		t.truthy( r >= 0, util.format( "%s >= %s", r, 0 ) );
-		t.truthy( type.isint(r), util.format( "type.isint(%s)", r ) );
+	const check = () => {
+		t.true(r < rj, `${r} < ${rj}`);
+		t.true(r >= 0, `${r} >= 0`);
+		t.true(type.isint(r), `type.isint(${r})`);
 	};
 
-	for ( i = 1 ; i < n ; ++i ) {
-		r = random.randrange( rj );
+	for (let i = 1; i < n; ++i) {
+		r = randrange(rj);
 
 		check();
 
 		--rj;
 	}
 
-	for ( i = 1 ; i < n ; ++i ) {
-		r = random.randrange( rj );
+	for (let i = 1; i < n; ++i) {
+		r = randrange(rj);
 
 		check();
 
 		++rj;
 	}
-
-
 });

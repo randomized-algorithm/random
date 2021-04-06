@@ -1,37 +1,31 @@
 import test from 'ava';
-import * as random from "../../src/index.js";
+import {randrange} from '../../src/index.js';
 
+import type from '@aureooms/js-type';
 
-import util from "util" ;
+test('randrange without step', (t) => {
+	let r;
 
-import type from "@aureooms/js-type" ;
+	const n = 5000;
+	let ri = -n;
+	let rj = n;
 
-
-
-test( "randrange without step", t => {
-
-	var i, n, r, ri, rj, check;
-
-	n = 5000;
-	ri = -n;
-	rj = n;
-
-	check = function () {
-		t.truthy( r < rj, util.format( "%s < %s", r, rj ) );
-		t.truthy( r >= ri, util.format( "%s >= %s", r, ri ) );
-		t.truthy( type.isint(r), util.format( "type.isint(%s)", r ) );
+	const check = () => {
+		t.true(r < rj, `${r} < ${rj}`);
+		t.true(r >= ri, `${r} >= ${ri}`);
+		t.true(type.isint(r), `type.isint(${r})`);
 	};
 
-	for ( i = 0 ; i < n ; ++i ) {
-		r = random.randrange( ri, rj );
+	for (let i = 0; i < n; ++i) {
+		r = randrange(ri, rj);
 
 		check();
 
 		++ri;
 	}
 
-	for ( i = 0 ; i < n ; ++i ) {
-		r = random.randrange( ri, rj );
+	for (let i = 0; i < n; ++i) {
+		r = randrange(ri, rj);
 
 		check();
 
@@ -39,13 +33,11 @@ test( "randrange without step", t => {
 		--rj;
 	}
 
-	for ( i = 0 ; i < n ; ++i ) {
-		r = random.randrange( ri, rj );
+	for (let i = 0; i < n; ++i) {
+		r = randrange(ri, rj);
 
 		check();
 
 		++rj;
 	}
-
-
 });

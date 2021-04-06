@@ -1,37 +1,31 @@
 import test from 'ava';
-import * as random from "../../src/index.js";
+import {randfloat} from '../../src/index.js';
 
+import type from '@aureooms/js-type';
 
-import util from "util" ;
+test('randfloat', (t) => {
+	let r;
 
-import type from "@aureooms/js-type" ;
+	const n = 5000;
+	let ri = -n;
+	let rj = n;
 
-
-
-test( "randfloat", t => {
-
-	var i, n, r, ri, rj, check;
-
-	n = 5000;
-	ri = -n;
-	rj = n;
-
-	check = function () {
-		t.truthy( r < rj, util.format( "%s < %s", r, rj ) );
-		t.truthy( r >= ri, util.format( "%s >= %s", r, ri ) );
-		t.truthy( type.isfinite(r), util.format( "type.isint(%s)", r ) );
+	const check = () => {
+		t.true(r < rj, `${r} < ${rj}`);
+		t.true(r >= ri, `${r} >= ${ri}`);
+		t.true(type.isfinite(r), `type.isfinite(${r})`);
 	};
 
-	for ( i = 0 ; i < n ; ++i ) {
-		r = random.randfloat( ri, rj );
+	for (let i = 0; i < n; ++i) {
+		r = randfloat(ri, rj);
 
 		check();
 
 		++ri;
 	}
 
-	for ( i = 0 ; i < n ; ++i ) {
-		r = random.randfloat( ri, rj );
+	for (let i = 0; i < n; ++i) {
+		r = randfloat(ri, rj);
 
 		check();
 
@@ -39,13 +33,11 @@ test( "randfloat", t => {
 		--rj;
 	}
 
-	for ( i = 0 ; i < n ; ++i ) {
-		r = random.randfloat( ri, rj );
+	for (let i = 0; i < n; ++i) {
+		r = randfloat(ri, rj);
 
 		check();
 
 		++rj;
 	}
-
-
 });

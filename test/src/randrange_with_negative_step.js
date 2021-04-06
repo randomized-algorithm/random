@@ -1,38 +1,34 @@
 import test from 'ava';
-import * as random from "../../src/index.js";
+import {randrange} from '../../src/index.js';
 
+import type from '@aureooms/js-type';
 
-import util from "util" ;
+test('randrange with negative step', (t) => {
+	let r;
+	let step;
 
-import type from "@aureooms/js-type" ;
+	const n = 5000;
+	let ri = -n;
+	let rj = n;
 
-test( "randrange with negative step", t => {
-
-	var i, n, r, ri, rj, check , step;
-
-	n = 5000;
-	ri = -n;
-	rj = n;
-
-	check = function () {
-		t.truthy( r <= rj, util.format( "%s <= %s", r, rj ) );
-		t.truthy( r > ri, util.format( "%s > %s", r, ri ) );
-		t.truthy( (rj - r) % (-step) === 0, util.format( "(%s - %s) %% (-%s) === 0", rj, r ,step ) );
-		t.truthy( type.isint(r), util.format( "type.isint(%s)", r ) );
+	const check = () => {
+		t.true(r <= rj, `${r} <= ${rj}`);
+		t.true(r > ri, `${r} > ${ri}`);
+		t.true((rj - r) % -step === 0, `(${rj} - ${r}) % (-${step}) === 0`);
+		t.true(type.isint(r), `type.isint(${r})`);
 	};
 
-	for ( step = -3 ; step <= -1 ; ++step ) {
-
-		for ( i = 0 ; i < n ; ++i ) {
-			r = random.randrange( rj, ri , step );
+	for (step = -3; step <= -1; ++step) {
+		for (let i = 0; i < n; ++i) {
+			r = randrange(rj, ri, step);
 
 			check();
 
 			++ri;
 		}
 
-		for ( i = 0 ; i < n ; ++i ) {
-			r = random.randrange( rj, ri , step );
+		for (let i = 0; i < n; ++i) {
+			r = randrange(rj, ri, step);
 
 			check();
 
@@ -40,14 +36,12 @@ test( "randrange with negative step", t => {
 			--rj;
 		}
 
-		for ( i = 0 ; i < n ; ++i ) {
-			r = random.randrange( rj, ri , step );
+		for (let i = 0; i < n; ++i) {
+			r = randrange(rj, ri, step);
 
 			check();
 
 			++rj;
 		}
-
 	}
-
 });
