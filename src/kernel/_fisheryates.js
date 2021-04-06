@@ -24,7 +24,7 @@
  */
 const _fisheryates = (randint) => {
 	/**
-	 * Take a sample of size n (without repetitions) from the items i through
+	 * Take a sample of size n (without replacement) from the items i through
 	 * j-1 of the input array. This is done in-place. The sample can be
 	 * retrieved from position i to i+n.
 	 *
@@ -42,11 +42,9 @@ const _fisheryates = (randint) => {
 
 		for (; i < k; ++i) {
 			// Choose any index p in the remaining array
-
 			const p = randint(i, j);
 
-			// Swap element at index p with first element in the array
-
+			// Swap selected element with the first remaining element.
 			const tmp = a[i];
 			a[i] = a[p];
 			a[p] = tmp;
