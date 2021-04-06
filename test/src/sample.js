@@ -5,7 +5,7 @@ import {_calloc} from '@aureooms/js-memory';
 import {iota, copy} from '@aureooms/js-array';
 import {increasing} from '@aureooms/js-compare';
 
-const macro = (t, type, _sample_name, sample, n, k, i, j) => {
+const macro = (t, type, _, sample, n, k, i, j) => {
 	const calloc = _calloc(type);
 
 	const a = calloc(n);
@@ -34,7 +34,7 @@ const macro = (t, type, _sample_name, sample, n, k, i, j) => {
 	}
 };
 
-macro.title = (title, type, sample_name, _sample, n, k, i, j) =>
+macro.title = (title, type, sample_name, _, n, k, i, j) =>
 	title || `[${n}] sample ( ${type.name}, ${sample_name}, ${k}, ${i}, ${j} )`;
 
 const n = 100;
