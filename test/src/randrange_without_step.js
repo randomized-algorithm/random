@@ -1,5 +1,5 @@
 import test from 'ava';
-import * as random from '../../src';
+import * as random from "../../src/index.js";
 
 
 import util from "util" ;

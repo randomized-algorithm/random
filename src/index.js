@@ -1,2 +1,2 @@
-export * from './api' ;
-export * from './kernel' ;
+export * from "./api/index.js" ;
+export * from "./kernel/index.js" ;

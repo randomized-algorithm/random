@@ -1,4 +1,4 @@
-import { randint } from './randint' ;
+import { randint } from "./randint.js" ;
 
 /**
  * Return a randomly selected element from range(start, stop, step).

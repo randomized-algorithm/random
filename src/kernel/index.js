@@ -1,2 +1,2 @@
-export * from './_fisheryates' ;
-export * from './_shuffle' ;
+export * from "./_fisheryates.js" ;
+export * from "./_shuffle.js" ;
