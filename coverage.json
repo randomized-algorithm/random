@@ -1,7 +1,7 @@
 {
-  "coverage": "71.42%",
-  "expectCount": 7,
-  "actualCount": 5,
+  "coverage": "80%",
+  "expectCount": 10,
+  "actualCount": 8,
   "files": {
     "src/api/randfloat.js": {
       "expectCount": 1,
@@ -9,6 +9,11 @@
       "undocumentLines": []
     },
     "src/api/randint.js": {
+      "expectCount": 1,
+      "actualCount": 1,
+      "undocumentLines": []
+    },
+    "src/api/random.js": {
       "expectCount": 1,
       "actualCount": 1,
       "undocumentLines": []
@@ -33,6 +38,16 @@
       ]
     },
     "src/kernel/_fisheryates.js": {
+      "expectCount": 1,
+      "actualCount": 1,
+      "undocumentLines": []
+    },
+    "src/kernel/_randfloat.js": {
+      "expectCount": 1,
+      "actualCount": 1,
+      "undocumentLines": []
+    },
+    "src/kernel/_randint.js": {
       "expectCount": 1,
       "actualCount": 1,
       "undocumentLines": []

@@ -567,7 +567,7 @@
     "__docId__": 48,
     "kind": "file",
     "name": "src/api/randfloat.js",
-    "content": "/**\n * Returns a floating point number in interval [i, j[ (i included, j excluded)\n * according to a uniform distribution.\n */\n\nconst randfloat = (i, j) => i + Math.random() * (j - i);\nexport default randfloat;\n",
+    "content": "import random from './random.js';\nimport _randfloat from '../kernel/_randfloat.js';\n\n/**\n * Returns a double in interval [i, j[ (i included, j excluded)\n * according to a uniform distribution.\n *\n * @function\n * @param {number} i The inclusive left bound\n * @param {number} j The non-inclusive right bound\n * @return {number} A double in the interval [i, j[ taken uniformly at\n * random.\n */\nconst randfloat = _randfloat(random);\nexport default randfloat;\n",
     "static": true,
     "longname": "/home/runner/work/js-random/js-random/src/api/randfloat.js",
     "access": "public",
@@ -576,40 +576,64 @@
   },
   {
     "__docId__": 49,
-    "kind": "function",
+    "kind": "variable",
     "name": "randfloat",
     "memberof": "src/api/randfloat.js",
-    "generator": false,
-    "async": false,
     "static": true,
     "longname": "src/api/randfloat.js~randfloat",
     "access": "public",
     "export": true,
     "importPath": "@aureooms/js-random/src/api/randfloat.js",
     "importStyle": "randfloat",
-    "description": "Returns a floating point number in interval [i, j[ (i included, j excluded)\naccording to a uniform distribution.",
-    "lineNumber": 6,
-    "params": [
+    "description": "Returns a double in interval [i, j[ (i included, j excluded)\naccording to a uniform distribution.",
+    "lineNumber": 14,
+    "unknown": [
       {
-        "name": "i",
-        "types": [
-          "*"
-        ]
-      },
-      {
-        "name": "j",
-        "types": [
-          "*"
-        ]
+        "tagName": "@function",
+        "tagValue": ""
       }
     ],
-    "return": null
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "number"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "i",
+        "description": "The inclusive left bound"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "number"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "j",
+        "description": "The non-inclusive right bound"
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "number"
+      ],
+      "spread": false,
+      "description": "A double in the interval [i, j[ taken uniformly at\nrandom."
+    },
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
   },
   {
     "__docId__": 50,
     "kind": "file",
     "name": "src/api/randint.js",
-    "content": "/**\n * Returns an integer in interval [i, j[ (i included, j excluded)\n * according to a uniform distribution.\n */\n\nconst randint = (i, j) => i + Math.floor(Math.random() * (j - i));\nexport default randint;\n",
+    "content": "import random from './random.js';\nimport _randint from '../kernel/_randint.js';\n\n/**\n * Returns an integer in interval [i, j[ (i included, j excluded)\n * according to a uniform distribution.\n *\n * @function\n * @param {number} i The inclusive left bound\n * @param {number} j The non-inclusive right bound\n * @return {number} An integer in the interval [i, j[ taken uniformly at\n * random.\n */\nconst randint = _randint(random);\nexport default randint;\n",
     "static": true,
     "longname": "/home/runner/work/js-random/js-random/src/api/randint.js",
     "access": "public",
@@ -618,11 +642,9 @@
   },
   {
     "__docId__": 51,
-    "kind": "function",
+    "kind": "variable",
     "name": "randint",
     "memberof": "src/api/randint.js",
-    "generator": false,
-    "async": false,
     "static": true,
     "longname": "src/api/randint.js~randint",
     "access": "public",
@@ -630,25 +652,87 @@
     "importPath": "@aureooms/js-random/src/api/randint.js",
     "importStyle": "randint",
     "description": "Returns an integer in interval [i, j[ (i included, j excluded)\naccording to a uniform distribution.",
-    "lineNumber": 6,
-    "params": [
+    "lineNumber": 14,
+    "unknown": [
       {
-        "name": "i",
-        "types": [
-          "*"
-        ]
-      },
-      {
-        "name": "j",
-        "types": [
-          "*"
-        ]
+        "tagName": "@function",
+        "tagValue": ""
       }
     ],
-    "return": null
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "number"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "i",
+        "description": "The inclusive left bound"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "number"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "j",
+        "description": "The non-inclusive right bound"
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "number"
+      ],
+      "spread": false,
+      "description": "An integer in the interval [i, j[ taken uniformly at\nrandom."
+    },
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
   },
   {
     "__docId__": 52,
+    "kind": "file",
+    "name": "src/api/random.js",
+    "content": "/**\n * Returns a double in the interval [0, 1) using JavaScript Math.random().\n * @return {number}\n */\nconst random = () => {\n\treturn Math.random();\n};\n\nexport default random;\n",
+    "static": true,
+    "longname": "/home/runner/work/js-random/js-random/src/api/random.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 53,
+    "kind": "function",
+    "name": "random",
+    "memberof": "src/api/random.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/api/random.js~random",
+    "access": "public",
+    "export": true,
+    "importPath": "@aureooms/js-random/src/api/random.js",
+    "importStyle": "random",
+    "description": "Returns a double in the interval [0, 1) using JavaScript Math.random().",
+    "lineNumber": 5,
+    "return": {
+      "nullable": null,
+      "types": [
+        "number"
+      ],
+      "spread": false,
+      "description": ""
+    },
+    "params": []
+  },
+  {
+    "__docId__": 54,
     "kind": "file",
     "name": "src/api/randrange.js",
     "content": "import randint from './randint.js';\n\n/**\n * Return a randomly selected element from range(start, stop, step).\n */\n\nconst randrange = (start, stop, step) => {\n\t// TODO handle empty ranges\n\n\tif (stop === undefined) return randint(0, start);\n\tif (step === undefined) step = 1;\n\n\tif (stop >= start) {\n\t\treturn start + step * randint(0, Math.floor((stop - start) / step));\n\t}\n\n\treturn start + step * randint(0, Math.floor((start - stop) / -step));\n};\n\nexport default randrange;\n",
@@ -659,7 +743,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 53,
+    "__docId__": 55,
     "kind": "function",
     "name": "randrange",
     "memberof": "src/api/randrange.js",
@@ -700,7 +784,7 @@
     }
   },
   {
-    "__docId__": 54,
+    "__docId__": 56,
     "kind": "file",
     "name": "src/api/sample.js",
     "content": "import _fisheryates from '../kernel/_fisheryates.js';\nimport randint from './randint.js';\n\nconst sample = _fisheryates(randint);\nexport default sample;\n",
@@ -711,7 +795,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 55,
+    "__docId__": 57,
     "kind": "variable",
     "name": "sample",
     "memberof": "src/api/sample.js",
@@ -731,7 +815,7 @@
     }
   },
   {
-    "__docId__": 56,
+    "__docId__": 58,
     "kind": "file",
     "name": "src/api/shuffle.js",
     "content": "import _shuffle from '../kernel/_shuffle.js';\nimport sample from './sample.js';\n\nconst shuffle = _shuffle(sample);\nexport default shuffle;\n",
@@ -742,7 +826,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 57,
+    "__docId__": 59,
     "kind": "variable",
     "name": "shuffle",
     "memberof": "src/api/shuffle.js",
@@ -762,10 +846,10 @@
     }
   },
   {
-    "__docId__": 58,
+    "__docId__": 60,
     "kind": "file",
     "name": "src/index.js",
-    "content": "export {default as randfloat} from './api/randfloat.js';\nexport {default as randint} from './api/randint.js';\nexport {default as randrange} from './api/randrange.js';\nexport {default as sample} from './api/sample.js';\nexport {default as shuffle} from './api/shuffle.js';\nexport {default as _fisheryates} from './kernel/_fisheryates.js';\nexport {default as _shuffle} from './kernel/_shuffle.js';\n",
+    "content": "export {default as randfloat} from './api/randfloat.js';\nexport {default as randint} from './api/randint.js';\nexport {default as random} from './api/random.js';\nexport {default as randrange} from './api/randrange.js';\nexport {default as sample} from './api/sample.js';\nexport {default as shuffle} from './api/shuffle.js';\nexport {default as _fisheryates} from './kernel/_fisheryates.js';\nexport {default as _randfloat} from './kernel/_randfloat.js';\nexport {default as _randint} from './kernel/_randint.js';\nexport {default as _shuffle} from './kernel/_shuffle.js';\n",
     "static": true,
     "longname": "/home/runner/work/js-random/js-random/src/index.js",
     "access": "public",
@@ -773,7 +857,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 59,
+    "__docId__": 61,
     "kind": "file",
     "name": "src/kernel/_fisheryates.js",
     "content": "/**\n * Sample array using Fisher-Yates method.\n */\n\nconst _fisheryates = (randint) => (n, a, i, j) => {\n\t// We will swap at most n elements\n\n\tconst k = i + n;\n\n\tfor (; i < k; ++i) {\n\t\t// Choose any index p in the remaining array\n\n\t\tconst p = randint(i, j);\n\n\t\t// Swap element at index p with first element in the array\n\n\t\tconst tmp = a[i];\n\t\ta[i] = a[p];\n\t\ta[p] = tmp;\n\t}\n};\n\nexport default _fisheryates;\n",
@@ -784,7 +868,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 60,
+    "__docId__": 62,
     "kind": "function",
     "name": "_fisheryates",
     "memberof": "src/kernel/_fisheryates.js",
@@ -809,7 +893,101 @@
     "return": null
   },
   {
-    "__docId__": 61,
+    "__docId__": 63,
+    "kind": "file",
+    "name": "src/kernel/_randfloat.js",
+    "content": "/**\n * Builds a randfloat function given a random number generator.\n *\n * @param {Function} random A function taking no arguments that returns a\n * double uniformly at random in the interval [0, 1).\n *\n * @return {Function} A randfloat function.\n */\nconst _randfloat = (random) => {\n\t/**\n\t * Returns a double in interval [i, j[ (i included, j excluded)\n\t * according to a uniform distribution.\n\t *\n\t * @param {number} i The inclusive left bound\n\t * @param {number} j The non-inclusive right bound\n\t * @return {number} A double in the interval [i, j[ taken uniformly at\n\t * random.\n\t */\n\tconst randfloat = (i, j) => i + random() * (j - i);\n\treturn randfloat;\n};\n\nexport default _randfloat;\n",
+    "static": true,
+    "longname": "/home/runner/work/js-random/js-random/src/kernel/_randfloat.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 64,
+    "kind": "function",
+    "name": "_randfloat",
+    "memberof": "src/kernel/_randfloat.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/kernel/_randfloat.js~_randfloat",
+    "access": "private",
+    "export": true,
+    "importPath": "@aureooms/js-random/src/kernel/_randfloat.js",
+    "importStyle": "_randfloat",
+    "description": "Builds a randfloat function given a random number generator.",
+    "lineNumber": 9,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "Function"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "random",
+        "description": "A function taking no arguments that returns a\ndouble uniformly at random in the interval [0, 1)."
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Function"
+      ],
+      "spread": false,
+      "description": "A randfloat function."
+    }
+  },
+  {
+    "__docId__": 65,
+    "kind": "file",
+    "name": "src/kernel/_randint.js",
+    "content": "/**\n * Builds a randint function given a random number generator.\n *\n * @param {Function} random A function taking no arguments that returns a\n * double uniformly at random in the interval [0, 1).\n *\n * @return {Function} A randint function.\n */\nconst _randint = (random) => {\n\t/**\n\t * Returns an integer in interval [i, j[ (i included, j excluded)\n\t * according to a uniform distribution.\n\t *\n\t * @param {number} i The inclusive left bound\n\t * @param {number} j The non-inclusive right bound\n\t * @return {number} An integer in the interval [i, j[ taken uniformly at\n\t * random.\n\t */\n\tconst randint = (i, j) => i + Math.floor(random() * (j - i));\n\treturn randint;\n};\n\nexport default _randint;\n",
+    "static": true,
+    "longname": "/home/runner/work/js-random/js-random/src/kernel/_randint.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 66,
+    "kind": "function",
+    "name": "_randint",
+    "memberof": "src/kernel/_randint.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/kernel/_randint.js~_randint",
+    "access": "private",
+    "export": true,
+    "importPath": "@aureooms/js-random/src/kernel/_randint.js",
+    "importStyle": "_randint",
+    "description": "Builds a randint function given a random number generator.",
+    "lineNumber": 9,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "Function"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "random",
+        "description": "A function taking no arguments that returns a\ndouble uniformly at random in the interval [0, 1)."
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Function"
+      ],
+      "spread": false,
+      "description": "A randint function."
+    }
+  },
+  {
+    "__docId__": 67,
     "kind": "file",
     "name": "src/kernel/_shuffle.js",
     "content": "/**\n * Shuffle array by sampling the complete array.\n */\n\nconst _shuffle = (sample) => (a, i, j) => sample(j - i, a, i, j);\nexport default _shuffle;\n",
@@ -820,7 +998,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 62,
+    "__docId__": 68,
     "kind": "function",
     "name": "_shuffle",
     "memberof": "src/kernel/_shuffle.js",
@@ -854,7 +1032,7 @@
   },
   {
     "kind": "packageJSON",
-    "content": "{\n  \"name\": \"@aureooms/js-random\",\n  \"description\": \"Randomness algorithms for JavaScript\",\n  \"version\": \"3.0.0\",\n  \"license\": \"AGPL-3.0\",\n  \"author\": \"Aurélien Ooms <aurelien.ooms@gmail.com>\",\n  \"homepage\": \"https://aureooms.github.io/js-random\",\n  \"repository\": {\n    \"url\": \"https://github.com/aureooms/js-random\",\n    \"type\": \"git\"\n  },\n  \"bugs\": {\n    \"url\": \"https://github.com/aureooms/js-random/issues\"\n  },\n  \"keywords\": [\n    \"javascript\",\n    \"js\",\n    \"randfloat\",\n    \"randint\",\n    \"random\",\n    \"randomness\",\n    \"sample\",\n    \"shuffle\"\n  ],\n  \"sideEffects\": false,\n  \"source\": \"src/index.js\",\n  \"main\": \"dist/index.js\",\n  \"module\": \"dist/index.module.js\",\n  \"esmodule\": \"dist/index.modern.js\",\n  \"umd:main\": \"dist/index.umd.js\",\n  \"unpkg\": \"dist/index.umd.js\",\n  \"exports\": {\n    \".\": {\n      \"browser\": \"./dist/index.module.js\",\n      \"umd\": \"./dist/index.umd.js\",\n      \"require\": \"./dist/index.js\",\n      \"default\": \"./dist/index.modern.js\"\n    }\n  },\n  \"files\": [\n    \"dist\"\n  ],\n  \"scripts\": {\n    \"build\": \"NODE_ENV=production microbundle\",\n    \"build-docs\": \"esdoc\",\n    \"build-gh-pages\": \"npm run build-docs\",\n    \"ci:test\": \"npm run lint-config && npm run lint && npm run cover\",\n    \"commit-msg\": \"commitlint --edit\",\n    \"cover\": \"NODE_ENV=cover c8 --all --src src --reporter lcov --reporter text-summary --reporter text npm test\",\n    \"debug\": \"NODE_ENV=debug npm run test -- -st --fail-fast\",\n    \"dev\": \"npm run lint-config-and-fix && npm run lint-and-fix && npm run cover -- -- -st --fail-fast\",\n    \"install-hooks\": \"husky install\",\n    \"lint\": \"xo\",\n    \"lint-and-fix\": \"npm run lint -- --fix\",\n    \"lint-config\": \"fixpack --dryRun\",\n    \"lint-config-and-fix\": \"fixpack || fixpack\",\n    \"postinstall\": \"npm run install-hooks\",\n    \"postpublish\": \"pinst --enable\",\n    \"precommit\": \"lint-staged\",\n    \"prepare\": \"npm run build\",\n    \"prepublishOnly\": \"pinst --disable\",\n    \"release\": \"np --message ':hatching_chick: release: Bumping to v%s.'\",\n    \"test\": \"ava\"\n  },\n  \"dependencies\": {},\n  \"devDependencies\": {\n    \"@aureooms/js-array\": \"4.0.0\",\n    \"@aureooms/js-functools\": \"2.0.3\",\n    \"@aureooms/js-itertools\": \"5.0.1\",\n    \"@aureooms/js-memory\": \"4.0.0\",\n    \"@aureooms/js-operator\": \"1.0.2\",\n    \"@aureooms/js-type\": \"1.0.4\",\n    \"@babel/core\": \"7.13.10\",\n    \"@babel/preset-env\": \"7.13.10\",\n    \"@babel/register\": \"7.13.8\",\n    \"@commitlint/cli\": \"12.1.1\",\n    \"@js-library/commitlint-config\": \"0.0.4\",\n    \"ava\": \"3.15.0\",\n    \"babel-plugin-transform-remove-console\": \"6.9.4\",\n    \"babel-plugin-unassert\": \"3.0.1\",\n    \"babel-preset-power-assert\": \"3.0.0\",\n    \"c8\": \"7.7.0\",\n    \"coveralls\": \"3.1.0\",\n    \"esdoc\": \"1.1.0\",\n    \"esdoc-inject-script-plugin\": \"1.0.0\",\n    \"esdoc-inject-style-plugin\": \"1.0.0\",\n    \"esdoc-standard-plugin\": \"1.0.0\",\n    \"fixpack\": \"4.0.0\",\n    \"husky\": \"6.0.0\",\n    \"lint-staged\": \"10.5.4\",\n    \"microbundle\": \"0.13.0\",\n    \"np\": \"7.4.0\",\n    \"pinst\": \"2.1.6\",\n    \"power-assert\": \"1.6.1\",\n    \"regenerator-runtime\": \"0.13.7\",\n    \"xo\": \"0.38.2\"\n  },\n  \"ava\": {\n    \"files\": [\n      \"test/src/**/*\"\n    ],\n    \"require\": [\n      \"regenerator-runtime/runtime\",\n      \"@babel/register\"\n    ],\n    \"timeout\": \"1m\",\n    \"concurrency\": 8\n  },\n  \"babel\": {\n    \"sourceMaps\": true,\n    \"presets\": [\n      [\n        \"@babel/preset-env\",\n        {\n          \"targets\": \"current node\"\n        }\n      ]\n    ],\n    \"plugins\": [\n      [\n        \"transform-remove-console\",\n        {\n          \"exclude\": [\n            \"log\",\n            \"error\",\n            \"warn\"\n          ]\n        }\n      ]\n    ],\n    \"env\": {\n      \"debug\": {\n        \"presets\": [\n          \"babel-preset-power-assert\"\n        ],\n        \"plugins\": [\n          [\n            \"transform-remove-console\",\n            {\n              \"exclude\": [\n                \"debug\",\n                \"log\",\n                \"error\",\n                \"warn\"\n              ]\n            }\n          ]\n        ]\n      },\n      \"test\": {\n        \"presets\": [\n          \"babel-preset-power-assert\"\n        ]\n      },\n      \"development\": {\n        \"presets\": [\n          [\n            \"@babel/preset-env\",\n            {\n              \"targets\": [\n                \"defaults\",\n                \"maintained node versions\"\n              ]\n            }\n          ],\n          \"babel-preset-power-assert\"\n        ]\n      },\n      \"production\": {\n        \"presets\": [\n          [\n            \"@babel/preset-env\",\n            {\n              \"targets\": [\n                \"defaults\",\n                \"maintained node versions\"\n              ]\n            }\n          ]\n        ],\n        \"plugins\": [\n          \"babel-plugin-unassert\"\n        ]\n      },\n      \"cover\": {\n        \"sourceMaps\": \"both\",\n        \"presets\": [\n          \"babel-preset-power-assert\"\n        ]\n      }\n    }\n  },\n  \"lint-staged\": {\n    \"*.js\": [\n      \"npm run lint-and-fix\"\n    ],\n    \"package.json\": [\n      \"npm run lint-config-and-fix\"\n    ]\n  },\n  \"prettier\": {\n    \"trailingComma\": \"all\"\n  },\n  \"xo\": {\n    \"prettier\": true,\n    \"plugins\": [\n      \"unicorn\"\n    ],\n    \"rules\": {\n      \"unicorn/filename-case\": \"off\",\n      \"camelcase\": \"off\",\n      \"unicorn/prevent-abbreviations\": \"off\",\n      \"no-constant-condition\": \"off\",\n      \"unicorn/prefer-math-trunc\": \"off\",\n      \"unicorn/no-new-array\": \"off\",\n      \"no-negated-condition\": \"off\"\n    },\n    \"overrides\": [\n      {\n        \"files\": [\n          \"doc/**\"\n        ],\n        \"env\": \"browser\"\n      }\n    ]\n  }\n}\n",
+    "content": "{\n  \"name\": \"@aureooms/js-random\",\n  \"description\": \"Randomness algorithms for JavaScript\",\n  \"version\": \"3.1.0\",\n  \"license\": \"AGPL-3.0\",\n  \"author\": \"Aurélien Ooms <aurelien.ooms@gmail.com>\",\n  \"homepage\": \"https://aureooms.github.io/js-random\",\n  \"repository\": {\n    \"url\": \"https://github.com/aureooms/js-random\",\n    \"type\": \"git\"\n  },\n  \"bugs\": {\n    \"url\": \"https://github.com/aureooms/js-random/issues\"\n  },\n  \"keywords\": [\n    \"javascript\",\n    \"js\",\n    \"randfloat\",\n    \"randint\",\n    \"random\",\n    \"randomness\",\n    \"sample\",\n    \"shuffle\"\n  ],\n  \"sideEffects\": false,\n  \"source\": \"src/index.js\",\n  \"main\": \"dist/index.js\",\n  \"module\": \"dist/index.module.js\",\n  \"esmodule\": \"dist/index.modern.js\",\n  \"umd:main\": \"dist/index.umd.js\",\n  \"unpkg\": \"dist/index.umd.js\",\n  \"exports\": {\n    \".\": {\n      \"browser\": \"./dist/index.module.js\",\n      \"umd\": \"./dist/index.umd.js\",\n      \"require\": \"./dist/index.js\",\n      \"default\": \"./dist/index.modern.js\"\n    }\n  },\n  \"files\": [\n    \"dist\"\n  ],\n  \"scripts\": {\n    \"build\": \"NODE_ENV=production microbundle\",\n    \"build-docs\": \"esdoc\",\n    \"build-gh-pages\": \"npm run build-docs\",\n    \"ci:test\": \"npm run lint-config && npm run lint && npm run cover\",\n    \"commit-msg\": \"commitlint --edit\",\n    \"cover\": \"NODE_ENV=cover c8 --all --src src --reporter lcov --reporter text-summary --reporter text npm test\",\n    \"debug\": \"NODE_ENV=debug npm run test -- -st --fail-fast\",\n    \"dev\": \"npm run lint-config-and-fix && npm run lint-and-fix && npm run cover -- -- -st --fail-fast\",\n    \"install-hooks\": \"husky install\",\n    \"lint\": \"xo\",\n    \"lint-and-fix\": \"npm run lint -- --fix\",\n    \"lint-config\": \"fixpack --dryRun\",\n    \"lint-config-and-fix\": \"fixpack || fixpack\",\n    \"postinstall\": \"npm run install-hooks\",\n    \"postpublish\": \"pinst --enable\",\n    \"precommit\": \"lint-staged\",\n    \"prepare\": \"npm run build\",\n    \"prepublishOnly\": \"pinst --disable\",\n    \"release\": \"np --message ':hatching_chick: release: Bumping to v%s.'\",\n    \"test\": \"ava\"\n  },\n  \"dependencies\": {},\n  \"devDependencies\": {\n    \"@aureooms/js-array\": \"4.0.0\",\n    \"@aureooms/js-functools\": \"2.0.3\",\n    \"@aureooms/js-itertools\": \"5.0.1\",\n    \"@aureooms/js-memory\": \"4.0.0\",\n    \"@aureooms/js-operator\": \"1.0.2\",\n    \"@aureooms/js-type\": \"1.0.4\",\n    \"@babel/core\": \"7.13.10\",\n    \"@babel/preset-env\": \"7.13.10\",\n    \"@babel/register\": \"7.13.8\",\n    \"@commitlint/cli\": \"12.1.1\",\n    \"@js-library/commitlint-config\": \"0.0.4\",\n    \"ava\": \"3.15.0\",\n    \"babel-plugin-transform-remove-console\": \"6.9.4\",\n    \"babel-plugin-unassert\": \"3.0.1\",\n    \"babel-preset-power-assert\": \"3.0.0\",\n    \"c8\": \"7.7.0\",\n    \"coveralls\": \"3.1.0\",\n    \"esdoc\": \"1.1.0\",\n    \"esdoc-inject-script-plugin\": \"1.0.0\",\n    \"esdoc-inject-style-plugin\": \"1.0.0\",\n    \"esdoc-standard-plugin\": \"1.0.0\",\n    \"fixpack\": \"4.0.0\",\n    \"husky\": \"6.0.0\",\n    \"lint-staged\": \"10.5.4\",\n    \"microbundle\": \"0.13.0\",\n    \"np\": \"7.4.0\",\n    \"pinst\": \"2.1.6\",\n    \"power-assert\": \"1.6.1\",\n    \"regenerator-runtime\": \"0.13.7\",\n    \"xo\": \"0.38.2\"\n  },\n  \"ava\": {\n    \"files\": [\n      \"test/src/**/*\"\n    ],\n    \"require\": [\n      \"regenerator-runtime/runtime\",\n      \"@babel/register\"\n    ],\n    \"timeout\": \"1m\",\n    \"concurrency\": 8\n  },\n  \"babel\": {\n    \"sourceMaps\": true,\n    \"presets\": [\n      [\n        \"@babel/preset-env\",\n        {\n          \"targets\": \"current node\"\n        }\n      ]\n    ],\n    \"plugins\": [\n      [\n        \"transform-remove-console\",\n        {\n          \"exclude\": [\n            \"log\",\n            \"error\",\n            \"warn\"\n          ]\n        }\n      ]\n    ],\n    \"env\": {\n      \"debug\": {\n        \"presets\": [\n          \"babel-preset-power-assert\"\n        ],\n        \"plugins\": [\n          [\n            \"transform-remove-console\",\n            {\n              \"exclude\": [\n                \"debug\",\n                \"log\",\n                \"error\",\n                \"warn\"\n              ]\n            }\n          ]\n        ]\n      },\n      \"test\": {\n        \"presets\": [\n          \"babel-preset-power-assert\"\n        ]\n      },\n      \"development\": {\n        \"presets\": [\n          [\n            \"@babel/preset-env\",\n            {\n              \"targets\": [\n                \"defaults\",\n                \"maintained node versions\"\n              ]\n            }\n          ],\n          \"babel-preset-power-assert\"\n        ]\n      },\n      \"production\": {\n        \"presets\": [\n          [\n            \"@babel/preset-env\",\n            {\n              \"targets\": [\n                \"defaults\",\n                \"maintained node versions\"\n              ]\n            }\n          ]\n        ],\n        \"plugins\": [\n          \"babel-plugin-unassert\"\n        ]\n      },\n      \"cover\": {\n        \"sourceMaps\": \"both\",\n        \"presets\": [\n          \"babel-preset-power-assert\"\n        ]\n      }\n    }\n  },\n  \"lint-staged\": {\n    \"*.js\": [\n      \"npm run lint-and-fix\"\n    ],\n    \"package.json\": [\n      \"npm run lint-config-and-fix\"\n    ]\n  },\n  \"prettier\": {\n    \"trailingComma\": \"all\"\n  },\n  \"xo\": {\n    \"prettier\": true,\n    \"plugins\": [\n      \"unicorn\"\n    ],\n    \"rules\": {\n      \"unicorn/filename-case\": \"off\",\n      \"camelcase\": \"off\",\n      \"unicorn/prevent-abbreviations\": \"off\",\n      \"no-constant-condition\": \"off\",\n      \"unicorn/prefer-math-trunc\": \"off\",\n      \"unicorn/no-new-array\": \"off\",\n      \"no-negated-condition\": \"off\"\n    },\n    \"overrides\": [\n      {\n        \"files\": [\n          \"doc/**\"\n        ],\n        \"env\": \"browser\"\n      }\n    ]\n  }\n}\n",
     "longname": "/home/runner/work/js-random/js-random/package.json",
     "name": "package.json",
     "static": true,

@@ -6,6 +6,18 @@ window.esdocSearchIndex = [
     "function"
   ],
   [
+    "@aureooms/js-random/src/kernel/_randfloat.js~_randfloat",
+    "function/index.html#static-function-_randfloat",
+    "<span>_randfloat</span> <span class=\"search-result-import-path\">@aureooms/js-random/src/kernel/_randfloat.js</span>",
+    "function"
+  ],
+  [
+    "@aureooms/js-random/src/kernel/_randint.js~_randint",
+    "function/index.html#static-function-_randint",
+    "<span>_randint</span> <span class=\"search-result-import-path\">@aureooms/js-random/src/kernel/_randint.js</span>",
+    "function"
+  ],
+  [
     "@aureooms/js-random/src/kernel/_shuffle.js~_shuffle",
     "function/index.html#static-function-_shuffle",
     "<span>_shuffle</span> <span class=\"search-result-import-path\">@aureooms/js-random/src/kernel/_shuffle.js</span>",
@@ -13,14 +25,20 @@ window.esdocSearchIndex = [
   ],
   [
     "@aureooms/js-random/src/api/randfloat.js~randfloat",
-    "function/index.html#static-function-randfloat",
+    "variable/index.html#static-variable-randfloat",
     "<span>randfloat</span> <span class=\"search-result-import-path\">@aureooms/js-random/src/api/randfloat.js</span>",
-    "function"
+    "variable"
   ],
   [
     "@aureooms/js-random/src/api/randint.js~randint",
-    "function/index.html#static-function-randint",
+    "variable/index.html#static-variable-randint",
     "<span>randint</span> <span class=\"search-result-import-path\">@aureooms/js-random/src/api/randint.js</span>",
+    "variable"
+  ],
+  [
+    "@aureooms/js-random/src/api/random.js~random",
+    "function/index.html#static-function-random",
+    "<span>random</span> <span class=\"search-result-import-path\">@aureooms/js-random/src/api/random.js</span>",
     "function"
   ],
   [
@@ -336,6 +354,12 @@ window.esdocSearchIndex = [
     "file"
   ],
   [
+    "src/api/random.js",
+    "file/src/api/random.js.html",
+    "src/api/random.js",
+    "file"
+  ],
+  [
     "src/api/randrange.js",
     "file/src/api/randrange.js.html",
     "src/api/randrange.js",
@@ -363,6 +387,18 @@ window.esdocSearchIndex = [
     "src/kernel/_fisheryates.js",
     "file/src/kernel/_fisheryates.js.html",
     "src/kernel/_fisheryates.js",
+    "file"
+  ],
+  [
+    "src/kernel/_randfloat.js",
+    "file/src/kernel/_randfloat.js.html",
+    "src/kernel/_randfloat.js",
+    "file"
+  ],
+  [
+    "src/kernel/_randint.js",
+    "file/src/kernel/_randint.js.html",
+    "src/kernel/_randint.js",
     "file"
   ],
   [
