@@ -157,13 +157,13 @@
           
           
           
-          <span class="code" data-ice="name"><span><a href="function/index.html#static-function-_fisheryates">_fisheryates</a></span></span><span class="code" data-ice="signature">(randint: <span>*</span>)</span>
+          <span class="code" data-ice="name"><span><a href="function/index.html#static-function-_fisheryates">_fisheryates</a></span></span><span class="code" data-ice="signature">(randint: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">Function</a></span>): <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">Function</a></span></span>
         </p>
       </div>
       <div>
         
         
-        <div data-ice="description"><p>Sample array using Fisher-Yates method.</p>
+        <div data-ice="description"><p>Sample element from an array using Fisher-Yates method.</p>
 </div>
       </div>
     </td>
@@ -244,13 +244,13 @@
           
           
           
-          <span class="code" data-ice="name"><span><a href="function/index.html#static-function-_shuffle">_shuffle</a></span></span><span class="code" data-ice="signature">(sample: <span>*</span>)</span>
+          <span class="code" data-ice="name"><span><a href="function/index.html#static-function-_shuffle">_shuffle</a></span></span><span class="code" data-ice="signature">(sample: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">Function</a></span>): <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">Function</a></span></span>
         </p>
       </div>
       <div>
         
         
-        <div data-ice="description"><p>Shuffle array by sampling the complete array.</p>
+        <div data-ice="description"><p>Shuffle the array by sampling the entire array.</p>
 </div>
       </div>
     </td>
@@ -488,18 +488,33 @@
     
     
     
-    <span class="code" data-ice="name">_fisheryates</span><span class="code" data-ice="signature">(randint: <span>*</span>)</span>
+    <span class="code" data-ice="name">_fisheryates</span><span class="code" data-ice="signature">(randint: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">Function</a></span>): <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">Function</a></span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/kernel/_fisheryates.js.html#lineNumber5">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/kernel/_fisheryates.js.html#lineNumber25">source</a></span></span>
     </span>
   </h3>
 
-  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import _fisheryates from &apos;<span><a href="file/src/kernel/_fisheryates.js.html#lineNumber5">@aureooms/js-random/src/kernel/_fisheryates.js</a></span>&apos;</code></pre></div>
+  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import _fisheryates from &apos;<span><a href="file/src/kernel/_fisheryates.js.html#lineNumber25">@aureooms/js-random/src/kernel/_fisheryates.js</a></span>&apos;</code></pre></div>
   
   
-  <div data-ice="description"><p>Sample array using Fisher-Yates method.</p>
+  <div data-ice="description"><p>Sample element from an array using Fisher-Yates method.</p>
+<p>NOTE: The original description of the algorithm by Fisher and Yates [1] had
+unnecessary bookkeeping which made the algorithm run in O(n * (j-i)) time.
+This implementation follows Durstenfeld&apos;s [2] and Knuth&apos;s [3] descriptions
+which yield O(n) running time.</p>
+<p>For more information see the excellent &quot;Fisher&#x2013;Yates shuffle&quot; page on
+Wikipedia [4]. Fisher and Yates description is referred there as
+&quot;Fisher and Yate&apos;s original method&quot; or &quot;pencil-and-paper method&quot;.
+The more efficient implementation described by Durstenfeld and Knuth is
+referred there as &quot;the modern method&quot;.</p>
+<p>[1] Fisher, Ronald A.; Yates, Frank (1938). Statistical tables for
+    biological, agricultural and medical research.
+[2] Durstenfeld, R. (July 1964). &quot;Algorithm 235: Random permutation&quot;
+[3] Knuth, Donald E. (1969). Seminumerical algorithms. The Art of Computer
+    Programming Volume 2.
+[4] <a href="https://en.wikipedia.org/wiki/Fisher&#x2013;Yates_shuffle">https://en.wikipedia.org/wiki/Fisher&#x2013;Yates_shuffle</a></p>
 </div>
 
   
@@ -514,16 +529,30 @@
     
     <tr data-ice="property" data-depth="0">
       <td data-ice="name" class="code" data-depth="0">randint</td>
-      <td data-ice="type" class="code"><span>*</span></td>
+      <td data-ice="type" class="code"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">Function</a></span></td>
       <td data-ice="appendix"></td>
-      <td data-ice="description"></td>
+      <td data-ice="description"><p>The randint function.</p>
+</td>
     </tr>
 </tbody>
   </table>
 </div>
 </div>
 
-  
+  <div class="return-params" data-ice="returnParams">
+    <h4>Return:</h4>
+    <table>
+      <tbody>
+        <tr>
+          <td class="return-type code" data-ice="returnType"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">Function</a></span></td>
+          <td class="return-desc" data-ice="returnDescription"><p>The sampling function.</p>
+</td>
+        </tr>
+      </tbody>
+    </table>
+    <div data-ice="returnProperties">
+</div>
+  </div>
 
   
 
@@ -698,18 +727,18 @@ double uniformly at random in the interval [0, 1).</p>
     
     
     
-    <span class="code" data-ice="name">_shuffle</span><span class="code" data-ice="signature">(sample: <span>*</span>)</span>
+    <span class="code" data-ice="name">_shuffle</span><span class="code" data-ice="signature">(sample: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">Function</a></span>): <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">Function</a></span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/kernel/_shuffle.js.html#lineNumber5">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/kernel/_shuffle.js.html#lineNumber7">source</a></span></span>
     </span>
   </h3>
 
-  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import _shuffle from &apos;<span><a href="file/src/kernel/_shuffle.js.html#lineNumber5">@aureooms/js-random/src/kernel/_shuffle.js</a></span>&apos;</code></pre></div>
+  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import _shuffle from &apos;<span><a href="file/src/kernel/_shuffle.js.html#lineNumber7">@aureooms/js-random/src/kernel/_shuffle.js</a></span>&apos;</code></pre></div>
   
   
-  <div data-ice="description"><p>Shuffle array by sampling the complete array.</p>
+  <div data-ice="description"><p>Shuffle the array by sampling the entire array.</p>
 </div>
 
   
@@ -724,16 +753,30 @@ double uniformly at random in the interval [0, 1).</p>
     
     <tr data-ice="property" data-depth="0">
       <td data-ice="name" class="code" data-depth="0">sample</td>
-      <td data-ice="type" class="code"><span>*</span></td>
+      <td data-ice="type" class="code"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">Function</a></span></td>
       <td data-ice="appendix"></td>
-      <td data-ice="description"></td>
+      <td data-ice="description"><p>The sample function.</p>
+</td>
     </tr>
 </tbody>
   </table>
 </div>
 </div>
 
-  
+  <div class="return-params" data-ice="returnParams">
+    <h4>Return:</h4>
+    <table>
+      <tbody>
+        <tr>
+          <td class="return-type code" data-ice="returnType"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">Function</a></span></td>
+          <td class="return-desc" data-ice="returnDescription"><p>The shuffle function.</p>
+</td>
+        </tr>
+      </tbody>
+    </table>
+    <div data-ice="returnProperties">
+</div>
+  </div>
 
   
 

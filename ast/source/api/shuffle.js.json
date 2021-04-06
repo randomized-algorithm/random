@@ -1,28 +1,28 @@
 {
   "type": "File",
   "start": 0,
-  "end": 139,
+  "end": 406,
   "loc": {
     "start": {
       "line": 1,
       "column": 0
     },
     "end": {
-      "line": 6,
+      "line": 14,
       "column": 0
     }
   },
   "program": {
     "type": "Program",
     "start": 0,
-    "end": 139,
+    "end": 406,
     "loc": {
       "start": {
         "line": 1,
         "column": 0
       },
       "end": {
-        "line": 6,
+        "line": 14,
         "column": 0
       }
     },
@@ -164,79 +164,98 @@
             "raw": "'./sample.js'"
           },
           "value": "./sample.js"
-        }
+        },
+        "trailingComments": [
+          {
+            "type": "CommentBlock",
+            "value": "*\n * Shuffle array in-place between positions i and j-1 (inclusive).\n * The other positions are left untouched.\n * @function\n * @param {Array} a The input array.\n * @param {number} i The inclusive left bound.\n * @param {number} j The non-inclusive right bound.\n ",
+            "start": 81,
+            "end": 347,
+            "loc": {
+              "start": {
+                "line": 4,
+                "column": 0
+              },
+              "end": {
+                "line": 11,
+                "column": 3
+              }
+            }
+          }
+        ]
       },
       {
         "type": "Identifier",
-        "start": 81,
-        "end": 114,
+        "start": 348,
+        "end": 381,
         "loc": {
           "start": {
-            "line": 4,
+            "line": 12,
             "column": 0
           },
           "end": {
-            "line": 4,
+            "line": 12,
             "column": 33
           }
         },
         "declarations": [
           {
             "type": "VariableDeclarator",
-            "start": 87,
-            "end": 113,
+            "start": 354,
+            "end": 380,
             "loc": {
               "start": {
-                "line": 4,
+                "line": 12,
                 "column": 6
               },
               "end": {
-                "line": 4,
+                "line": 12,
                 "column": 32
               }
             },
             "id": {
               "type": "Identifier",
-              "start": 87,
-              "end": 94,
+              "start": 354,
+              "end": 361,
               "loc": {
                 "start": {
-                  "line": 4,
+                  "line": 12,
                   "column": 6
                 },
                 "end": {
-                  "line": 4,
+                  "line": 12,
                   "column": 13
                 },
                 "identifierName": "shuffle"
               },
-              "name": "shuffle"
+              "name": "shuffle",
+              "leadingComments": null
             },
             "init": {
               "type": "CallExpression",
-              "start": 97,
-              "end": 113,
+              "start": 364,
+              "end": 380,
               "loc": {
                 "start": {
-                  "line": 4,
+                  "line": 12,
                   "column": 16
                 },
                 "end": {
-                  "line": 4,
+                  "line": 12,
                   "column": 32
                 }
               },
               "callee": {
                 "type": "Identifier",
-                "start": 97,
-                "end": 105,
+                "start": 364,
+                "end": 372,
                 "loc": {
                   "start": {
-                    "line": 4,
+                    "line": 12,
                     "column": 16
                   },
                   "end": {
-                    "line": 4,
+                    "line": 12,
                     "column": 24
                   },
                   "identifierName": "_shuffle"
@@ -246,15 +265,15 @@
               "arguments": [
                 {
                   "type": "Identifier",
-                  "start": 106,
-                  "end": 112,
+                  "start": 373,
+                  "end": 379,
                   "loc": {
                     "start": {
-                      "line": 4,
+                      "line": 12,
                       "column": 25
                     },
                     "end": {
-                      "line": 4,
+                      "line": 12,
                       "column": 31
                     },
                     "identifierName": "sample"
@@ -262,39 +281,40 @@
                   "name": "sample"
                 }
               ]
-            }
+            },
+            "leadingComments": null
           }
         ],
         "kind": "const",
-        "name": "_",
         "leadingComments": [],
+        "name": "_",
         "trailingComments": []
       },
       {
         "type": "Identifier",
-        "start": 115,
-        "end": 138,
+        "start": 382,
+        "end": 405,
         "loc": {
           "start": {
-            "line": 5,
+            "line": 13,
             "column": 0
           },
           "end": {
-            "line": 5,
+            "line": 13,
             "column": 23
           }
         },
         "declaration": {
           "type": "Identifier",
-          "start": 130,
-          "end": 137,
+          "start": 397,
+          "end": 404,
           "loc": {
             "start": {
-              "line": 5,
+              "line": 13,
               "column": 15
             },
             "end": {
-              "line": 5,
+              "line": 13,
               "column": 22
             },
             "identifierName": "shuffle"
@@ -307,89 +327,90 @@
       },
       {
         "type": "ExportDefaultDeclaration",
-        "start": 115,
-        "end": 138,
+        "start": 382,
+        "end": 405,
         "loc": {
           "start": {
-            "line": 5,
+            "line": 13,
             "column": 0
           },
           "end": {
-            "line": 5,
+            "line": 13,
             "column": 23
           }
         },
         "declaration": {
           "type": "VariableDeclaration",
-          "start": 81,
-          "end": 114,
+          "start": 348,
+          "end": 381,
           "loc": {
             "start": {
-              "line": 4,
+              "line": 12,
               "column": 0
             },
             "end": {
-              "line": 4,
+              "line": 12,
               "column": 33
             }
           },
           "declarations": [
             {
               "type": "VariableDeclarator",
-              "start": 87,
-              "end": 113,
+              "start": 354,
+              "end": 380,
               "loc": {
                 "start": {
-                  "line": 4,
+                  "line": 12,
                   "column": 6
                 },
                 "end": {
-                  "line": 4,
+                  "line": 12,
                   "column": 32
                 }
               },
               "id": {
                 "type": "Identifier",
-                "start": 87,
-                "end": 94,
+                "start": 354,
+                "end": 361,
                 "loc": {
                   "start": {
-                    "line": 4,
+                    "line": 12,
                     "column": 6
                   },
                   "end": {
-                    "line": 4,
+                    "line": 12,
                     "column": 13
                   },
                   "identifierName": "shuffle"
                 },
-                "name": "shuffle"
+                "name": "shuffle",
+                "leadingComments": null
               },
               "init": {
                 "type": "CallExpression",
-                "start": 97,
-                "end": 113,
+                "start": 364,
+                "end": 380,
                 "loc": {
                   "start": {
-                    "line": 4,
+                    "line": 12,
                     "column": 16
                   },
                   "end": {
-                    "line": 4,
+                    "line": 12,
                     "column": 32
                   }
                 },
                 "callee": {
                   "type": "Identifier",
-                  "start": 97,
-                  "end": 105,
+                  "start": 364,
+                  "end": 372,
                   "loc": {
                     "start": {
-                      "line": 4,
+                      "line": 12,
                       "column": 16
                     },
                     "end": {
-                      "line": 4,
+                      "line": 12,
                       "column": 24
                     },
                     "identifierName": "_shuffle"
@@ -399,15 +420,15 @@
                 "arguments": [
                   {
                     "type": "Identifier",
-                    "start": 106,
-                    "end": 112,
+                    "start": 373,
+                    "end": 379,
                     "loc": {
                       "start": {
-                        "line": 4,
+                        "line": 12,
                         "column": 25
                       },
                       "end": {
-                        "line": 4,
+                        "line": 12,
                         "column": 31
                       },
                       "identifierName": "sample"
@@ -415,18 +436,53 @@
                     "name": "sample"
                   }
                 ]
-              }
+              },
+              "leadingComments": null
             }
           ],
           "kind": "const",
-          "leadingComments": [],
+          "leadingComments": [
+            {
+              "type": "CommentBlock",
+              "value": "*\n * Shuffle array in-place between positions i and j-1 (inclusive).\n * The other positions are left untouched.\n * @function\n * @param {Array} a The input array.\n * @param {number} i The inclusive left bound.\n * @param {number} j The non-inclusive right bound.\n ",
+              "start": 81,
+              "end": 347,
+              "loc": {
+                "start": {
+                  "line": 4,
+                  "column": 0
+                },
+                "end": {
+                  "line": 11,
+                  "column": 3
+                }
+              }
+            }
+          ],
           "trailingComments": []
         }
       }
     ],
     "directives": []
   },
-  "comments": [],
+  "comments": [
+    {
+      "type": "CommentBlock",
+      "value": "*\n * Shuffle array in-place between positions i and j-1 (inclusive).\n * The other positions are left untouched.\n * @function\n * @param {Array} a The input array.\n * @param {number} i The inclusive left bound.\n * @param {number} j The non-inclusive right bound.\n ",
+      "start": 81,
+      "end": 347,
+      "loc": {
+        "start": {
+          "line": 4,
+          "column": 0
+        },
+        "end": {
+          "line": 11,
+          "column": 3
+        }
+      }
+    }
+  ],
   "tokens": [
     {
       "type": {
@@ -695,6 +751,22 @@
       }
     },
     {
+      "type": "CommentBlock",
+      "value": "*\n * Shuffle array in-place between positions i and j-1 (inclusive).\n * The other positions are left untouched.\n * @function\n * @param {Array} a The input array.\n * @param {number} i The inclusive left bound.\n * @param {number} j The non-inclusive right bound.\n ",
+      "start": 81,
+      "end": 347,
+      "loc": {
+        "start": {
+          "line": 4,
+          "column": 0
+        },
+        "end": {
+          "line": 11,
+          "column": 3
+        }
+      }
+    },
+    {
       "type": {
         "label": "const",
         "keyword": "const",
@@ -709,15 +781,15 @@
         "updateContext": null
       },
       "value": "const",
-      "start": 81,
-      "end": 86,
+      "start": 348,
+      "end": 353,
       "loc": {
         "start": {
-          "line": 4,
+          "line": 12,
           "column": 0
         },
         "end": {
-          "line": 4,
+          "line": 12,
           "column": 5
         }
       }
@@ -735,15 +807,15 @@
         "binop": null
       },
       "value": "shuffle",
-      "start": 87,
-      "end": 94,
+      "start": 354,
+      "end": 361,
       "loc": {
         "start": {
-          "line": 4,
+          "line": 12,
           "column": 6
         },
         "end": {
-          "line": 4,
+          "line": 12,
           "column": 13
         }
       }
@@ -762,15 +834,15 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 95,
-      "end": 96,
+      "start": 362,
+      "end": 363,
       "loc": {
         "start": {
-          "line": 4,
+          "line": 12,
           "column": 14
         },
         "end": {
-          "line": 4,
+          "line": 12,
           "column": 15
         }
       }
@@ -788,15 +860,15 @@
         "binop": null
       },
       "value": "_shuffle",
-      "start": 97,
-      "end": 105,
+      "start": 364,
+      "end": 372,
       "loc": {
         "start": {
-          "line": 4,
+          "line": 12,
           "column": 16
         },
         "end": {
-          "line": 4,
+          "line": 12,
           "column": 24
         }
       }
@@ -813,15 +885,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 105,
-      "end": 106,
+      "start": 372,
+      "end": 373,
       "loc": {
         "start": {
-          "line": 4,
+          "line": 12,
           "column": 24
         },
         "end": {
-          "line": 4,
+          "line": 12,
           "column": 25
         }
       }
@@ -839,15 +911,15 @@
         "binop": null
       },
       "value": "sample",
-      "start": 106,
-      "end": 112,
+      "start": 373,
+      "end": 379,
       "loc": {
         "start": {
-          "line": 4,
+          "line": 12,
           "column": 25
         },
         "end": {
-          "line": 4,
+          "line": 12,
           "column": 31
         }
       }
@@ -864,15 +936,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 112,
-      "end": 113,
+      "start": 379,
+      "end": 380,
       "loc": {
         "start": {
-          "line": 4,
+          "line": 12,
           "column": 31
         },
         "end": {
-          "line": 4,
+          "line": 12,
           "column": 32
         }
       }
@@ -890,15 +962,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 113,
-      "end": 114,
+      "start": 380,
+      "end": 381,
       "loc": {
         "start": {
-          "line": 4,
+          "line": 12,
           "column": 32
         },
         "end": {
-          "line": 4,
+          "line": 12,
           "column": 33
         }
       }
@@ -918,15 +990,15 @@
         "updateContext": null
       },
       "value": "export",
-      "start": 115,
-      "end": 121,
+      "start": 382,
+      "end": 388,
       "loc": {
         "start": {
-          "line": 5,
+          "line": 13,
           "column": 0
         },
         "end": {
-          "line": 5,
+          "line": 13,
           "column": 6
         }
       }
@@ -946,15 +1018,15 @@
         "updateContext": null
       },
       "value": "default",
-      "start": 122,
-      "end": 129,
+      "start": 389,
+      "end": 396,
       "loc": {
         "start": {
-          "line": 5,
+          "line": 13,
           "column": 7
         },
         "end": {
-          "line": 5,
+          "line": 13,
           "column": 14
         }
       }
@@ -972,15 +1044,15 @@
         "binop": null
       },
       "value": "shuffle",
-      "start": 130,
-      "end": 137,
+      "start": 397,
+      "end": 404,
       "loc": {
         "start": {
-          "line": 5,
+          "line": 13,
           "column": 15
         },
         "end": {
-          "line": 5,
+          "line": 13,
           "column": 22
         }
       }
@@ -998,15 +1070,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 137,
-      "end": 138,
+      "start": 404,
+      "end": 405,
       "loc": {
         "start": {
-          "line": 5,
+          "line": 13,
           "column": 22
         },
         "end": {
-          "line": 5,
+          "line": 13,
           "column": 23
         }
       }
@@ -1024,15 +1096,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 139,
-      "end": 139,
+      "start": 406,
+      "end": 406,
       "loc": {
         "start": {
-          "line": 6,
+          "line": 14,
           "column": 0
         },
         "end": {
-          "line": 6,
+          "line": 14,
           "column": 0
         }
       }

@@ -153,13 +153,15 @@ according to a uniform distribution.</p>
           
           
           
-          <span class="code" data-ice="name"><span><a href="variable/index.html#static-variable-sample">sample</a></span></span><span class="code" data-ice="signature">: <span>*</span></span>
+          <span class="code" data-ice="name"><span><a href="variable/index.html#static-variable-sample">sample</a></span></span><span class="code" data-ice="signature">(n: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></span>, a: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></span>, i: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></span>, j: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></span>): <span>*</span></span>
         </p>
       </div>
       <div>
         
         
-        
+        <div data-ice="description"><p>Take a sample of size n (without repetitions) from the items i through
+j-1 of the input array.</p>
+</div>
       </div>
     </td>
     <td>
@@ -181,13 +183,14 @@ according to a uniform distribution.</p>
           
           
           
-          <span class="code" data-ice="name"><span><a href="variable/index.html#static-variable-shuffle">shuffle</a></span></span><span class="code" data-ice="signature">: <span>*</span></span>
+          <span class="code" data-ice="name"><span><a href="variable/index.html#static-variable-shuffle">shuffle</a></span></span><span class="code" data-ice="signature">(a: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></span>, i: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></span>, j: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></span>): <span>*</span></span>
         </p>
       </div>
       <div>
         
         
-        
+        <div data-ice="description"><p>Shuffle array in-place between positions i and j-1 (inclusive).</p>
+</div>
       </div>
     </td>
     <td>
@@ -383,18 +386,21 @@ random.</p>
     
     
     
-    <span class="code" data-ice="name">sample</span><span class="code" data-ice="signature">: <span>*</span></span>
+    <span class="code" data-ice="name">sample</span><span class="code" data-ice="signature">(n: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></span>, a: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></span>, i: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></span>, j: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></span>): <span>*</span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/api/sample.js.html#lineNumber4">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/api/sample.js.html#lineNumber15">source</a></span></span>
     </span>
   </h3>
 
-  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import sample from &apos;<span><a href="file/src/api/sample.js.html#lineNumber4">@aureooms/js-random/src/api/sample.js</a></span>&apos;</code></pre></div>
+  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import sample from &apos;<span><a href="file/src/api/sample.js.html#lineNumber15">@aureooms/js-random/src/api/sample.js</a></span>&apos;</code></pre></div>
   
   
-  
+  <div data-ice="description"><p>Take a sample of size n (without repetitions) from the items i through
+j-1 of the input array. This is done in-place. The sample can be retrieved
+from position i to i+n.</p>
+</div>
 
   
 
@@ -426,18 +432,20 @@ random.</p>
     
     
     
-    <span class="code" data-ice="name">shuffle</span><span class="code" data-ice="signature">: <span>*</span></span>
+    <span class="code" data-ice="name">shuffle</span><span class="code" data-ice="signature">(a: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></span>, i: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></span>, j: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></span>): <span>*</span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/api/shuffle.js.html#lineNumber4">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/api/shuffle.js.html#lineNumber12">source</a></span></span>
     </span>
   </h3>
 
-  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import shuffle from &apos;<span><a href="file/src/api/shuffle.js.html#lineNumber4">@aureooms/js-random/src/api/shuffle.js</a></span>&apos;</code></pre></div>
+  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import shuffle from &apos;<span><a href="file/src/api/shuffle.js.html#lineNumber12">@aureooms/js-random/src/api/shuffle.js</a></span>&apos;</code></pre></div>
   
   
-  
+  <div data-ice="description"><p>Shuffle array in-place between positions i and j-1 (inclusive).
+The other positions are left untouched.</p>
+</div>
 
   
 

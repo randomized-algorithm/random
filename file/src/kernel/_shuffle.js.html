@@ -47,10 +47,24 @@
 
 <div class="content" data-ice="content"><h1 data-ice="title">src/kernel/_shuffle.js</h1>
 <pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">/**
- * Shuffle array by sampling the complete array.
+ * Shuffle the array by sampling the entire array.
+ *
+ * @param {Function} sample The sample function.
+ * @return {Function} The shuffle function.
  */
+const _shuffle = (sample) =&gt; {
+	/**
+	 * Shuffle array in-place between positions i and j-1 (inclusive).
+	 * The other positions are left untouched.
+	 *
+	 * @param {Array} a The input array.
+	 * @param {number} i The inclusive left bound.
+	 * @param {number} j The non-inclusive right bound.
+	 */
+	const shuffle = (a, i, j) =&gt; sample(j - i, a, i, j);
+	return shuffle;
+};
 
-const _shuffle = (sample) =&gt; (a, i, j) =&gt; sample(j - i, a, i, j);
 export default _shuffle;
 </code></pre>
 

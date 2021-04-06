@@ -863,7 +863,7 @@
     "__docId__": 58,
     "kind": "file",
     "name": "src/api/sample.js",
-    "content": "import _fisheryates from '../kernel/_fisheryates.js';\nimport randint from './randint.js';\n\nconst sample = _fisheryates(randint);\nexport default sample;\n",
+    "content": "import _fisheryates from '../kernel/_fisheryates.js';\nimport randint from './randint.js';\n\n/**\n * Take a sample of size n (without repetitions) from the items i through\n * j-1 of the input array. This is done in-place. The sample can be retrieved\n * from position i to i+n.\n *\n * @function\n * @param {number} n The size of the sample.\n * @param {Array} a The input array.\n * @param {number} i The inclusive left bound.\n * @param {number} j The non-inclusive right bound.\n */\nconst sample = _fisheryates(randint);\nexport default sample;\n",
     "static": true,
     "longname": "/home/runner/work/js-random/js-random/src/api/sample.js",
     "access": "public",
@@ -881,9 +881,56 @@
     "export": true,
     "importPath": "@aureooms/js-random/src/api/sample.js",
     "importStyle": "sample",
-    "description": null,
-    "lineNumber": 4,
-    "undocument": true,
+    "description": "Take a sample of size n (without repetitions) from the items i through\nj-1 of the input array. This is done in-place. The sample can be retrieved\nfrom position i to i+n.",
+    "lineNumber": 15,
+    "unknown": [
+      {
+        "tagName": "@function",
+        "tagValue": ""
+      }
+    ],
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "number"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "n",
+        "description": "The size of the sample."
+      },
+      {
+        "nullable": null,
+        "types": [
+          "Array"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "a",
+        "description": "The input array."
+      },
+      {
+        "nullable": null,
+        "types": [
+          "number"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "i",
+        "description": "The inclusive left bound."
+      },
+      {
+        "nullable": null,
+        "types": [
+          "number"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "j",
+        "description": "The non-inclusive right bound."
+      }
+    ],
     "type": {
       "types": [
         "*"
@@ -894,7 +941,7 @@
     "__docId__": 60,
     "kind": "file",
     "name": "src/api/shuffle.js",
-    "content": "import _shuffle from '../kernel/_shuffle.js';\nimport sample from './sample.js';\n\nconst shuffle = _shuffle(sample);\nexport default shuffle;\n",
+    "content": "import _shuffle from '../kernel/_shuffle.js';\nimport sample from './sample.js';\n\n/**\n * Shuffle array in-place between positions i and j-1 (inclusive).\n * The other positions are left untouched.\n * @function\n * @param {Array} a The input array.\n * @param {number} i The inclusive left bound.\n * @param {number} j The non-inclusive right bound.\n */\nconst shuffle = _shuffle(sample);\nexport default shuffle;\n",
     "static": true,
     "longname": "/home/runner/work/js-random/js-random/src/api/shuffle.js",
     "access": "public",
@@ -912,9 +959,46 @@
     "export": true,
     "importPath": "@aureooms/js-random/src/api/shuffle.js",
     "importStyle": "shuffle",
-    "description": null,
-    "lineNumber": 4,
-    "undocument": true,
+    "description": "Shuffle array in-place between positions i and j-1 (inclusive).\nThe other positions are left untouched.",
+    "lineNumber": 12,
+    "unknown": [
+      {
+        "tagName": "@function",
+        "tagValue": ""
+      }
+    ],
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "Array"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "a",
+        "description": "The input array."
+      },
+      {
+        "nullable": null,
+        "types": [
+          "number"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "i",
+        "description": "The inclusive left bound."
+      },
+      {
+        "nullable": null,
+        "types": [
+          "number"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "j",
+        "description": "The non-inclusive right bound."
+      }
+    ],
     "type": {
       "types": [
         "*"
@@ -983,7 +1067,7 @@
     "__docId__": 65,
     "kind": "file",
     "name": "src/kernel/_fisheryates.js",
-    "content": "/**\n * Sample array using Fisher-Yates method.\n */\n\nconst _fisheryates = (randint) => (n, a, i, j) => {\n\t// We will swap at most n elements\n\n\tconst k = i + n;\n\n\tfor (; i < k; ++i) {\n\t\t// Choose any index p in the remaining array\n\n\t\tconst p = randint(i, j);\n\n\t\t// Swap element at index p with first element in the array\n\n\t\tconst tmp = a[i];\n\t\ta[i] = a[p];\n\t\ta[p] = tmp;\n\t}\n};\n\nexport default _fisheryates;\n",
+    "content": "/**\n * Sample element from an array using Fisher-Yates method.\n *\n * NOTE: The original description of the algorithm by Fisher and Yates [1] had\n * unnecessary bookkeeping which made the algorithm run in O(n * (j-i)) time.\n * This implementation follows Durstenfeld's [2] and Knuth's [3] descriptions\n * which yield O(n) running time.\n *\n * For more information see the excellent \"Fisher–Yates shuffle\" page on\n * Wikipedia [4]. Fisher and Yates description is referred there as\n * \"Fisher and Yate's original method\" or \"pencil-and-paper method\".\n * The more efficient implementation described by Durstenfeld and Knuth is\n * referred there as \"the modern method\".\n *\n * [1] Fisher, Ronald A.; Yates, Frank (1938). Statistical tables for\n *     biological, agricultural and medical research.\n * [2] Durstenfeld, R. (July 1964). \"Algorithm 235: Random permutation\"\n * [3] Knuth, Donald E. (1969). Seminumerical algorithms. The Art of Computer\n *     Programming Volume 2.\n * [4] https://en.wikipedia.org/wiki/Fisher–Yates_shuffle\n *\n * @param {Function} randint The randint function.\n * @return {Function} The sampling function.\n */\nconst _fisheryates = (randint) => {\n\t/**\n\t * Take a sample of size n (without repetitions) from the items i through\n\t * j-1 of the input array. This is done in-place. The sample can be\n\t * retrieved from position i to i+n.\n\t *\n\t * @param {number} n The size of the sample.\n\t * @param {Array} a The input array.\n\t * @param {number} i The inclusive left bound.\n\t * @param {number} j The non-inclusive right bound.\n\t */\n\tconst sample = (n, a, i, j) => {\n\t\t// We will swap at most n elements\n\t\t// NOTE: When n = j - i, the last swap swaps a[j-1] with itself,\n\t\t// which is a NOOP. /!\\ HOWEVER, the last swap is NOT a NOOP when\n\t\t// n < j - i. Hence we cannot let k = i + n - 1 in general.\n\t\tconst k = i + n;\n\n\t\tfor (; i < k; ++i) {\n\t\t\t// Choose any index p in the remaining array\n\n\t\t\tconst p = randint(i, j);\n\n\t\t\t// Swap element at index p with first element in the array\n\n\t\t\tconst tmp = a[i];\n\t\t\ta[i] = a[p];\n\t\t\ta[p] = tmp;\n\t\t}\n\t};\n\n\treturn sample;\n};\n\nexport default _fisheryates;\n",
     "static": true,
     "longname": "/home/runner/work/js-random/js-random/src/kernel/_fisheryates.js",
     "access": "public",
@@ -1003,17 +1087,28 @@
     "export": true,
     "importPath": "@aureooms/js-random/src/kernel/_fisheryates.js",
     "importStyle": "_fisheryates",
-    "description": "Sample array using Fisher-Yates method.",
-    "lineNumber": 5,
+    "description": "Sample element from an array using Fisher-Yates method.\n\nNOTE: The original description of the algorithm by Fisher and Yates [1] had\nunnecessary bookkeeping which made the algorithm run in O(n * (j-i)) time.\nThis implementation follows Durstenfeld's [2] and Knuth's [3] descriptions\nwhich yield O(n) running time.\n\nFor more information see the excellent \"Fisher–Yates shuffle\" page on\nWikipedia [4]. Fisher and Yates description is referred there as\n\"Fisher and Yate's original method\" or \"pencil-and-paper method\".\nThe more efficient implementation described by Durstenfeld and Knuth is\nreferred there as \"the modern method\".\n\n[1] Fisher, Ronald A.; Yates, Frank (1938). Statistical tables for\n    biological, agricultural and medical research.\n[2] Durstenfeld, R. (July 1964). \"Algorithm 235: Random permutation\"\n[3] Knuth, Donald E. (1969). Seminumerical algorithms. The Art of Computer\n    Programming Volume 2.\n[4] https://en.wikipedia.org/wiki/Fisher–Yates_shuffle",
+    "lineNumber": 25,
     "params": [
       {
-        "name": "randint",
+        "nullable": null,
         "types": [
-          "*"
-        ]
+          "Function"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "randint",
+        "description": "The randint function."
       }
     ],
-    "return": null
+    "return": {
+      "nullable": null,
+      "types": [
+        "Function"
+      ],
+      "spread": false,
+      "description": "The sampling function."
+    }
   },
   {
     "__docId__": 67,
@@ -1113,7 +1208,7 @@
     "__docId__": 71,
     "kind": "file",
     "name": "src/kernel/_shuffle.js",
-    "content": "/**\n * Shuffle array by sampling the complete array.\n */\n\nconst _shuffle = (sample) => (a, i, j) => sample(j - i, a, i, j);\nexport default _shuffle;\n",
+    "content": "/**\n * Shuffle the array by sampling the entire array.\n *\n * @param {Function} sample The sample function.\n * @return {Function} The shuffle function.\n */\nconst _shuffle = (sample) => {\n\t/**\n\t * Shuffle array in-place between positions i and j-1 (inclusive).\n\t * The other positions are left untouched.\n\t *\n\t * @param {Array} a The input array.\n\t * @param {number} i The inclusive left bound.\n\t * @param {number} j The non-inclusive right bound.\n\t */\n\tconst shuffle = (a, i, j) => sample(j - i, a, i, j);\n\treturn shuffle;\n};\n\nexport default _shuffle;\n",
     "static": true,
     "longname": "/home/runner/work/js-random/js-random/src/kernel/_shuffle.js",
     "access": "public",
@@ -1133,17 +1228,28 @@
     "export": true,
     "importPath": "@aureooms/js-random/src/kernel/_shuffle.js",
     "importStyle": "_shuffle",
-    "description": "Shuffle array by sampling the complete array.",
-    "lineNumber": 5,
+    "description": "Shuffle the array by sampling the entire array.",
+    "lineNumber": 7,
     "params": [
       {
-        "name": "sample",
+        "nullable": null,
         "types": [
-          "*"
-        ]
+          "Function"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "sample",
+        "description": "The sample function."
       }
     ],
-    "return": null
+    "return": {
+      "nullable": null,
+      "types": [
+        "Function"
+      ],
+      "spread": false,
+      "description": "The shuffle function."
+    }
   },
   {
     "kind": "index",
@@ -1155,7 +1261,7 @@
   },
   {
     "kind": "packageJSON",
-    "content": "{\n  \"name\": \"@aureooms/js-random\",\n  \"description\": \"Randomness algorithms for JavaScript\",\n  \"version\": \"3.2.0\",\n  \"license\": \"AGPL-3.0\",\n  \"author\": \"Aurélien Ooms <aurelien.ooms@gmail.com>\",\n  \"homepage\": \"https://aureooms.github.io/js-random\",\n  \"repository\": {\n    \"url\": \"https://github.com/aureooms/js-random\",\n    \"type\": \"git\"\n  },\n  \"bugs\": {\n    \"url\": \"https://github.com/aureooms/js-random/issues\"\n  },\n  \"keywords\": [\n    \"javascript\",\n    \"js\",\n    \"randfloat\",\n    \"randint\",\n    \"random\",\n    \"randomness\",\n    \"sample\",\n    \"shuffle\"\n  ],\n  \"sideEffects\": false,\n  \"source\": \"src/index.js\",\n  \"main\": \"dist/index.js\",\n  \"module\": \"dist/index.module.js\",\n  \"esmodule\": \"dist/index.modern.js\",\n  \"umd:main\": \"dist/index.umd.js\",\n  \"unpkg\": \"dist/index.umd.js\",\n  \"exports\": {\n    \".\": {\n      \"browser\": \"./dist/index.module.js\",\n      \"umd\": \"./dist/index.umd.js\",\n      \"require\": \"./dist/index.js\",\n      \"default\": \"./dist/index.modern.js\"\n    }\n  },\n  \"files\": [\n    \"dist\"\n  ],\n  \"scripts\": {\n    \"build\": \"NODE_ENV=production microbundle\",\n    \"build-docs\": \"esdoc\",\n    \"build-gh-pages\": \"npm run build-docs\",\n    \"ci:test\": \"npm run lint-config && npm run lint && npm run cover\",\n    \"commit-msg\": \"commitlint --edit\",\n    \"cover\": \"NODE_ENV=cover c8 --all --src src --reporter lcov --reporter text-summary --reporter text npm test\",\n    \"debug\": \"NODE_ENV=debug npm run test -- -st --fail-fast\",\n    \"dev\": \"npm run lint-config-and-fix && npm run lint-and-fix && npm run cover -- -- -st --fail-fast\",\n    \"install-hooks\": \"husky install\",\n    \"lint\": \"xo\",\n    \"lint-and-fix\": \"npm run lint -- --fix\",\n    \"lint-config\": \"fixpack --dryRun\",\n    \"lint-config-and-fix\": \"fixpack || fixpack\",\n    \"postinstall\": \"npm run install-hooks\",\n    \"postpublish\": \"pinst --enable\",\n    \"precommit\": \"lint-staged\",\n    \"prepare\": \"npm run build\",\n    \"prepublishOnly\": \"pinst --disable\",\n    \"release\": \"np --message ':hatching_chick: release: Bumping to v%s.'\",\n    \"test\": \"ava\"\n  },\n  \"dependencies\": {},\n  \"devDependencies\": {\n    \"@aureooms/js-array\": \"4.0.0\",\n    \"@aureooms/js-compare\": \"^2.0.1\",\n    \"@aureooms/js-functools\": \"2.0.3\",\n    \"@aureooms/js-itertools\": \"5.0.1\",\n    \"@aureooms/js-memory\": \"4.0.0\",\n    \"@aureooms/js-type\": \"1.0.4\",\n    \"@babel/core\": \"7.13.10\",\n    \"@babel/preset-env\": \"7.13.10\",\n    \"@babel/register\": \"7.13.8\",\n    \"@commitlint/cli\": \"12.1.1\",\n    \"@js-library/commitlint-config\": \"0.0.4\",\n    \"ava\": \"3.15.0\",\n    \"babel-plugin-transform-remove-console\": \"6.9.4\",\n    \"babel-plugin-unassert\": \"3.0.1\",\n    \"babel-preset-power-assert\": \"3.0.0\",\n    \"c8\": \"7.7.0\",\n    \"coveralls\": \"3.1.0\",\n    \"esdoc\": \"1.1.0\",\n    \"esdoc-inject-script-plugin\": \"1.0.0\",\n    \"esdoc-inject-style-plugin\": \"1.0.0\",\n    \"esdoc-standard-plugin\": \"1.0.0\",\n    \"fixpack\": \"4.0.0\",\n    \"husky\": \"6.0.0\",\n    \"lint-staged\": \"10.5.4\",\n    \"microbundle\": \"0.13.0\",\n    \"np\": \"7.4.0\",\n    \"pinst\": \"2.1.6\",\n    \"power-assert\": \"1.6.1\",\n    \"regenerator-runtime\": \"0.13.7\",\n    \"xo\": \"0.38.2\"\n  },\n  \"ava\": {\n    \"files\": [\n      \"test/src/**/*\"\n    ],\n    \"require\": [\n      \"regenerator-runtime/runtime\",\n      \"@babel/register\"\n    ],\n    \"timeout\": \"1m\",\n    \"concurrency\": 8\n  },\n  \"babel\": {\n    \"sourceMaps\": true,\n    \"presets\": [\n      [\n        \"@babel/preset-env\",\n        {\n          \"targets\": \"current node\"\n        }\n      ]\n    ],\n    \"plugins\": [\n      [\n        \"transform-remove-console\",\n        {\n          \"exclude\": [\n            \"log\",\n            \"error\",\n            \"warn\"\n          ]\n        }\n      ]\n    ],\n    \"env\": {\n      \"debug\": {\n        \"presets\": [\n          \"babel-preset-power-assert\"\n        ],\n        \"plugins\": [\n          [\n            \"transform-remove-console\",\n            {\n              \"exclude\": [\n                \"debug\",\n                \"log\",\n                \"error\",\n                \"warn\"\n              ]\n            }\n          ]\n        ]\n      },\n      \"test\": {\n        \"presets\": [\n          \"babel-preset-power-assert\"\n        ]\n      },\n      \"development\": {\n        \"presets\": [\n          [\n            \"@babel/preset-env\",\n            {\n              \"targets\": [\n                \"defaults\",\n                \"maintained node versions\"\n              ]\n            }\n          ],\n          \"babel-preset-power-assert\"\n        ]\n      },\n      \"production\": {\n        \"presets\": [\n          [\n            \"@babel/preset-env\",\n            {\n              \"targets\": [\n                \"defaults\",\n                \"maintained node versions\"\n              ]\n            }\n          ]\n        ],\n        \"plugins\": [\n          \"babel-plugin-unassert\"\n        ]\n      },\n      \"cover\": {\n        \"sourceMaps\": \"both\",\n        \"presets\": [\n          \"babel-preset-power-assert\"\n        ]\n      }\n    }\n  },\n  \"lint-staged\": {\n    \"*.js\": [\n      \"npm run lint-and-fix\"\n    ],\n    \"package.json\": [\n      \"npm run lint-config-and-fix\"\n    ]\n  },\n  \"prettier\": {\n    \"trailingComma\": \"all\"\n  },\n  \"xo\": {\n    \"prettier\": true,\n    \"plugins\": [\n      \"unicorn\"\n    ],\n    \"rules\": {\n      \"unicorn/filename-case\": \"off\",\n      \"camelcase\": \"off\",\n      \"unicorn/prevent-abbreviations\": \"off\",\n      \"no-constant-condition\": \"off\",\n      \"unicorn/prefer-math-trunc\": \"off\",\n      \"unicorn/no-new-array\": \"off\",\n      \"no-negated-condition\": \"off\"\n    },\n    \"overrides\": [\n      {\n        \"files\": [\n          \"doc/**\"\n        ],\n        \"env\": \"browser\"\n      }\n    ]\n  }\n}\n",
+    "content": "{\n  \"name\": \"@aureooms/js-random\",\n  \"description\": \"Randomness algorithms for JavaScript\",\n  \"version\": \"3.2.1\",\n  \"license\": \"AGPL-3.0\",\n  \"author\": \"Aurélien Ooms <aurelien.ooms@gmail.com>\",\n  \"homepage\": \"https://aureooms.github.io/js-random\",\n  \"repository\": {\n    \"url\": \"https://github.com/aureooms/js-random\",\n    \"type\": \"git\"\n  },\n  \"bugs\": {\n    \"url\": \"https://github.com/aureooms/js-random/issues\"\n  },\n  \"keywords\": [\n    \"javascript\",\n    \"js\",\n    \"randfloat\",\n    \"randint\",\n    \"random\",\n    \"randomness\",\n    \"sample\",\n    \"shuffle\"\n  ],\n  \"sideEffects\": false,\n  \"source\": \"src/index.js\",\n  \"main\": \"dist/index.js\",\n  \"module\": \"dist/index.module.js\",\n  \"esmodule\": \"dist/index.modern.js\",\n  \"umd:main\": \"dist/index.umd.js\",\n  \"unpkg\": \"dist/index.umd.js\",\n  \"exports\": {\n    \".\": {\n      \"browser\": \"./dist/index.module.js\",\n      \"umd\": \"./dist/index.umd.js\",\n      \"require\": \"./dist/index.js\",\n      \"default\": \"./dist/index.modern.js\"\n    }\n  },\n  \"files\": [\n    \"dist\"\n  ],\n  \"scripts\": {\n    \"build\": \"NODE_ENV=production microbundle\",\n    \"build-docs\": \"esdoc\",\n    \"build-gh-pages\": \"npm run build-docs\",\n    \"ci:test\": \"npm run lint-config && npm run lint && npm run cover\",\n    \"commit-msg\": \"commitlint --edit\",\n    \"cover\": \"NODE_ENV=cover c8 --all --src src --reporter lcov --reporter text-summary --reporter text npm test\",\n    \"debug\": \"NODE_ENV=debug npm run test -- -st --fail-fast\",\n    \"dev\": \"npm run lint-config-and-fix && npm run lint-and-fix && npm run cover -- -- -st --fail-fast\",\n    \"install-hooks\": \"husky install\",\n    \"lint\": \"xo\",\n    \"lint-and-fix\": \"npm run lint -- --fix\",\n    \"lint-config\": \"fixpack --dryRun\",\n    \"lint-config-and-fix\": \"fixpack || fixpack\",\n    \"postinstall\": \"npm run install-hooks\",\n    \"postpublish\": \"pinst --enable\",\n    \"precommit\": \"lint-staged\",\n    \"prepare\": \"npm run build\",\n    \"prepublishOnly\": \"pinst --disable\",\n    \"release\": \"np --message ':hatching_chick: release: Bumping to v%s.'\",\n    \"test\": \"ava\"\n  },\n  \"dependencies\": {},\n  \"devDependencies\": {\n    \"@aureooms/js-array\": \"4.0.0\",\n    \"@aureooms/js-compare\": \"^2.0.1\",\n    \"@aureooms/js-functools\": \"2.0.3\",\n    \"@aureooms/js-itertools\": \"5.0.1\",\n    \"@aureooms/js-memory\": \"4.0.0\",\n    \"@aureooms/js-type\": \"1.0.4\",\n    \"@babel/core\": \"7.13.10\",\n    \"@babel/preset-env\": \"7.13.10\",\n    \"@babel/register\": \"7.13.8\",\n    \"@commitlint/cli\": \"12.1.1\",\n    \"@js-library/commitlint-config\": \"0.0.4\",\n    \"ava\": \"3.15.0\",\n    \"babel-plugin-transform-remove-console\": \"6.9.4\",\n    \"babel-plugin-unassert\": \"3.0.1\",\n    \"babel-preset-power-assert\": \"3.0.0\",\n    \"c8\": \"7.7.0\",\n    \"coveralls\": \"3.1.0\",\n    \"esdoc\": \"1.1.0\",\n    \"esdoc-inject-script-plugin\": \"1.0.0\",\n    \"esdoc-inject-style-plugin\": \"1.0.0\",\n    \"esdoc-standard-plugin\": \"1.0.0\",\n    \"fixpack\": \"4.0.0\",\n    \"husky\": \"6.0.0\",\n    \"lint-staged\": \"10.5.4\",\n    \"microbundle\": \"0.13.0\",\n    \"np\": \"7.4.0\",\n    \"pinst\": \"2.1.6\",\n    \"power-assert\": \"1.6.1\",\n    \"regenerator-runtime\": \"0.13.7\",\n    \"xo\": \"0.38.2\"\n  },\n  \"ava\": {\n    \"files\": [\n      \"test/src/**/*\"\n    ],\n    \"require\": [\n      \"regenerator-runtime/runtime\",\n      \"@babel/register\"\n    ],\n    \"timeout\": \"1m\",\n    \"concurrency\": 8\n  },\n  \"babel\": {\n    \"sourceMaps\": true,\n    \"presets\": [\n      [\n        \"@babel/preset-env\",\n        {\n          \"targets\": \"current node\"\n        }\n      ]\n    ],\n    \"plugins\": [\n      [\n        \"transform-remove-console\",\n        {\n          \"exclude\": [\n            \"log\",\n            \"error\",\n            \"warn\"\n          ]\n        }\n      ]\n    ],\n    \"env\": {\n      \"debug\": {\n        \"presets\": [\n          \"babel-preset-power-assert\"\n        ],\n        \"plugins\": [\n          [\n            \"transform-remove-console\",\n            {\n              \"exclude\": [\n                \"debug\",\n                \"log\",\n                \"error\",\n                \"warn\"\n              ]\n            }\n          ]\n        ]\n      },\n      \"test\": {\n        \"presets\": [\n          \"babel-preset-power-assert\"\n        ]\n      },\n      \"development\": {\n        \"presets\": [\n          [\n            \"@babel/preset-env\",\n            {\n              \"targets\": [\n                \"defaults\",\n                \"maintained node versions\"\n              ]\n            }\n          ],\n          \"babel-preset-power-assert\"\n        ]\n      },\n      \"production\": {\n        \"presets\": [\n          [\n            \"@babel/preset-env\",\n            {\n              \"targets\": [\n                \"defaults\",\n                \"maintained node versions\"\n              ]\n            }\n          ]\n        ],\n        \"plugins\": [\n          \"babel-plugin-unassert\"\n        ]\n      },\n      \"cover\": {\n        \"sourceMaps\": \"both\",\n        \"presets\": [\n          \"babel-preset-power-assert\"\n        ]\n      }\n    }\n  },\n  \"lint-staged\": {\n    \"*.js\": [\n      \"npm run lint-and-fix\"\n    ],\n    \"package.json\": [\n      \"npm run lint-config-and-fix\"\n    ]\n  },\n  \"prettier\": {\n    \"trailingComma\": \"all\"\n  },\n  \"xo\": {\n    \"prettier\": true,\n    \"plugins\": [\n      \"unicorn\"\n    ],\n    \"rules\": {\n      \"unicorn/filename-case\": \"off\",\n      \"camelcase\": \"off\",\n      \"unicorn/prevent-abbreviations\": \"off\",\n      \"no-constant-condition\": \"off\",\n      \"unicorn/prefer-math-trunc\": \"off\",\n      \"unicorn/no-new-array\": \"off\",\n      \"no-negated-condition\": \"off\"\n    },\n    \"overrides\": [\n      {\n        \"files\": [\n          \"doc/**\"\n        ],\n        \"env\": \"browser\"\n      }\n    ]\n  }\n}\n",
     "longname": "/home/runner/work/js-random/js-random/package.json",
     "name": "package.json",
     "static": true,

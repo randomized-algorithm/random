@@ -1,7 +1,7 @@
 {
-  "coverage": "83.33%",
+  "coverage": "100%",
   "expectCount": 12,
-  "actualCount": 10,
+  "actualCount": 12,
   "files": {
     "src/api/choice.js": {
       "expectCount": 1,
@@ -30,17 +30,13 @@
     },
     "src/api/sample.js": {
       "expectCount": 1,
-      "actualCount": 0,
-      "undocumentLines": [
-        4
-      ]
+      "actualCount": 1,
+      "undocumentLines": []
     },
     "src/api/shuffle.js": {
       "expectCount": 1,
-      "actualCount": 0,
-      "undocumentLines": [
-        4
-      ]
+      "actualCount": 1,
+      "undocumentLines": []
     },
     "src/kernel/_choice.js": {
       "expectCount": 1,
