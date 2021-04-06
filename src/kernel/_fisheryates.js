@@ -1,5 +1,5 @@
 /**
- * Sample element from an array using Fisher-Yates method.
+ * Sample elements from an array using Fisher-Yates method.
  *
  * NOTE: The original description of the algorithm by Fisher and Yates [1] had
  * unnecessary bookkeeping which made the algorithm run in O(n * (j-i)) time.
