@@ -18,25 +18,42 @@
  * [3] Knuth, Donald E. (1969). Seminumerical algorithms. The Art of Computer
  *     Programming Volume 2.
  * [4] https://en.wikipedia.org/wiki/Fisher–Yates_shuffle
+ *
+ * @param {Function} randint The randint function.
+ * @return {Function} The sampling function.
  */
-const _fisheryates = (randint) => (n, a, i, j) => {
-	// We will swap at most n elements
-	// NOTE: When n = j - i, the last swap swaps a[j-1] with itself,
-	// which is a NOOP. /!\ HOWEVER, the last swap is NOT a NOOP when
-	// n < j - i. Hence we cannot let k = i + n - 1 in general.
-	const k = i + n;
+const _fisheryates = (randint) => {
+	/**
+	 * Take a sample of size n (without repetitions) from the items i through
+	 * j-1 of the input array. This is done in-place. The sample can be
+	 * retrieved from position i to i+n.
+	 *
+	 * @param {number} n The size of the sample.
+	 * @param {Array} a The input array.
+	 * @param {number} i The inclusive left bound.
+	 * @param {number} j The non-inclusive right bound.
+	 */
+	const sample = (n, a, i, j) => {
+		// We will swap at most n elements
+		// NOTE: When n = j - i, the last swap swaps a[j-1] with itself,
+		// which is a NOOP. /!\ HOWEVER, the last swap is NOT a NOOP when
+		// n < j - i. Hence we cannot let k = i + n - 1 in general.
+		const k = i + n;
 
-	for (; i < k; ++i) {
-		// Choose any index p in the remaining array
+		for (; i < k; ++i) {
+			// Choose any index p in the remaining array
 
-		const p = randint(i, j);
+			const p = randint(i, j);
 
-		// Swap element at index p with first element in the array
+			// Swap element at index p with first element in the array
 
-		const tmp = a[i];
-		a[i] = a[p];
-		a[p] = tmp;
-	}
+			const tmp = a[i];
+			a[i] = a[p];
+			a[p] = tmp;
+		}
+	};
+
+	return sample;
 };
 
 export default _fisheryates;
