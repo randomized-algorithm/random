@@ -12,6 +12,12 @@ window.esdocSearchIndex = [
     "function"
   ],
   [
+    "@aureooms/js-random/src/kernel/_fisheryates_inside_out.js~_fisheryates_inside_out",
+    "function/index.html#static-function-_fisheryates_inside_out",
+    "<span>_fisheryates_inside_out</span> <span class=\"search-result-import-path\">@aureooms/js-random/src/kernel/_fisheryates_inside_out.js</span>",
+    "function"
+  ],
+  [
     "@aureooms/js-random/src/kernel/_randfloat.js~_randfloat",
     "function/index.html#static-function-_randfloat",
     "<span>_randfloat</span> <span class=\"search-result-import-path\">@aureooms/js-random/src/kernel/_randfloat.js</span>",
@@ -69,6 +75,12 @@ window.esdocSearchIndex = [
     "@aureooms/js-random/src/api/shuffle.js~shuffle",
     "variable/index.html#static-variable-shuffle",
     "<span>shuffle</span> <span class=\"search-result-import-path\">@aureooms/js-random/src/api/shuffle.js</span>",
+    "variable"
+  ],
+  [
+    "@aureooms/js-random/src/api/shuffled.js~shuffled",
+    "variable/index.html#static-variable-shuffled",
+    "<span>shuffled</span> <span class=\"search-result-import-path\">@aureooms/js-random/src/api/shuffled.js</span>",
     "variable"
   ],
   [
@@ -396,6 +408,12 @@ window.esdocSearchIndex = [
     "file"
   ],
   [
+    "src/api/shuffled.js",
+    "file/src/api/shuffled.js.html",
+    "src/api/shuffled.js",
+    "file"
+  ],
+  [
     "src/index.js",
     "file/src/index.js.html",
     "src/index.js",
@@ -411,6 +429,12 @@ window.esdocSearchIndex = [
     "src/kernel/_fisheryates.js",
     "file/src/kernel/_fisheryates.js.html",
     "src/kernel/_fisheryates.js",
+    "file"
+  ],
+  [
+    "src/kernel/_fisheryates_inside_out.js",
+    "file/src/kernel/_fisheryates_inside_out.js.html",
+    "src/kernel/_fisheryates_inside_out.js",
     "file"
   ],
   [

@@ -1,7 +1,7 @@
 {
   "coverage": "100%",
-  "expectCount": 12,
-  "actualCount": 12,
+  "expectCount": 14,
+  "actualCount": 14,
   "files": {
     "src/api/choice.js": {
       "expectCount": 1,
@@ -38,12 +38,22 @@
       "actualCount": 1,
       "undocumentLines": []
     },
+    "src/api/shuffled.js": {
+      "expectCount": 1,
+      "actualCount": 1,
+      "undocumentLines": []
+    },
     "src/kernel/_choice.js": {
       "expectCount": 1,
       "actualCount": 1,
       "undocumentLines": []
     },
     "src/kernel/_fisheryates.js": {
+      "expectCount": 1,
+      "actualCount": 1,
+      "undocumentLines": []
+    },
+    "src/kernel/_fisheryates_inside_out.js": {
       "expectCount": 1,
       "actualCount": 1,
       "undocumentLines": []

@@ -36,8 +36,10 @@
 <li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-randint">randint</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-sample">sample</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-shuffle">shuffle</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-shuffled">shuffled</a></span></span></li>
 <li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#kernel">kernel</a><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-_choice">_choice</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-_fisheryates">_fisheryates</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-_fisheryates_inside_out">_fisheryates_inside_out</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-_randfloat">_randfloat</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-_randint">_randint</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-_shuffle">_shuffle</a></span></span></li>
@@ -49,12 +51,24 @@
 <pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">import randint from &apos;./randint.js&apos;;
 
 /**
- * Return a randomly selected element from range(start, stop, step).
+ * Pick an element from range(start, stop, step) uniformly at random.
+ *
+ * Return an element from range(start, stop, step) selected uniformly at random.
+ * If step is positive, this set corresponds to
+ * {x: x in [start, stop[ AND x % step = 0}.
+ * If step is negative, the range has to be given in reverse order, that is,
+ * largest value first, smallest value second. Both the starting value and the
+ * step value are optional. By default the starting value is &lt;code&gt;0&lt;/code&gt;.
+ * The default for the step value is &lt;code&gt;1&lt;/code&gt;.
+ *
+ * TODO: Handle empty ranges.
+ *
+ * @param {number} [start=0] - The starting value.
+ * @param {number} stop - The stopping value.
+ * @param {number} [step=1] - The step value.
+ * @return {number} The picked element.
  */
-
 const randrange = (start, stop, step) =&gt; {
-	// TODO handle empty ranges
-
 	if (stop === undefined) return randint(0, start);
 	if (step === undefined) step = 1;
 

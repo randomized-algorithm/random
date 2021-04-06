@@ -57,16 +57,19 @@
 </div>
 </nav>
 
-<div class="content" data-ice="content"><div class="github-markdown" data-ice="content"><h1 id="usage">Usage</h1><p>The code needs a ES2015+ polyfill to work, for example
-<a href="https://babeljs.io/docs/usage/polyfill">regenerator-runtime/runtime</a>.</p>
+<div class="content" data-ice="content"><div class="github-markdown" data-ice="content"><h1 id="usage">Usage</h1><blockquote>
+<p>:warning: Depending on your environment, the code may require
+<code>regeneratorRuntime</code> to be defined, for instance by importing
+<a href="https://www.npmjs.com/package/regenerator-runtime">regenerator-runtime/runtime</a>.</p>
+</blockquote>
 <pre><code class="lang-js"><code class="source-code prettyprint">require( &apos;regenerator-runtime/runtime&apos; ) ;
 // or
 import &apos;regenerator-runtime/runtime.js&apos; ;</code>
 </code></pre>
 <p>Then</p>
-<pre><code class="lang-js"><code class="source-code prettyprint">const random = require( &apos;@aureooms/js-random&apos; ) ;
+<pre><code class="lang-js"><code class="source-code prettyprint">const { ... } = require( &apos;@aureooms/js-random&apos; ) ;
 // or
-import * as random from &apos;@aureooms/js-random&apos; ;</code>
+import { ... } from &apos;@aureooms/js-random&apos; ;</code>
 </code></pre>
 </div>
 </div>

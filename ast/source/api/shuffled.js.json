@@ -1,28 +1,28 @@
 {
   "type": "File",
   "start": 0,
-  "end": 536,
+  "end": 423,
   "loc": {
     "start": {
       "line": 1,
       "column": 0
     },
     "end": {
-      "line": 17,
+      "line": 14,
       "column": 0
     }
   },
   "program": {
     "type": "Program",
     "start": 0,
-    "end": 536,
+    "end": 423,
     "loc": {
       "start": {
         "line": 1,
         "column": 0
       },
       "end": {
-        "line": 17,
+        "line": 14,
         "column": 0
       }
     },
@@ -31,7 +31,7 @@
       {
         "type": "ImportDeclaration",
         "start": 0,
-        "end": 53,
+        "end": 75,
         "loc": {
           "start": {
             "line": 1,
@@ -39,14 +39,14 @@
           },
           "end": {
             "line": 1,
-            "column": 53
+            "column": 75
           }
         },
         "specifiers": [
           {
             "type": "ImportDefaultSpecifier",
             "start": 7,
-            "end": 19,
+            "end": 30,
             "loc": {
               "start": {
                 "line": 1,
@@ -54,13 +54,13 @@
               },
               "end": {
                 "line": 1,
-                "column": 19
+                "column": 30
               }
             },
             "local": {
               "type": "Identifier",
               "start": 7,
-              "end": 19,
+              "end": 30,
               "loc": {
                 "start": {
                   "line": 1,
@@ -68,39 +68,39 @@
                 },
                 "end": {
                   "line": 1,
-                  "column": 19
+                  "column": 30
                 },
-                "identifierName": "_fisheryates"
+                "identifierName": "_fisheryates_inside_out"
               },
-              "name": "_fisheryates"
+              "name": "_fisheryates_inside_out"
             }
           }
         ],
         "source": {
           "type": "StringLiteral",
-          "start": 25,
-          "end": 52,
+          "start": 36,
+          "end": 74,
           "loc": {
             "start": {
               "line": 1,
-              "column": 25
+              "column": 36
             },
             "end": {
               "line": 1,
-              "column": 52
+              "column": 74
             }
           },
           "extra": {
-            "rawValue": "../kernel/_fisheryates.js",
-            "raw": "'../kernel/_fisheryates.js'"
+            "rawValue": "../kernel/_fisheryates_inside_out.js",
+            "raw": "'../kernel/_fisheryates_inside_out.js'"
           },
-          "value": "../kernel/_fisheryates.js"
+          "value": "../kernel/_fisheryates_inside_out.js"
         }
       },
       {
         "type": "ImportDeclaration",
-        "start": 54,
-        "end": 89,
+        "start": 76,
+        "end": 111,
         "loc": {
           "start": {
             "line": 2,
@@ -114,8 +114,8 @@
         "specifiers": [
           {
             "type": "ImportDefaultSpecifier",
-            "start": 61,
-            "end": 68,
+            "start": 83,
+            "end": 90,
             "loc": {
               "start": {
                 "line": 2,
@@ -128,8 +128,8 @@
             },
             "local": {
               "type": "Identifier",
-              "start": 61,
-              "end": 68,
+              "start": 83,
+              "end": 90,
               "loc": {
                 "start": {
                   "line": 2,
@@ -147,8 +147,8 @@
         ],
         "source": {
           "type": "StringLiteral",
-          "start": 74,
-          "end": 88,
+          "start": 96,
+          "end": 110,
           "loc": {
             "start": {
               "line": 2,
@@ -168,16 +168,16 @@
         "trailingComments": [
           {
             "type": "CommentBlock",
-            "value": "*\n * Take a sample of size n (without replacement) from the items i through\n * j-1 of the input array. This is done in-place. The sample can be retrieved\n * from position i to i+n.\n *\n * @function\n * @param {number} n The size of the sample.\n * @param {Array} a The input array.\n * @param {number} i The inclusive left bound.\n * @param {number} j The non-inclusive right bound.\n ",
-            "start": 91,
-            "end": 474,
+            "value": "*\n * Given an input iterable, constructs an array containing the elements of the\n * input shuffled uniformly at random.\n *\n * @function\n * @param {Iterable} iterable The input iterable.\n * @return {Array} The constructed array.\n ",
+            "start": 113,
+            "end": 346,
             "loc": {
               "start": {
                 "line": 4,
                 "column": 0
               },
               "end": {
-                "line": 14,
+                "line": 11,
                 "column": 3
               }
             }
@@ -186,95 +186,95 @@
       },
       {
         "type": "Identifier",
-        "start": 475,
-        "end": 512,
+        "start": 347,
+        "end": 397,
         "loc": {
           "start": {
-            "line": 15,
+            "line": 12,
             "column": 0
           },
           "end": {
-            "line": 15,
-            "column": 37
+            "line": 12,
+            "column": 50
           }
         },
         "declarations": [
           {
             "type": "VariableDeclarator",
-            "start": 481,
-            "end": 511,
+            "start": 353,
+            "end": 396,
             "loc": {
               "start": {
-                "line": 15,
+                "line": 12,
                 "column": 6
               },
               "end": {
-                "line": 15,
-                "column": 36
+                "line": 12,
+                "column": 49
               }
             },
             "id": {
               "type": "Identifier",
-              "start": 481,
-              "end": 487,
+              "start": 353,
+              "end": 361,
               "loc": {
                 "start": {
-                  "line": 15,
+                  "line": 12,
                   "column": 6
                 },
                 "end": {
-                  "line": 15,
-                  "column": 12
+                  "line": 12,
+                  "column": 14
                 },
-                "identifierName": "sample"
+                "identifierName": "shuffled"
               },
-              "name": "sample",
+              "name": "shuffled",
               "leadingComments": null
             },
             "init": {
               "type": "CallExpression",
-              "start": 490,
-              "end": 511,
+              "start": 364,
+              "end": 396,
               "loc": {
                 "start": {
-                  "line": 15,
-                  "column": 15
+                  "line": 12,
+                  "column": 17
                 },
                 "end": {
-                  "line": 15,
-                  "column": 36
+                  "line": 12,
+                  "column": 49
                 }
               },
               "callee": {
                 "type": "Identifier",
-                "start": 490,
-                "end": 502,
+                "start": 364,
+                "end": 387,
                 "loc": {
                   "start": {
-                    "line": 15,
-                    "column": 15
+                    "line": 12,
+                    "column": 17
                   },
                   "end": {
-                    "line": 15,
-                    "column": 27
+                    "line": 12,
+                    "column": 40
                   },
-                  "identifierName": "_fisheryates"
+                  "identifierName": "_fisheryates_inside_out"
                 },
-                "name": "_fisheryates"
+                "name": "_fisheryates_inside_out"
               },
               "arguments": [
                 {
                   "type": "Identifier",
-                  "start": 503,
-                  "end": 510,
+                  "start": 388,
+                  "end": 395,
                   "loc": {
                     "start": {
-                      "line": 15,
-                      "column": 28
+                      "line": 12,
+                      "column": 41
                     },
                     "end": {
-                      "line": 15,
-                      "column": 35
+                      "line": 12,
+                      "column": 48
                     },
                     "identifierName": "randint"
                   },
@@ -292,34 +292,34 @@
       },
       {
         "type": "Identifier",
-        "start": 513,
-        "end": 535,
+        "start": 398,
+        "end": 422,
         "loc": {
           "start": {
-            "line": 16,
+            "line": 13,
             "column": 0
           },
           "end": {
-            "line": 16,
-            "column": 22
+            "line": 13,
+            "column": 24
           }
         },
         "declaration": {
           "type": "Identifier",
-          "start": 528,
-          "end": 534,
+          "start": 413,
+          "end": 421,
           "loc": {
             "start": {
-              "line": 16,
+              "line": 13,
               "column": 15
             },
             "end": {
-              "line": 16,
-              "column": 21
+              "line": 13,
+              "column": 23
             },
-            "identifierName": "sample"
+            "identifierName": "shuffled"
           },
-          "name": "sample"
+          "name": "shuffled"
         },
         "name": "_",
         "leadingComments": [],
@@ -327,109 +327,109 @@
       },
       {
         "type": "ExportDefaultDeclaration",
-        "start": 513,
-        "end": 535,
+        "start": 398,
+        "end": 422,
         "loc": {
           "start": {
-            "line": 16,
+            "line": 13,
             "column": 0
           },
           "end": {
-            "line": 16,
-            "column": 22
+            "line": 13,
+            "column": 24
           }
         },
         "declaration": {
           "type": "VariableDeclaration",
-          "start": 475,
-          "end": 512,
+          "start": 347,
+          "end": 397,
           "loc": {
             "start": {
-              "line": 15,
+              "line": 12,
               "column": 0
             },
             "end": {
-              "line": 15,
-              "column": 37
+              "line": 12,
+              "column": 50
             }
           },
           "declarations": [
             {
               "type": "VariableDeclarator",
-              "start": 481,
-              "end": 511,
+              "start": 353,
+              "end": 396,
               "loc": {
                 "start": {
-                  "line": 15,
+                  "line": 12,
                   "column": 6
                 },
                 "end": {
-                  "line": 15,
-                  "column": 36
+                  "line": 12,
+                  "column": 49
                 }
               },
               "id": {
                 "type": "Identifier",
-                "start": 481,
-                "end": 487,
+                "start": 353,
+                "end": 361,
                 "loc": {
                   "start": {
-                    "line": 15,
+                    "line": 12,
                     "column": 6
                   },
                   "end": {
-                    "line": 15,
-                    "column": 12
+                    "line": 12,
+                    "column": 14
                   },
-                  "identifierName": "sample"
+                  "identifierName": "shuffled"
                 },
-                "name": "sample",
+                "name": "shuffled",
                 "leadingComments": null
               },
               "init": {
                 "type": "CallExpression",
-                "start": 490,
-                "end": 511,
+                "start": 364,
+                "end": 396,
                 "loc": {
                   "start": {
-                    "line": 15,
-                    "column": 15
+                    "line": 12,
+                    "column": 17
                   },
                   "end": {
-                    "line": 15,
-                    "column": 36
+                    "line": 12,
+                    "column": 49
                   }
                 },
                 "callee": {
                   "type": "Identifier",
-                  "start": 490,
-                  "end": 502,
+                  "start": 364,
+                  "end": 387,
                   "loc": {
                     "start": {
-                      "line": 15,
-                      "column": 15
+                      "line": 12,
+                      "column": 17
                     },
                     "end": {
-                      "line": 15,
-                      "column": 27
+                      "line": 12,
+                      "column": 40
                     },
-                    "identifierName": "_fisheryates"
+                    "identifierName": "_fisheryates_inside_out"
                   },
-                  "name": "_fisheryates"
+                  "name": "_fisheryates_inside_out"
                 },
                 "arguments": [
                   {
                     "type": "Identifier",
-                    "start": 503,
-                    "end": 510,
+                    "start": 388,
+                    "end": 395,
                     "loc": {
                       "start": {
-                        "line": 15,
-                        "column": 28
+                        "line": 12,
+                        "column": 41
                       },
                       "end": {
-                        "line": 15,
-                        "column": 35
+                        "line": 12,
+                        "column": 48
                       },
                       "identifierName": "randint"
                     },
@@ -444,16 +444,16 @@
           "leadingComments": [
             {
               "type": "CommentBlock",
-              "value": "*\n * Take a sample of size n (without replacement) from the items i through\n * j-1 of the input array. This is done in-place. The sample can be retrieved\n * from position i to i+n.\n *\n * @function\n * @param {number} n The size of the sample.\n * @param {Array} a The input array.\n * @param {number} i The inclusive left bound.\n * @param {number} j The non-inclusive right bound.\n ",
-              "start": 91,
-              "end": 474,
+              "value": "*\n * Given an input iterable, constructs an array containing the elements of the\n * input shuffled uniformly at random.\n *\n * @function\n * @param {Iterable} iterable The input iterable.\n * @return {Array} The constructed array.\n ",
+              "start": 113,
+              "end": 346,
               "loc": {
                 "start": {
                   "line": 4,
                   "column": 0
                 },
                 "end": {
-                  "line": 14,
+                  "line": 11,
                   "column": 3
                 }
               }
@@ -468,16 +468,16 @@
   "comments": [
     {
       "type": "CommentBlock",
-      "value": "*\n * Take a sample of size n (without replacement) from the items i through\n * j-1 of the input array. This is done in-place. The sample can be retrieved\n * from position i to i+n.\n *\n * @function\n * @param {number} n The size of the sample.\n * @param {Array} a The input array.\n * @param {number} i The inclusive left bound.\n * @param {number} j The non-inclusive right bound.\n ",
-      "start": 91,
-      "end": 474,
+      "value": "*\n * Given an input iterable, constructs an array containing the elements of the\n * input shuffled uniformly at random.\n *\n * @function\n * @param {Iterable} iterable The input iterable.\n * @return {Array} The constructed array.\n ",
+      "start": 113,
+      "end": 346,
       "loc": {
         "start": {
           "line": 4,
           "column": 0
         },
         "end": {
-          "line": 14,
+          "line": 11,
           "column": 3
         }
       }
@@ -524,9 +524,9 @@
         "postfix": false,
         "binop": null
       },
-      "value": "_fisheryates",
+      "value": "_fisheryates_inside_out",
       "start": 7,
-      "end": 19,
+      "end": 30,
       "loc": {
         "start": {
           "line": 1,
@@ -534,7 +534,7 @@
         },
         "end": {
           "line": 1,
-          "column": 19
+          "column": 30
         }
       }
     },
@@ -551,16 +551,16 @@
         "binop": null
       },
       "value": "from",
-      "start": 20,
-      "end": 24,
+      "start": 31,
+      "end": 35,
       "loc": {
         "start": {
           "line": 1,
-          "column": 20
+          "column": 31
         },
         "end": {
           "line": 1,
-          "column": 24
+          "column": 35
         }
       }
     },
@@ -577,17 +577,17 @@
         "binop": null,
         "updateContext": null
       },
-      "value": "../kernel/_fisheryates.js",
-      "start": 25,
-      "end": 52,
+      "value": "../kernel/_fisheryates_inside_out.js",
+      "start": 36,
+      "end": 74,
       "loc": {
         "start": {
           "line": 1,
-          "column": 25
+          "column": 36
         },
         "end": {
           "line": 1,
-          "column": 52
+          "column": 74
         }
       }
     },
@@ -604,16 +604,16 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 52,
-      "end": 53,
+      "start": 74,
+      "end": 75,
       "loc": {
         "start": {
           "line": 1,
-          "column": 52
+          "column": 74
         },
         "end": {
           "line": 1,
-          "column": 53
+          "column": 75
         }
       }
     },
@@ -632,8 +632,8 @@
         "updateContext": null
       },
       "value": "import",
-      "start": 54,
-      "end": 60,
+      "start": 76,
+      "end": 82,
       "loc": {
         "start": {
           "line": 2,
@@ -658,8 +658,8 @@
         "binop": null
       },
       "value": "randint",
-      "start": 61,
-      "end": 68,
+      "start": 83,
+      "end": 90,
       "loc": {
         "start": {
           "line": 2,
@@ -684,8 +684,8 @@
         "binop": null
       },
       "value": "from",
-      "start": 69,
-      "end": 73,
+      "start": 91,
+      "end": 95,
       "loc": {
         "start": {
           "line": 2,
@@ -711,8 +711,8 @@
         "updateContext": null
       },
       "value": "./randint.js",
-      "start": 74,
-      "end": 88,
+      "start": 96,
+      "end": 110,
       "loc": {
         "start": {
           "line": 2,
@@ -737,8 +737,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 88,
-      "end": 89,
+      "start": 110,
+      "end": 111,
       "loc": {
         "start": {
           "line": 2,
@@ -752,16 +752,16 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n * Take a sample of size n (without replacement) from the items i through\n * j-1 of the input array. This is done in-place. The sample can be retrieved\n * from position i to i+n.\n *\n * @function\n * @param {number} n The size of the sample.\n * @param {Array} a The input array.\n * @param {number} i The inclusive left bound.\n * @param {number} j The non-inclusive right bound.\n ",
-      "start": 91,
-      "end": 474,
+      "value": "*\n * Given an input iterable, constructs an array containing the elements of the\n * input shuffled uniformly at random.\n *\n * @function\n * @param {Iterable} iterable The input iterable.\n * @return {Array} The constructed array.\n ",
+      "start": 113,
+      "end": 346,
       "loc": {
         "start": {
           "line": 4,
           "column": 0
         },
         "end": {
-          "line": 14,
+          "line": 11,
           "column": 3
         }
       }
@@ -781,15 +781,15 @@
         "updateContext": null
       },
       "value": "const",
-      "start": 475,
-      "end": 480,
+      "start": 347,
+      "end": 352,
       "loc": {
         "start": {
-          "line": 15,
+          "line": 12,
           "column": 0
         },
         "end": {
-          "line": 15,
+          "line": 12,
           "column": 5
         }
       }
@@ -806,17 +806,17 @@
         "postfix": false,
         "binop": null
       },
-      "value": "sample",
-      "start": 481,
-      "end": 487,
+      "value": "shuffled",
+      "start": 353,
+      "end": 361,
       "loc": {
         "start": {
-          "line": 15,
+          "line": 12,
           "column": 6
         },
         "end": {
-          "line": 15,
-          "column": 12
+          "line": 12,
+          "column": 14
         }
       }
     },
@@ -834,16 +834,16 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 488,
-      "end": 489,
+      "start": 362,
+      "end": 363,
       "loc": {
         "start": {
-          "line": 15,
-          "column": 13
+          "line": 12,
+          "column": 15
         },
         "end": {
-          "line": 15,
-          "column": 14
+          "line": 12,
+          "column": 16
         }
       }
     },
@@ -859,17 +859,17 @@
         "postfix": false,
         "binop": null
       },
-      "value": "_fisheryates",
-      "start": 490,
-      "end": 502,
+      "value": "_fisheryates_inside_out",
+      "start": 364,
+      "end": 387,
       "loc": {
         "start": {
-          "line": 15,
-          "column": 15
+          "line": 12,
+          "column": 17
         },
         "end": {
-          "line": 15,
-          "column": 27
+          "line": 12,
+          "column": 40
         }
       }
     },
@@ -885,16 +885,16 @@
         "postfix": false,
         "binop": null
       },
-      "start": 502,
-      "end": 503,
+      "start": 387,
+      "end": 388,
       "loc": {
         "start": {
-          "line": 15,
-          "column": 27
+          "line": 12,
+          "column": 40
         },
         "end": {
-          "line": 15,
-          "column": 28
+          "line": 12,
+          "column": 41
         }
       }
     },
@@ -911,16 +911,16 @@
         "binop": null
       },
       "value": "randint",
-      "start": 503,
-      "end": 510,
+      "start": 388,
+      "end": 395,
       "loc": {
         "start": {
-          "line": 15,
-          "column": 28
+          "line": 12,
+          "column": 41
         },
         "end": {
-          "line": 15,
-          "column": 35
+          "line": 12,
+          "column": 48
         }
       }
     },
@@ -936,16 +936,16 @@
         "postfix": false,
         "binop": null
       },
-      "start": 510,
-      "end": 511,
+      "start": 395,
+      "end": 396,
       "loc": {
         "start": {
-          "line": 15,
-          "column": 35
+          "line": 12,
+          "column": 48
         },
         "end": {
-          "line": 15,
-          "column": 36
+          "line": 12,
+          "column": 49
         }
       }
     },
@@ -962,16 +962,16 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 511,
-      "end": 512,
+      "start": 396,
+      "end": 397,
       "loc": {
         "start": {
-          "line": 15,
-          "column": 36
+          "line": 12,
+          "column": 49
         },
         "end": {
-          "line": 15,
-          "column": 37
+          "line": 12,
+          "column": 50
         }
       }
     },
@@ -990,15 +990,15 @@
         "updateContext": null
       },
       "value": "export",
-      "start": 513,
-      "end": 519,
+      "start": 398,
+      "end": 404,
       "loc": {
         "start": {
-          "line": 16,
+          "line": 13,
           "column": 0
         },
         "end": {
-          "line": 16,
+          "line": 13,
           "column": 6
         }
       }
@@ -1018,15 +1018,15 @@
         "updateContext": null
       },
       "value": "default",
-      "start": 520,
-      "end": 527,
+      "start": 405,
+      "end": 412,
       "loc": {
         "start": {
-          "line": 16,
+          "line": 13,
           "column": 7
         },
         "end": {
-          "line": 16,
+          "line": 13,
           "column": 14
         }
       }
@@ -1043,17 +1043,17 @@
         "postfix": false,
         "binop": null
       },
-      "value": "sample",
-      "start": 528,
-      "end": 534,
+      "value": "shuffled",
+      "start": 413,
+      "end": 421,
       "loc": {
         "start": {
-          "line": 16,
+          "line": 13,
           "column": 15
         },
         "end": {
-          "line": 16,
-          "column": 21
+          "line": 13,
+          "column": 23
         }
       }
     },
@@ -1070,16 +1070,16 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 534,
-      "end": 535,
+      "start": 421,
+      "end": 422,
       "loc": {
         "start": {
-          "line": 16,
-          "column": 21
+          "line": 13,
+          "column": 23
         },
         "end": {
-          "line": 16,
-          "column": 22
+          "line": 13,
+          "column": 24
         }
       }
     },
@@ -1096,15 +1096,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 536,
-      "end": 536,
+      "start": 423,
+      "end": 423,
       "loc": {
         "start": {
-          "line": 17,
+          "line": 14,
           "column": 0
         },
         "end": {
-          "line": 17,
+          "line": 14,
           "column": 0
         }
       }

@@ -36,8 +36,10 @@
 <li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-randint">randint</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-sample">sample</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-shuffle">shuffle</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-shuffled">shuffled</a></span></span></li>
 <li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#kernel">kernel</a><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-_choice">_choice</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-_fisheryates">_fisheryates</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-_fisheryates_inside_out">_fisheryates_inside_out</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-_randfloat">_randfloat</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-_randint">_randint</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-_shuffle">_shuffle</a></span></span></li>
@@ -47,7 +49,7 @@
 
 <div class="content" data-ice="content"><h1 data-ice="title">src/kernel/_fisheryates.js</h1>
 <pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">/**
- * Sample element from an array using Fisher-Yates method.
+ * Sample elements from an array using Fisher-Yates method.
  *
  * NOTE: The original description of the algorithm by Fisher and Yates [1] had
  * unnecessary bookkeeping which made the algorithm run in O(n * (j-i)) time.
@@ -72,7 +74,7 @@
  */
 const _fisheryates = (randint) =&gt; {
 	/**
-	 * Take a sample of size n (without repetitions) from the items i through
+	 * Take a sample of size n (without replacement) from the items i through
 	 * j-1 of the input array. This is done in-place. The sample can be
 	 * retrieved from position i to i+n.
 	 *
@@ -90,11 +92,9 @@ const _fisheryates = (randint) =&gt; {
 
 		for (; i &lt; k; ++i) {
 			// Choose any index p in the remaining array
-
 			const p = randint(i, j);
 
-			// Swap element at index p with first element in the array
-
+			// Swap selected element with the first remaining element.
 			const tmp = a[i];
 			a[i] = a[p];
 			a[p] = tmp;
