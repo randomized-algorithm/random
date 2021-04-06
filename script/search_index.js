@@ -1,5 +1,11 @@
 window.esdocSearchIndex = [
   [
+    "@aureooms/js-random/src/kernel/_choice.js~_choice",
+    "function/index.html#static-function-_choice",
+    "<span>_choice</span> <span class=\"search-result-import-path\">@aureooms/js-random/src/kernel/_choice.js</span>",
+    "function"
+  ],
+  [
     "@aureooms/js-random/src/kernel/_fisheryates.js~_fisheryates",
     "function/index.html#static-function-_fisheryates",
     "<span>_fisheryates</span> <span class=\"search-result-import-path\">@aureooms/js-random/src/kernel/_fisheryates.js</span>",
@@ -22,6 +28,12 @@ window.esdocSearchIndex = [
     "function/index.html#static-function-_shuffle",
     "<span>_shuffle</span> <span class=\"search-result-import-path\">@aureooms/js-random/src/kernel/_shuffle.js</span>",
     "function"
+  ],
+  [
+    "@aureooms/js-random/src/api/choice.js~choice",
+    "variable/index.html#static-variable-choice",
+    "<span>choice</span> <span class=\"search-result-import-path\">@aureooms/js-random/src/api/choice.js</span>",
+    "variable"
   ],
   [
     "@aureooms/js-random/src/api/randfloat.js~randfloat",
@@ -342,6 +354,12 @@ window.esdocSearchIndex = [
     "external"
   ],
   [
+    "src/api/choice.js",
+    "file/src/api/choice.js.html",
+    "src/api/choice.js",
+    "file"
+  ],
+  [
     "src/api/randfloat.js",
     "file/src/api/randfloat.js.html",
     "src/api/randfloat.js",
@@ -381,6 +399,12 @@ window.esdocSearchIndex = [
     "src/index.js",
     "file/src/index.js.html",
     "src/index.js",
+    "file"
+  ],
+  [
+    "src/kernel/_choice.js",
+    "file/src/kernel/_choice.js.html",
+    "src/kernel/_choice.js",
     "file"
   ],
   [

@@ -1,8 +1,13 @@
 {
-  "coverage": "80%",
-  "expectCount": 10,
-  "actualCount": 8,
+  "coverage": "83.33%",
+  "expectCount": 12,
+  "actualCount": 10,
   "files": {
+    "src/api/choice.js": {
+      "expectCount": 1,
+      "actualCount": 1,
+      "undocumentLines": []
+    },
     "src/api/randfloat.js": {
       "expectCount": 1,
       "actualCount": 1,
@@ -36,6 +41,11 @@
       "undocumentLines": [
         4
       ]
+    },
+    "src/kernel/_choice.js": {
+      "expectCount": 1,
+      "actualCount": 1,
+      "undocumentLines": []
     },
     "src/kernel/_fisheryates.js": {
       "expectCount": 1,
