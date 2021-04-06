@@ -1,7 +1,7 @@
 {
   "name": "@aureooms/js-random",
   "description": "Randomness algorithms for JavaScript",
-  "version": "3.1.0",
+  "version": "3.2.0",
   "license": "AGPL-3.0",
   "author": "Aurélien Ooms <aurelien.ooms@gmail.com>",
   "homepage": "https://aureooms.github.io/js-random",
