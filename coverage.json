@@ -3,16 +3,6 @@
   "expectCount": 7,
   "actualCount": 5,
   "files": {
-    "src/kernel/_fisheryates.js": {
-      "expectCount": 1,
-      "actualCount": 1,
-      "undocumentLines": []
-    },
-    "src/kernel/_shuffle.js": {
-      "expectCount": 1,
-      "actualCount": 1,
-      "undocumentLines": []
-    },
     "src/api/randfloat.js": {
       "expectCount": 1,
       "actualCount": 1,
@@ -41,6 +31,16 @@
       "undocumentLines": [
         4
       ]
+    },
+    "src/kernel/_fisheryates.js": {
+      "expectCount": 1,
+      "actualCount": 1,
+      "undocumentLines": []
+    },
+    "src/kernel/_shuffle.js": {
+      "expectCount": 1,
+      "actualCount": 1,
+      "undocumentLines": []
     }
   }
 }
