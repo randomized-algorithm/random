@@ -1,10 +1,10 @@
-import {randint} from './randint.js';
+import randint from './randint.js';
 
 /**
  * Return a randomly selected element from range(start, stop, step).
  */
 
-export function randrange(start, stop, step) {
+const randrange = (start, stop, step) => {
 	// TODO handle empty ranges
 
 	if (stop === undefined) return randint(0, start);
@@ -15,4 +15,6 @@ export function randrange(start, stop, step) {
 	}
 
 	return start + step * randint(0, Math.floor((start - stop) / -step));
-}
+};
+
+export default randrange;

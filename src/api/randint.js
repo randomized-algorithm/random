@@ -3,6 +3,5 @@
  * according to a uniform distribution.
  */
 
-export function randint(i, j) {
-	return i + Math.floor(Math.random() * (j - i));
-}
+const randint = (i, j) => i + Math.floor(Math.random() * (j - i));
+export default randint;

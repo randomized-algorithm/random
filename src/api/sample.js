@@ -1,4 +1,5 @@
-import {_fisheryates} from '../kernel/index.js';
-import {randint} from './randint.js';
+import _fisheryates from '../kernel/_fisheryates.js';
+import randint from './randint.js';
 
-export const sample = _fisheryates(randint);
+const sample = _fisheryates(randint);
+export default sample;

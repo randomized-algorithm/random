@@ -3,6 +3,5 @@
  * according to a uniform distribution.
  */
 
-export function randfloat(i, j) {
-	return i + Math.random() * (j - i);
-}
+const randfloat = (i, j) => i + Math.random() * (j - i);
+export default randfloat;

@@ -1,4 +1,5 @@
-import {_shuffle} from '../kernel/index.js';
-import {sample} from './sample.js';
+import _shuffle from '../kernel/_shuffle.js';
+import sample from './sample.js';
 
-export const shuffle = _shuffle(sample);
+const shuffle = _shuffle(sample);
+export default shuffle;
