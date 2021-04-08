@@ -1,7 +1,7 @@
 {
   "coverage": "100%",
-  "expectCount": 14,
-  "actualCount": 14,
+  "expectCount": 16,
+  "actualCount": 16,
   "files": {
     "src/api/choice.js": {
       "expectCount": 1,
@@ -24,6 +24,11 @@
       "undocumentLines": []
     },
     "src/api/randrange.js": {
+      "expectCount": 1,
+      "actualCount": 1,
+      "undocumentLines": []
+    },
+    "src/api/reservoir.js": {
       "expectCount": 1,
       "actualCount": 1,
       "undocumentLines": []
@@ -69,6 +74,11 @@
       "undocumentLines": []
     },
     "src/kernel/_shuffle.js": {
+      "expectCount": 1,
+      "actualCount": 1,
+      "undocumentLines": []
+    },
+    "src/kernel/_waterman.js": {
       "expectCount": 1,
       "actualCount": 1,
       "undocumentLines": []

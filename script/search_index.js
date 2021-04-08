@@ -36,6 +36,12 @@ window.esdocSearchIndex = [
     "function"
   ],
   [
+    "@aureooms/js-random/src/kernel/_waterman.js~_waterman",
+    "function/index.html#static-function-_waterman",
+    "<span>_waterman</span> <span class=\"search-result-import-path\">@aureooms/js-random/src/kernel/_waterman.js</span>",
+    "function"
+  ],
+  [
     "@aureooms/js-random/src/api/choice.js~choice",
     "variable/index.html#static-variable-choice",
     "<span>choice</span> <span class=\"search-result-import-path\">@aureooms/js-random/src/api/choice.js</span>",
@@ -64,6 +70,12 @@ window.esdocSearchIndex = [
     "function/index.html#static-function-randrange",
     "<span>randrange</span> <span class=\"search-result-import-path\">@aureooms/js-random/src/api/randrange.js</span>",
     "function"
+  ],
+  [
+    "@aureooms/js-random/src/api/reservoir.js~reservoir",
+    "variable/index.html#static-variable-reservoir",
+    "<span>reservoir</span> <span class=\"search-result-import-path\">@aureooms/js-random/src/api/reservoir.js</span>",
+    "variable"
   ],
   [
     "@aureooms/js-random/src/api/sample.js~sample",
@@ -396,6 +408,12 @@ window.esdocSearchIndex = [
     "file"
   ],
   [
+    "src/api/reservoir.js",
+    "file/src/api/reservoir.js.html",
+    "src/api/reservoir.js",
+    "file"
+  ],
+  [
     "src/api/sample.js",
     "file/src/api/sample.js.html",
     "src/api/sample.js",
@@ -453,6 +471,12 @@ window.esdocSearchIndex = [
     "src/kernel/_shuffle.js",
     "file/src/kernel/_shuffle.js.html",
     "src/kernel/_shuffle.js",
+    "file"
+  ],
+  [
+    "src/kernel/_waterman.js",
+    "file/src/kernel/_waterman.js.html",
+    "src/kernel/_waterman.js",
     "file"
   ]
 ]

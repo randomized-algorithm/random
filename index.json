@@ -881,6 +881,84 @@
   {
     "__docId__": 58,
     "kind": "file",
+    "name": "src/api/reservoir.js",
+    "content": "import _waterman from '../kernel/_waterman.js';\nimport randint from './randint.js';\n\n/**\n * Reservoir sampling.\n *\n * @function\n * @param {number} k The size of the sample.\n * @param {Iterable} iterable The input iterable.\n * @param {Array} [output=new Array(k)] The output array.\n * @return {Array} The output array.\n */\nconst reservoir = _waterman(randint);\nexport default reservoir;\n",
+    "static": true,
+    "longname": "/home/runner/work/js-random/js-random/src/api/reservoir.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 59,
+    "kind": "variable",
+    "name": "reservoir",
+    "memberof": "src/api/reservoir.js",
+    "static": true,
+    "longname": "src/api/reservoir.js~reservoir",
+    "access": "public",
+    "export": true,
+    "importPath": "@aureooms/js-random/src/api/reservoir.js",
+    "importStyle": "reservoir",
+    "description": "Reservoir sampling.",
+    "lineNumber": 13,
+    "unknown": [
+      {
+        "tagName": "@function",
+        "tagValue": ""
+      }
+    ],
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "number"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "k",
+        "description": "The size of the sample."
+      },
+      {
+        "nullable": null,
+        "types": [
+          "Iterable"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "iterable",
+        "description": "The input iterable."
+      },
+      {
+        "nullable": null,
+        "types": [
+          "Array"
+        ],
+        "spread": false,
+        "optional": true,
+        "defaultValue": "new Array(k)",
+        "defaultRaw": "new Array(k)",
+        "name": "output",
+        "description": "The output array."
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Array"
+      ],
+      "spread": false,
+      "description": "The output array."
+    },
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 60,
+    "kind": "file",
     "name": "src/api/sample.js",
     "content": "import _fisheryates from '../kernel/_fisheryates.js';\nimport randint from './randint.js';\n\n/**\n * Take a sample of size n (without replacement) from the items i through\n * j-1 of the input array. This is done in-place. The sample can be retrieved\n * from position i to i+n.\n *\n * @function\n * @param {number} n The size of the sample.\n * @param {Array} a The input array.\n * @param {number} i The inclusive left bound.\n * @param {number} j The non-inclusive right bound.\n */\nconst sample = _fisheryates(randint);\nexport default sample;\n",
     "static": true,
@@ -890,7 +968,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 59,
+    "__docId__": 61,
     "kind": "variable",
     "name": "sample",
     "memberof": "src/api/sample.js",
@@ -957,7 +1035,7 @@
     }
   },
   {
-    "__docId__": 60,
+    "__docId__": 62,
     "kind": "file",
     "name": "src/api/shuffle.js",
     "content": "import _shuffle from '../kernel/_shuffle.js';\nimport sample from './sample.js';\n\n/**\n * Shuffle array in-place between positions i and j-1 (inclusive).\n * The other positions are left untouched.\n * @function\n * @param {Array} a The input array.\n * @param {number} i The inclusive left bound.\n * @param {number} j The non-inclusive right bound.\n */\nconst shuffle = _shuffle(sample);\nexport default shuffle;\n",
@@ -968,7 +1046,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 61,
+    "__docId__": 63,
     "kind": "variable",
     "name": "shuffle",
     "memberof": "src/api/shuffle.js",
@@ -1025,7 +1103,7 @@
     }
   },
   {
-    "__docId__": 62,
+    "__docId__": 64,
     "kind": "file",
     "name": "src/api/shuffled.js",
     "content": "import _fisheryates_inside_out from '../kernel/_fisheryates_inside_out.js';\nimport randint from './randint.js';\n\n/**\n * Given an input iterable, constructs an array containing the elements of the\n * input shuffled uniformly at random.\n *\n * @function\n * @param {Iterable} iterable The input iterable.\n * @return {Array} The constructed array.\n */\nconst shuffled = _fisheryates_inside_out(randint);\nexport default shuffled;\n",
@@ -1036,7 +1114,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 63,
+    "__docId__": 65,
     "kind": "variable",
     "name": "shuffled",
     "memberof": "src/api/shuffled.js",
@@ -1081,10 +1159,10 @@
     }
   },
   {
-    "__docId__": 64,
+    "__docId__": 66,
     "kind": "file",
     "name": "src/index.js",
-    "content": "export {default as choice} from './api/choice.js';\nexport {default as randfloat} from './api/randfloat.js';\nexport {default as randint} from './api/randint.js';\nexport {default as random} from './api/random.js';\nexport {default as randrange} from './api/randrange.js';\nexport {default as sample} from './api/sample.js';\nexport {default as shuffle} from './api/shuffle.js';\nexport {default as shuffled} from './api/shuffled.js';\nexport {default as _choice} from './kernel/_choice.js';\nexport {default as _fisheryates} from './kernel/_fisheryates.js';\nexport {default as _fisheryates_inside_out} from './kernel/_fisheryates_inside_out.js';\nexport {default as _randfloat} from './kernel/_randfloat.js';\nexport {default as _randint} from './kernel/_randint.js';\nexport {default as _shuffle} from './kernel/_shuffle.js';\n",
+    "content": "export {default as choice} from './api/choice.js';\nexport {default as randfloat} from './api/randfloat.js';\nexport {default as randint} from './api/randint.js';\nexport {default as random} from './api/random.js';\nexport {default as randrange} from './api/randrange.js';\nexport {default as reservoir} from './api/reservoir.js';\nexport {default as sample} from './api/sample.js';\nexport {default as shuffle} from './api/shuffle.js';\nexport {default as shuffled} from './api/shuffled.js';\nexport {default as _choice} from './kernel/_choice.js';\nexport {default as _fisheryates} from './kernel/_fisheryates.js';\nexport {default as _fisheryates_inside_out} from './kernel/_fisheryates_inside_out.js';\nexport {default as _randfloat} from './kernel/_randfloat.js';\nexport {default as _randint} from './kernel/_randint.js';\nexport {default as _shuffle} from './kernel/_shuffle.js';\nexport {default as _waterman} from './kernel/_waterman.js';\n",
     "static": true,
     "longname": "/home/runner/work/js-random/js-random/src/index.js",
     "access": "public",
@@ -1092,7 +1170,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 65,
+    "__docId__": 67,
     "kind": "file",
     "name": "src/kernel/_choice.js",
     "content": "/**\n * Builds a choice function given a randint function.\n *\n * @param {Function} randint The randint function.\n * @return {Function} The choice function.\n */\nconst _choice = (randint) => {\n\t/**\n\t * Sample a single element from an array.\n\t *\n\t * @param {Array} a The input array.\n\t * @param {number} i Inclusive left bound.\n\t * @param {number} j Non-inclusive right bound.\n\t * @return {any} The sampled element.\n\t */\n\tconst choice = (a, i, j) => {\n\t\tconst x = randint(i, j);\n\t\treturn a[x];\n\t};\n\n\treturn choice;\n};\n\nexport default _choice;\n",
@@ -1103,7 +1181,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 66,
+    "__docId__": 68,
     "kind": "function",
     "name": "_choice",
     "memberof": "src/kernel/_choice.js",
@@ -1139,7 +1217,7 @@
     }
   },
   {
-    "__docId__": 67,
+    "__docId__": 69,
     "kind": "file",
     "name": "src/kernel/_fisheryates.js",
     "content": "/**\n * Sample elements from an array using Fisher-Yates method.\n *\n * NOTE: The original description of the algorithm by Fisher and Yates [1] had\n * unnecessary bookkeeping which made the algorithm run in O(n * (j-i)) time.\n * This implementation follows Durstenfeld's [2] and Knuth's [3] descriptions\n * which yield O(n) running time.\n *\n * For more information see the excellent \"Fisher–Yates shuffle\" page on\n * Wikipedia [4]. Fisher and Yates description is referred there as\n * \"Fisher and Yate's original method\" or \"pencil-and-paper method\".\n * The more efficient implementation described by Durstenfeld and Knuth is\n * referred there as \"the modern method\".\n *\n * [1] Fisher, Ronald A.; Yates, Frank (1938). Statistical tables for\n *     biological, agricultural and medical research.\n * [2] Durstenfeld, R. (July 1964). \"Algorithm 235: Random permutation\"\n * [3] Knuth, Donald E. (1969). Seminumerical algorithms. The Art of Computer\n *     Programming Volume 2.\n * [4] https://en.wikipedia.org/wiki/Fisher–Yates_shuffle\n *\n * @param {Function} randint The randint function.\n * @return {Function} The sampling function.\n */\nconst _fisheryates = (randint) => {\n\t/**\n\t * Take a sample of size n (without replacement) from the items i through\n\t * j-1 of the input array. This is done in-place. The sample can be\n\t * retrieved from position i to i+n.\n\t *\n\t * @param {number} n The size of the sample.\n\t * @param {Array} a The input array.\n\t * @param {number} i The inclusive left bound.\n\t * @param {number} j The non-inclusive right bound.\n\t */\n\tconst sample = (n, a, i, j) => {\n\t\t// We will swap at most n elements\n\t\t// NOTE: When n = j - i, the last swap swaps a[j-1] with itself,\n\t\t// which is a NOOP. /!\\ HOWEVER, the last swap is NOT a NOOP when\n\t\t// n < j - i. Hence we cannot let k = i + n - 1 in general.\n\t\tconst k = i + n;\n\n\t\tfor (; i < k; ++i) {\n\t\t\t// Choose any index p in the remaining array\n\t\t\tconst p = randint(i, j);\n\n\t\t\t// Swap selected element with the first remaining element.\n\t\t\tconst tmp = a[i];\n\t\t\ta[i] = a[p];\n\t\t\ta[p] = tmp;\n\t\t}\n\t};\n\n\treturn sample;\n};\n\nexport default _fisheryates;\n",
@@ -1150,7 +1228,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 68,
+    "__docId__": 70,
     "kind": "function",
     "name": "_fisheryates",
     "memberof": "src/kernel/_fisheryates.js",
@@ -1186,7 +1264,7 @@
     }
   },
   {
-    "__docId__": 69,
+    "__docId__": 71,
     "kind": "file",
     "name": "src/kernel/_fisheryates_inside_out.js",
     "content": "/**\n * Shuffle elements of an iterable using an inside-out implementation of the\n * Fisher-Yates method.\n *\n * One can observe that if the input contains n elements, the loop has exactly\n * n! possible outcomes: one for the first iteration, two for the second, three\n * for the third, etc., the number of outcomes of a loop being the product of\n * the number of outcomes for each iteration. Given a perfect randint function,\n * each iteration's outcomes are equally likely, and independent of other\n * iterations outcomes.  The proof below shows that these outcomes are\n * distinct.\n *\n * To see that this method yields the correct result (assume perfect randint):\n *   1. Observe that it is correct when the input is empty.\n *   2. By induction:\n *     - Induction hypothesis: assume it is correct when the input consists of\n *       n elements.\n *     - We almost insert the (n+1)th element at one of the n+1 possible\n *       insertion position in the output array. Almost because we move the\n *       element that is at the insertion position at the end instead of\n *       shifting the elements right of the insertion position to make room for\n *       the inserted element.\n *     - Ideally, since we inserted the last element at one of the n+1\n *       positions, we would like that the elements inserted earlier form one\n *       of n! permutations uniformly at random after moving the element under\n *       the insertion position. This is true because the permutations that we\n *       obtain after this move are in one-to-one correspondance with the n!\n *       distinct permutations that can be obtained before the move. These are\n *       equally likely to be produced by the induction hypothesis.\n *\n * @param {Function} randint The randint function.\n * @return {Function} The sampling function.\n */\nconst _fisheryates_inside_out = (randint) => {\n\t/**\n\t * Given an input iterable, constructs an array containing the elements of\n\t * the input shuffled uniformly at random.\n\t *\n\t * @param {Iterable} iterable The input iterable.\n\t * @param {Array} [output=[]] The constructed array.\n\t * @return {Array} The constructed array.\n\t */\n\tconst shuffled = (iterable, output = []) => {\n\t\tlet n = 0;\n\t\tfor (const item of iterable) {\n\t\t\tconst i = randint(-1, n);\n\t\t\tif (i === -1) output.push(item);\n\t\t\telse {\n\t\t\t\toutput.push(output[i]);\n\t\t\t\toutput[i] = item;\n\t\t\t}\n\n\t\t\t++n;\n\t\t}\n\n\t\treturn output;\n\t};\n\n\treturn shuffled;\n};\n\nexport default _fisheryates_inside_out;\n",
@@ -1197,7 +1275,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 70,
+    "__docId__": 72,
     "kind": "function",
     "name": "_fisheryates_inside_out",
     "memberof": "src/kernel/_fisheryates_inside_out.js",
@@ -1233,7 +1311,7 @@
     }
   },
   {
-    "__docId__": 71,
+    "__docId__": 73,
     "kind": "file",
     "name": "src/kernel/_randfloat.js",
     "content": "/**\n * Builds a randfloat function given a random number generator.\n *\n * @param {Function} random A function taking no arguments that returns a\n * double uniformly at random in the interval [0, 1).\n *\n * @return {Function} A randfloat function.\n */\nconst _randfloat = (random) => {\n\t/**\n\t * Returns a double in interval [i, j[ (i included, j excluded)\n\t * according to a uniform distribution.\n\t *\n\t * @param {number} i The inclusive left bound\n\t * @param {number} j The non-inclusive right bound\n\t * @return {number} A double in the interval [i, j[ taken uniformly at\n\t * random.\n\t */\n\tconst randfloat = (i, j) => i + random() * (j - i);\n\treturn randfloat;\n};\n\nexport default _randfloat;\n",
@@ -1244,7 +1322,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 72,
+    "__docId__": 74,
     "kind": "function",
     "name": "_randfloat",
     "memberof": "src/kernel/_randfloat.js",
@@ -1280,7 +1358,7 @@
     }
   },
   {
-    "__docId__": 73,
+    "__docId__": 75,
     "kind": "file",
     "name": "src/kernel/_randint.js",
     "content": "/**\n * Builds a randint function given a random number generator.\n *\n * @param {Function} random A function taking no arguments that returns a\n * double uniformly at random in the interval [0, 1).\n *\n * @return {Function} A randint function.\n */\nconst _randint = (random) => {\n\t/**\n\t * Returns an integer in interval [i, j[ (i included, j excluded)\n\t * according to a uniform distribution.\n\t *\n\t * @param {number} i The inclusive left bound\n\t * @param {number} j The non-inclusive right bound\n\t * @return {number} An integer in the interval [i, j[ taken uniformly at\n\t * random.\n\t */\n\tconst randint = (i, j) => i + Math.floor(random() * (j - i));\n\treturn randint;\n};\n\nexport default _randint;\n",
@@ -1291,7 +1369,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 74,
+    "__docId__": 76,
     "kind": "function",
     "name": "_randint",
     "memberof": "src/kernel/_randint.js",
@@ -1327,7 +1405,7 @@
     }
   },
   {
-    "__docId__": 75,
+    "__docId__": 77,
     "kind": "file",
     "name": "src/kernel/_shuffle.js",
     "content": "/**\n * Shuffle the array by sampling the entire array.\n *\n * @param {Function} sample The sample function.\n * @return {Function} The shuffle function.\n */\nconst _shuffle = (sample) => {\n\t/**\n\t * Shuffle array in-place between positions i and j-1 (inclusive).\n\t * The other positions are left untouched.\n\t *\n\t * @param {Array} a The input array.\n\t * @param {number} i The inclusive left bound.\n\t * @param {number} j The non-inclusive right bound.\n\t */\n\tconst shuffle = (a, i, j) => sample(j - i, a, i, j);\n\treturn shuffle;\n};\n\nexport default _shuffle;\n",
@@ -1338,7 +1416,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 76,
+    "__docId__": 78,
     "kind": "function",
     "name": "_shuffle",
     "memberof": "src/kernel/_shuffle.js",
@@ -1374,6 +1452,53 @@
     }
   },
   {
+    "__docId__": 79,
+    "kind": "file",
+    "name": "src/kernel/_waterman.js",
+    "content": "/**\n * Construct a sampling function using Algorithm R due to Alan Waterman (both\n * name and attribution are due to Knuth).\n *\n * @param {Function} randint The randint function.\n * @return {Function} The sample function.\n */\nconst _waterman = (randint) => {\n\t/**\n\t * Samples k items uniformly at random from an iterable of unknown size.\n\t *\n\t * We want each item to have probability k/n of being selected.\n\t *\n\t * The algorithm works as follows:\n\t *   1. We initialize a candidate sample with the first k items.\n\t *   2. For each remaining item i, decide whether to insert it in the\n\t *   candidate sample with probability k/i, evicting an item from the\n\t *   candidate sample at random, or to discard it immediately (with\n\t *   probability 1-k/i),\n\t *\n\t * To prove that the obtained probability of inclusion for each item is correct\n\t * we multiply two probabilities:\n\t *   1. The probability of entering the candidate sample.\n\t *   2. The probability of staying in the candidate sample until the end.\n\t *\n\t * For items 1 to k, probability 1. is 1, and probability 2. is\n\t * (1-1/(k+1))(1-1/(k+2))...(1-1/n)\n\t * = (k/(k+1))((k+1)/(k+2))...((n-1)/n) which telescopes to k/n.\n\t *\n\t * For items i = k+1 to n, where probability 1. is k/i, and probability 2.\n\t * is (1-1/(i+1))(1-1/(i+2))...(1-1/n)\n\t * = (i/(i+1))((i+1)/(i+2))...((n-1)/n) which telescopes to i/n.\n\t *\n\t * NOTE: Could also implement so that it yields after each input item.\n\t * NOTE: One can reduce the expected number of random bits needed by\n\t * avoiding generating any number above k-1:\n\t *   - First we branch on whether i < k.\n\t *   - Then we generate the random number between 0 and k-1 only if needed.\n\t *\n\t * To decide on the branch, flip a biased coin with parameter p = k/n.\n\t * To do so, flip a fair coin until it differs from the binary\n\t * representation of k/n (0.10110101...).\n\t * The computation can be made efficient by realizing several things:\n\t *   - k is fixed and smaller than n (so divmod step can be skipped)\n\t *   - k/(n+1) < k/n (so we can avoid recomputing if the biased flip > k/n)\n\t *\n\t * This would reduce the number of necessary random bits from O(n log n) to\n\t * expected O(n).\n\t *\n\t * @param {number} k The size of the sample.\n\t * @param {Iterable} iterable The input iterable.\n\t * @param {Array} [output=new Array(k)] The output array.\n\t * @return {Array} The output array.\n\t */\n\tconst sample = (k, iterable, output = new Array(k)) => {\n\t\tconst it = iterable[Symbol.iterator]();\n\n\t\tlet n = 0;\n\n\t\tfor (; n < k; ++n) {\n\t\t\tconst {value, done} = it.next();\n\t\t\tif (done) return output;\n\t\t\toutput[n] = value;\n\t\t}\n\n\t\tfor (; ; ++n) {\n\t\t\tconst {value, done} = it.next();\n\t\t\tif (done) return output;\n\t\t\tconst i = randint(0, n);\n\t\t\tif (i < k) output[i] = value;\n\t\t}\n\t};\n\n\treturn sample;\n};\n\nexport default _waterman;\n",
+    "static": true,
+    "longname": "/home/runner/work/js-random/js-random/src/kernel/_waterman.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 80,
+    "kind": "function",
+    "name": "_waterman",
+    "memberof": "src/kernel/_waterman.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/kernel/_waterman.js~_waterman",
+    "access": "private",
+    "export": true,
+    "importPath": "@aureooms/js-random/src/kernel/_waterman.js",
+    "importStyle": "_waterman",
+    "description": "Construct a sampling function using Algorithm R due to Alan Waterman (both\nname and attribution are due to Knuth).",
+    "lineNumber": 8,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "Function"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "randint",
+        "description": "The randint function."
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Function"
+      ],
+      "spread": false,
+      "description": "The sample function."
+    }
+  },
+  {
     "kind": "index",
     "content": ":game_die: [@aureooms/js-random](https://aureooms.github.io/js-random)\n==\n\n<p align=\"center\">\n<a href=\"https://xkcd.com/1210\">\n<img src=\"https://imgs.xkcd.com/comics/im_so_random.png\" width=\"600\">\n</a><br/>\n© <a href=\"https://xkcd.com\">xkcd.com</a>\n</p>\n\nRandomness algorithms for JavaScript.\nSee [docs](https://aureooms.github.io/js-random).\nParent is [@aureooms/js-algorithms](https://aureooms.github.io/js-algorithms).\n\n> :warning: Depending on your environment, the code may require\n> `regeneratorRuntime` to be defined, for instance by importing\n> [regenerator-runtime/runtime](https://www.npmjs.com/package/regenerator-runtime).\n\n```js\nimport {\n\trandint , // randint(i, j) -> [i, j[ \\cap ZZ\n\trandfloat , // randfloat(i, j) -> [i, j[\n\tsample , // /!\\ in-place\n\tshuffle , // /!\\ in-place\n} from '@aureooms/js-random' ;\n```\n\n[![License](https://img.shields.io/github/license/aureooms/js-random.svg)](https://raw.githubusercontent.com/aureooms/js-random/main/LICENSE)\n[![Version](https://img.shields.io/npm/v/@aureooms/js-random.svg)](https://www.npmjs.org/package/@aureooms/js-random)\n[![Tests](https://img.shields.io/github/workflow/status/aureooms/js-random/ci:test?event=push&label=tests)](https://github.com/aureooms/js-random/actions/workflows/ci:test.yml?query=branch:main)\n[![Dependencies](https://img.shields.io/david/aureooms/js-random.svg)](https://david-dm.org/aureooms/js-random)\n[![Dev dependencies](https://img.shields.io/david/dev/aureooms/js-random.svg)](https://david-dm.org/aureooms/js-random?type=dev)\n[![GitHub issues](https://img.shields.io/github/issues/aureooms/js-random.svg)](https://github.com/aureooms/js-random/issues)\n[![Downloads](https://img.shields.io/npm/dm/@aureooms/js-random.svg)](https://www.npmjs.org/package/@aureooms/js-random)\n\n[![Code issues](https://img.shields.io/codeclimate/issues/aureooms/js-random.svg)](https://codeclimate.com/github/aureooms/js-random/issues)\n[![Code maintainability](https://img.shields.io/codeclimate/maintainability/aureooms/js-random.svg)](https://codeclimate.com/github/aureooms/js-random/trends/churn)\n[![Code coverage (cov)](https://img.shields.io/codecov/c/gh/aureooms/js-random/main.svg)](https://codecov.io/gh/aureooms/js-random)\n[![Code technical debt](https://img.shields.io/codeclimate/tech-debt/aureooms/js-random.svg)](https://codeclimate.com/github/aureooms/js-random/trends/technical_debt)\n[![Documentation](https://aureooms.github.io/js-random/badge.svg)](https://aureooms.github.io/js-random/source.html)\n[![Package size](https://img.shields.io/bundlephobia/minzip/@aureooms/js-random)](https://bundlephobia.com/result?p=@aureooms/js-random)\n",
     "longname": "/home/runner/work/js-random/js-random/README.md",
@@ -1383,7 +1508,7 @@
   },
   {
     "kind": "packageJSON",
-    "content": "{\n  \"name\": \"@aureooms/js-random\",\n  \"description\": \"Randomness algorithms for JavaScript\",\n  \"version\": \"3.3.0\",\n  \"license\": \"AGPL-3.0\",\n  \"author\": \"Aurélien Ooms <aurelien.ooms@gmail.com>\",\n  \"homepage\": \"https://aureooms.github.io/js-random\",\n  \"repository\": {\n    \"url\": \"https://github.com/aureooms/js-random\",\n    \"type\": \"git\"\n  },\n  \"bugs\": {\n    \"url\": \"https://github.com/aureooms/js-random/issues\"\n  },\n  \"keywords\": [\n    \"javascript\",\n    \"js\",\n    \"randfloat\",\n    \"randint\",\n    \"random\",\n    \"randomness\",\n    \"sample\",\n    \"shuffle\"\n  ],\n  \"sideEffects\": false,\n  \"source\": \"src/index.js\",\n  \"main\": \"dist/index.js\",\n  \"module\": \"dist/index.module.js\",\n  \"esmodule\": \"dist/index.modern.js\",\n  \"umd:main\": \"dist/index.umd.js\",\n  \"unpkg\": \"dist/index.umd.js\",\n  \"exports\": {\n    \".\": {\n      \"browser\": \"./dist/index.module.js\",\n      \"umd\": \"./dist/index.umd.js\",\n      \"require\": \"./dist/index.js\",\n      \"default\": \"./dist/index.modern.js\"\n    }\n  },\n  \"files\": [\n    \"dist\"\n  ],\n  \"scripts\": {\n    \"build\": \"NODE_ENV=production microbundle\",\n    \"build-docs\": \"esdoc\",\n    \"build-gh-pages\": \"npm run build-docs\",\n    \"ci:test\": \"npm run lint-config && npm run lint && npm run cover\",\n    \"commit-msg\": \"commitlint --edit\",\n    \"cover\": \"NODE_ENV=cover c8 --all --src src --reporter lcov --reporter text-summary --reporter text npm test\",\n    \"debug\": \"NODE_ENV=debug npm run test -- -st --fail-fast\",\n    \"dev\": \"npm run lint-config-and-fix && npm run lint-and-fix && npm run cover -- -- -st --fail-fast\",\n    \"install-hooks\": \"husky install\",\n    \"lint\": \"xo\",\n    \"lint-and-fix\": \"npm run lint -- --fix\",\n    \"lint-config\": \"fixpack --dryRun\",\n    \"lint-config-and-fix\": \"fixpack || fixpack\",\n    \"postinstall\": \"npm run install-hooks\",\n    \"postpublish\": \"pinst --enable\",\n    \"precommit\": \"lint-staged\",\n    \"prepare\": \"npm run build\",\n    \"prepublishOnly\": \"pinst --disable\",\n    \"release\": \"np --message ':hatching_chick: release: Bumping to v%s.'\",\n    \"test\": \"ava\"\n  },\n  \"dependencies\": {},\n  \"devDependencies\": {\n    \"@aureooms/js-array\": \"4.0.0\",\n    \"@aureooms/js-compare\": \"^2.0.1\",\n    \"@aureooms/js-functools\": \"2.0.3\",\n    \"@aureooms/js-itertools\": \"5.1.0\",\n    \"@aureooms/js-memory\": \"4.0.0\",\n    \"@aureooms/js-type\": \"1.0.4\",\n    \"@babel/core\": \"7.13.14\",\n    \"@babel/preset-env\": \"7.13.12\",\n    \"@babel/register\": \"7.13.14\",\n    \"@commitlint/cli\": \"12.1.1\",\n    \"@js-library/commitlint-config\": \"0.0.4\",\n    \"ava\": \"3.15.0\",\n    \"babel-plugin-transform-remove-console\": \"6.9.4\",\n    \"babel-plugin-unassert\": \"3.0.1\",\n    \"babel-preset-power-assert\": \"3.0.0\",\n    \"c8\": \"7.7.0\",\n    \"coveralls\": \"3.1.0\",\n    \"esdoc\": \"1.1.0\",\n    \"esdoc-inject-script-plugin\": \"1.0.0\",\n    \"esdoc-inject-style-plugin\": \"1.0.0\",\n    \"esdoc-standard-plugin\": \"1.0.0\",\n    \"fixpack\": \"4.0.0\",\n    \"husky\": \"6.0.0\",\n    \"lint-staged\": \"10.5.4\",\n    \"microbundle\": \"0.13.0\",\n    \"np\": \"7.4.0\",\n    \"pinst\": \"2.1.6\",\n    \"power-assert\": \"1.6.1\",\n    \"regenerator-runtime\": \"0.13.7\",\n    \"xo\": \"0.38.2\"\n  },\n  \"ava\": {\n    \"files\": [\n      \"test/src/**/*\"\n    ],\n    \"require\": [\n      \"regenerator-runtime/runtime\",\n      \"@babel/register\"\n    ],\n    \"timeout\": \"1m\",\n    \"concurrency\": 8\n  },\n  \"babel\": {\n    \"sourceMaps\": true,\n    \"presets\": [\n      [\n        \"@babel/preset-env\",\n        {\n          \"targets\": \"current node\"\n        }\n      ]\n    ],\n    \"plugins\": [\n      [\n        \"transform-remove-console\",\n        {\n          \"exclude\": [\n            \"log\",\n            \"error\",\n            \"warn\"\n          ]\n        }\n      ]\n    ],\n    \"env\": {\n      \"debug\": {\n        \"presets\": [\n          \"babel-preset-power-assert\"\n        ],\n        \"plugins\": [\n          [\n            \"transform-remove-console\",\n            {\n              \"exclude\": [\n                \"debug\",\n                \"log\",\n                \"error\",\n                \"warn\"\n              ]\n            }\n          ]\n        ]\n      },\n      \"test\": {\n        \"presets\": [\n          \"babel-preset-power-assert\"\n        ]\n      },\n      \"development\": {\n        \"presets\": [\n          [\n            \"@babel/preset-env\",\n            {\n              \"targets\": [\n                \"defaults\",\n                \"maintained node versions\"\n              ]\n            }\n          ],\n          \"babel-preset-power-assert\"\n        ]\n      },\n      \"production\": {\n        \"presets\": [\n          [\n            \"@babel/preset-env\",\n            {\n              \"targets\": [\n                \"defaults\",\n                \"maintained node versions\"\n              ]\n            }\n          ]\n        ],\n        \"plugins\": [\n          \"babel-plugin-unassert\"\n        ]\n      },\n      \"cover\": {\n        \"sourceMaps\": \"both\",\n        \"presets\": [\n          \"babel-preset-power-assert\"\n        ]\n      }\n    }\n  },\n  \"lint-staged\": {\n    \"*.js\": [\n      \"npm run lint-and-fix\"\n    ],\n    \"package.json\": [\n      \"npm run lint-config-and-fix\"\n    ]\n  },\n  \"prettier\": {\n    \"trailingComma\": \"all\"\n  },\n  \"xo\": {\n    \"prettier\": true,\n    \"plugins\": [\n      \"unicorn\"\n    ],\n    \"rules\": {\n      \"unicorn/filename-case\": \"off\",\n      \"camelcase\": \"off\",\n      \"unicorn/prevent-abbreviations\": \"off\",\n      \"no-constant-condition\": \"off\",\n      \"unicorn/prefer-math-trunc\": \"off\",\n      \"unicorn/no-new-array\": \"off\",\n      \"no-negated-condition\": \"off\"\n    },\n    \"overrides\": [\n      {\n        \"files\": [\n          \"doc/**\"\n        ],\n        \"env\": \"browser\"\n      }\n    ]\n  }\n}\n",
+    "content": "{\n  \"name\": \"@aureooms/js-random\",\n  \"description\": \"Randomness algorithms for JavaScript\",\n  \"version\": \"3.4.0\",\n  \"license\": \"AGPL-3.0\",\n  \"author\": \"Aurélien Ooms <aurelien.ooms@gmail.com>\",\n  \"homepage\": \"https://aureooms.github.io/js-random\",\n  \"repository\": {\n    \"url\": \"https://github.com/aureooms/js-random\",\n    \"type\": \"git\"\n  },\n  \"bugs\": {\n    \"url\": \"https://github.com/aureooms/js-random/issues\"\n  },\n  \"keywords\": [\n    \"javascript\",\n    \"js\",\n    \"randfloat\",\n    \"randint\",\n    \"random\",\n    \"randomness\",\n    \"sample\",\n    \"shuffle\"\n  ],\n  \"sideEffects\": false,\n  \"source\": \"src/index.js\",\n  \"main\": \"dist/index.js\",\n  \"module\": \"dist/index.module.js\",\n  \"esmodule\": \"dist/index.modern.js\",\n  \"umd:main\": \"dist/index.umd.js\",\n  \"unpkg\": \"dist/index.umd.js\",\n  \"exports\": {\n    \".\": {\n      \"browser\": \"./dist/index.module.js\",\n      \"umd\": \"./dist/index.umd.js\",\n      \"require\": \"./dist/index.js\",\n      \"default\": \"./dist/index.modern.js\"\n    }\n  },\n  \"files\": [\n    \"dist\"\n  ],\n  \"scripts\": {\n    \"build\": \"NODE_ENV=production microbundle\",\n    \"build-docs\": \"esdoc\",\n    \"build-gh-pages\": \"npm run build-docs\",\n    \"ci:test\": \"npm run lint-config && npm run lint && npm run cover\",\n    \"commit-msg\": \"commitlint --edit\",\n    \"cover\": \"NODE_ENV=cover c8 --all --src src --reporter lcov --reporter text-summary --reporter text npm test\",\n    \"debug\": \"NODE_ENV=debug npm run test -- -st --fail-fast\",\n    \"dev\": \"npm run lint-config-and-fix && npm run lint-and-fix && npm run cover -- -- -st --fail-fast\",\n    \"install-hooks\": \"husky install\",\n    \"lint\": \"xo\",\n    \"lint-and-fix\": \"npm run lint -- --fix\",\n    \"lint-config\": \"fixpack --dryRun\",\n    \"lint-config-and-fix\": \"fixpack || fixpack\",\n    \"postinstall\": \"npm run install-hooks\",\n    \"postpublish\": \"pinst --enable\",\n    \"precommit\": \"lint-staged\",\n    \"prepare\": \"npm run build\",\n    \"prepublishOnly\": \"pinst --disable\",\n    \"release\": \"np --message ':hatching_chick: release: Bumping to v%s.'\",\n    \"test\": \"ava\"\n  },\n  \"dependencies\": {},\n  \"devDependencies\": {\n    \"@aureooms/js-array\": \"4.0.0\",\n    \"@aureooms/js-compare\": \"2.0.1\",\n    \"@aureooms/js-functools\": \"2.0.3\",\n    \"@aureooms/js-itertools\": \"5.1.0\",\n    \"@aureooms/js-memory\": \"4.0.0\",\n    \"@aureooms/js-red-black-tree\": \"^9.0.0\",\n    \"@aureooms/js-type\": \"1.0.4\",\n    \"@babel/core\": \"7.13.14\",\n    \"@babel/preset-env\": \"7.13.12\",\n    \"@babel/register\": \"7.13.14\",\n    \"@commitlint/cli\": \"12.1.1\",\n    \"@js-library/commitlint-config\": \"0.0.4\",\n    \"ava\": \"3.15.0\",\n    \"babel-plugin-transform-remove-console\": \"6.9.4\",\n    \"babel-plugin-unassert\": \"3.0.1\",\n    \"babel-preset-power-assert\": \"3.0.0\",\n    \"c8\": \"7.7.1\",\n    \"coveralls\": \"3.1.0\",\n    \"esdoc\": \"1.1.0\",\n    \"esdoc-inject-script-plugin\": \"1.0.0\",\n    \"esdoc-inject-style-plugin\": \"1.0.0\",\n    \"esdoc-standard-plugin\": \"1.0.0\",\n    \"fixpack\": \"4.0.0\",\n    \"husky\": \"6.0.0\",\n    \"lint-staged\": \"10.5.4\",\n    \"microbundle\": \"0.13.0\",\n    \"np\": \"7.4.0\",\n    \"pinst\": \"2.1.6\",\n    \"power-assert\": \"1.6.1\",\n    \"regenerator-runtime\": \"0.13.7\",\n    \"xo\": \"0.38.2\"\n  },\n  \"ava\": {\n    \"files\": [\n      \"test/src/**/*\"\n    ],\n    \"require\": [\n      \"regenerator-runtime/runtime\",\n      \"@babel/register\"\n    ],\n    \"timeout\": \"1m\",\n    \"concurrency\": 8\n  },\n  \"babel\": {\n    \"sourceMaps\": true,\n    \"presets\": [\n      [\n        \"@babel/preset-env\",\n        {\n          \"targets\": \"current node\"\n        }\n      ]\n    ],\n    \"plugins\": [\n      [\n        \"transform-remove-console\",\n        {\n          \"exclude\": [\n            \"log\",\n            \"error\",\n            \"warn\"\n          ]\n        }\n      ]\n    ],\n    \"env\": {\n      \"debug\": {\n        \"presets\": [\n          \"babel-preset-power-assert\"\n        ],\n        \"plugins\": [\n          [\n            \"transform-remove-console\",\n            {\n              \"exclude\": [\n                \"debug\",\n                \"log\",\n                \"error\",\n                \"warn\"\n              ]\n            }\n          ]\n        ]\n      },\n      \"test\": {\n        \"presets\": [\n          \"babel-preset-power-assert\"\n        ]\n      },\n      \"development\": {\n        \"presets\": [\n          [\n            \"@babel/preset-env\",\n            {\n              \"targets\": [\n                \"defaults\",\n                \"maintained node versions\"\n              ]\n            }\n          ],\n          \"babel-preset-power-assert\"\n        ]\n      },\n      \"production\": {\n        \"presets\": [\n          [\n            \"@babel/preset-env\",\n            {\n              \"targets\": [\n                \"defaults\",\n                \"maintained node versions\"\n              ]\n            }\n          ]\n        ],\n        \"plugins\": [\n          \"babel-plugin-unassert\"\n        ]\n      },\n      \"cover\": {\n        \"sourceMaps\": \"both\",\n        \"presets\": [\n          \"babel-preset-power-assert\"\n        ]\n      }\n    }\n  },\n  \"lint-staged\": {\n    \"*.js\": [\n      \"npm run lint-and-fix\"\n    ],\n    \"package.json\": [\n      \"npm run lint-config-and-fix\"\n    ]\n  },\n  \"prettier\": {\n    \"trailingComma\": \"all\"\n  },\n  \"xo\": {\n    \"prettier\": true,\n    \"plugins\": [\n      \"unicorn\"\n    ],\n    \"rules\": {\n      \"unicorn/filename-case\": \"off\",\n      \"camelcase\": \"off\",\n      \"unicorn/prevent-abbreviations\": \"off\",\n      \"no-constant-condition\": \"off\",\n      \"unicorn/prefer-math-trunc\": \"off\",\n      \"unicorn/no-new-array\": \"off\",\n      \"no-negated-condition\": \"off\"\n    },\n    \"overrides\": [\n      {\n        \"files\": [\n          \"doc/**\"\n        ],\n        \"env\": \"browser\"\n      }\n    ]\n  }\n}\n",
     "longname": "/home/runner/work/js-random/js-random/package.json",
     "name": "package.json",
     "static": true,

@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <base data-ice="baseUrl" href="../../../">
-  <title data-ice="title">src/kernel/_fisheryates.js | @aureooms/js-random</title>
+  <title data-ice="title">src/kernel/_waterman.js | @aureooms/js-random</title>
   <link type="text/css" rel="stylesheet" href="css/style.css">
   <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
   <script src="script/prettify/prettify.js"></script>
@@ -49,64 +49,84 @@
 </div>
 </nav>
 
-<div class="content" data-ice="content"><h1 data-ice="title">src/kernel/_fisheryates.js</h1>
+<div class="content" data-ice="content"><h1 data-ice="title">src/kernel/_waterman.js</h1>
 <pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">/**
- * Sample elements from an array using Fisher-Yates method.
- *
- * NOTE: The original description of the algorithm by Fisher and Yates [1] had
- * unnecessary bookkeeping which made the algorithm run in O(n * (j-i)) time.
- * This implementation follows Durstenfeld&apos;s [2] and Knuth&apos;s [3] descriptions
- * which yield O(n) running time.
- *
- * For more information see the excellent &quot;Fisher&#x2013;Yates shuffle&quot; page on
- * Wikipedia [4]. Fisher and Yates description is referred there as
- * &quot;Fisher and Yate&apos;s original method&quot; or &quot;pencil-and-paper method&quot;.
- * The more efficient implementation described by Durstenfeld and Knuth is
- * referred there as &quot;the modern method&quot;.
- *
- * [1] Fisher, Ronald A.; Yates, Frank (1938). Statistical tables for
- *     biological, agricultural and medical research.
- * [2] Durstenfeld, R. (July 1964). &quot;Algorithm 235: Random permutation&quot;
- * [3] Knuth, Donald E. (1969). Seminumerical algorithms. The Art of Computer
- *     Programming Volume 2.
- * [4] https://en.wikipedia.org/wiki/Fisher&#x2013;Yates_shuffle
+ * Construct a sampling function using Algorithm R due to Alan Waterman (both
+ * name and attribution are due to Knuth).
  *
  * @param {Function} randint The randint function.
- * @return {Function} The sampling function.
+ * @return {Function} The sample function.
  */
-const _fisheryates = (randint) =&gt; {
+const _waterman = (randint) =&gt; {
 	/**
-	 * Take a sample of size n (without replacement) from the items i through
-	 * j-1 of the input array. This is done in-place. The sample can be
-	 * retrieved from position i to i+n.
+	 * Samples k items uniformly at random from an iterable of unknown size.
 	 *
-	 * @param {number} n The size of the sample.
-	 * @param {Array} a The input array.
-	 * @param {number} i The inclusive left bound.
-	 * @param {number} j The non-inclusive right bound.
+	 * We want each item to have probability k/n of being selected.
+	 *
+	 * The algorithm works as follows:
+	 *   1. We initialize a candidate sample with the first k items.
+	 *   2. For each remaining item i, decide whether to insert it in the
+	 *   candidate sample with probability k/i, evicting an item from the
+	 *   candidate sample at random, or to discard it immediately (with
+	 *   probability 1-k/i),
+	 *
+	 * To prove that the obtained probability of inclusion for each item is correct
+	 * we multiply two probabilities:
+	 *   1. The probability of entering the candidate sample.
+	 *   2. The probability of staying in the candidate sample until the end.
+	 *
+	 * For items 1 to k, probability 1. is 1, and probability 2. is
+	 * (1-1/(k+1))(1-1/(k+2))...(1-1/n)
+	 * = (k/(k+1))((k+1)/(k+2))...((n-1)/n) which telescopes to k/n.
+	 *
+	 * For items i = k+1 to n, where probability 1. is k/i, and probability 2.
+	 * is (1-1/(i+1))(1-1/(i+2))...(1-1/n)
+	 * = (i/(i+1))((i+1)/(i+2))...((n-1)/n) which telescopes to i/n.
+	 *
+	 * NOTE: Could also implement so that it yields after each input item.
+	 * NOTE: One can reduce the expected number of random bits needed by
+	 * avoiding generating any number above k-1:
+	 *   - First we branch on whether i &lt; k.
+	 *   - Then we generate the random number between 0 and k-1 only if needed.
+	 *
+	 * To decide on the branch, flip a biased coin with parameter p = k/n.
+	 * To do so, flip a fair coin until it differs from the binary
+	 * representation of k/n (0.10110101...).
+	 * The computation can be made efficient by realizing several things:
+	 *   - k is fixed and smaller than n (so divmod step can be skipped)
+	 *   - k/(n+1) &lt; k/n (so we can avoid recomputing if the biased flip &gt; k/n)
+	 *
+	 * This would reduce the number of necessary random bits from O(n log n) to
+	 * expected O(n).
+	 *
+	 * @param {number} k The size of the sample.
+	 * @param {Iterable} iterable The input iterable.
+	 * @param {Array} [output=new Array(k)] The output array.
+	 * @return {Array} The output array.
 	 */
-	const sample = (n, a, i, j) =&gt; {
-		// We will swap at most n elements
-		// NOTE: When n = j - i, the last swap swaps a[j-1] with itself,
-		// which is a NOOP. /!\ HOWEVER, the last swap is NOT a NOOP when
-		// n &lt; j - i. Hence we cannot let k = i + n - 1 in general.
-		const k = i + n;
+	const sample = (k, iterable, output = new Array(k)) =&gt; {
+		const it = iterable[Symbol.iterator]();
 
-		for (; i &lt; k; ++i) {
-			// Choose any index p in the remaining array
-			const p = randint(i, j);
+		let n = 0;
 
-			// Swap selected element with the first remaining element.
-			const tmp = a[i];
-			a[i] = a[p];
-			a[p] = tmp;
+		for (; n &lt; k; ++n) {
+			const {value, done} = it.next();
+			if (done) return output;
+			output[n] = value;
+		}
+
+		for (; ; ++n) {
+			const {value, done} = it.next();
+			if (done) return output;
+			const i = randint(0, n);
+			if (i &lt; k) output[i] = value;
 		}
 	};
 
 	return sample;
 };
 
-export default _fisheryates;
+export default _waterman;
 </code></pre>
 
 </div>
