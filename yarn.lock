@@ -42,6 +42,11 @@
   resolved "https://registry.yarnpkg.com/@aureooms/js-memory/-/js-memory-4.0.0.tgz#db87dc64b948f672d73b434ebde047b05869712c"
   integrity sha1-24fcZLlI9nLXO0NOveBHsFhpcSw=
 
+"@aureooms/js-red-black-tree@^9.0.0":
+  version "9.0.0"
+  resolved "https://registry.yarnpkg.com/@aureooms/js-red-black-tree/-/js-red-black-tree-9.0.0.tgz#ee006f24af42749546232b2d0baa13910c98f7b2"
+  integrity sha512-sUtY0HnwQnBUjrfwysKc6H4BJO4O2+NnrUHLqTYJyT1l1VSI+oXGffjjmMJTFpIl4L/4FEZAN0L3BiQxgR1T8g==
+
 "@aureooms/js-type@1.0.4":
   version "1.0.4"
   resolved "https://registry.yarnpkg.com/@aureooms/js-type/-/js-type-1.0.4.tgz#7f9de5f5f8506ff9c8958731744b7427b62e92b7"
