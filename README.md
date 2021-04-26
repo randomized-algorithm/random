@@ -25,17 +25,17 @@ import {
 } from '@aureooms/js-random' ;
 ```
 
-[![License](https://img.shields.io/github/license/aureooms/js-random.svg)](https://raw.githubusercontent.com/aureooms/js-random/main/LICENSE)
+[![License](https://img.shields.io/github/license/make-github-pseudonymous-again/js-random.svg)](https://raw.githubusercontent.com/make-github-pseudonymous-again/js-random/main/LICENSE)
 [![Version](https://img.shields.io/npm/v/@aureooms/js-random.svg)](https://www.npmjs.org/package/@aureooms/js-random)
-[![Tests](https://img.shields.io/github/workflow/status/aureooms/js-random/ci:test?event=push&label=tests)](https://github.com/aureooms/js-random/actions/workflows/ci:test.yml?query=branch:main)
-[![Dependencies](https://img.shields.io/david/aureooms/js-random.svg)](https://david-dm.org/aureooms/js-random)
-[![Dev dependencies](https://img.shields.io/david/dev/aureooms/js-random.svg)](https://david-dm.org/aureooms/js-random?type=dev)
-[![GitHub issues](https://img.shields.io/github/issues/aureooms/js-random.svg)](https://github.com/aureooms/js-random/issues)
+[![Tests](https://img.shields.io/github/workflow/status/make-github-pseudonymous-again/js-random/ci:test?event=push&label=tests)](https://github.com/make-github-pseudonymous-again/js-random/actions/workflows/ci:test.yml?query=branch:main)
+[![Dependencies](https://img.shields.io/david/make-github-pseudonymous-again/js-random.svg)](https://david-dm.org/make-github-pseudonymous-again/js-random)
+[![Dev dependencies](https://img.shields.io/david/dev/make-github-pseudonymous-again/js-random.svg)](https://david-dm.org/make-github-pseudonymous-again/js-random?type=dev)
+[![GitHub issues](https://img.shields.io/github/issues/make-github-pseudonymous-again/js-random.svg)](https://github.com/make-github-pseudonymous-again/js-random/issues)
 [![Downloads](https://img.shields.io/npm/dm/@aureooms/js-random.svg)](https://www.npmjs.org/package/@aureooms/js-random)
 
-[![Code issues](https://img.shields.io/codeclimate/issues/aureooms/js-random.svg)](https://codeclimate.com/github/aureooms/js-random/issues)
-[![Code maintainability](https://img.shields.io/codeclimate/maintainability/aureooms/js-random.svg)](https://codeclimate.com/github/aureooms/js-random/trends/churn)
-[![Code coverage (cov)](https://img.shields.io/codecov/c/gh/aureooms/js-random/main.svg)](https://codecov.io/gh/aureooms/js-random)
-[![Code technical debt](https://img.shields.io/codeclimate/tech-debt/aureooms/js-random.svg)](https://codeclimate.com/github/aureooms/js-random/trends/technical_debt)
+[![Code issues](https://img.shields.io/codeclimate/issues/make-github-pseudonymous-again/js-random.svg)](https://codeclimate.com/github/make-github-pseudonymous-again/js-random/issues)
+[![Code maintainability](https://img.shields.io/codeclimate/maintainability/make-github-pseudonymous-again/js-random.svg)](https://codeclimate.com/github/make-github-pseudonymous-again/js-random/trends/churn)
+[![Code coverage (cov)](https://img.shields.io/codecov/c/gh/make-github-pseudonymous-again/js-random/main.svg)](https://codecov.io/gh/make-github-pseudonymous-again/js-random)
+[![Code technical debt](https://img.shields.io/codeclimate/tech-debt/make-github-pseudonymous-again/js-random.svg)](https://codeclimate.com/github/make-github-pseudonymous-again/js-random/trends/technical_debt)
 [![Documentation](https://make-github-pseudonymous-again.github.io/js-random/badge.svg)](https://make-github-pseudonymous-again.github.io/js-random/source.html)
 [![Package size](https://img.shields.io/bundlephobia/minzip/@aureooms/js-random)](https://bundlephobia.com/result?p=@aureooms/js-random)

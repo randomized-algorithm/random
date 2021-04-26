@@ -6,11 +6,11 @@
   "author": "Aurélien Ooms <aurelien.ooms@gmail.com>",
   "homepage": "https://make-github-pseudonymous-again.github.io/js-random",
   "repository": {
-    "url": "https://github.com/aureooms/js-random",
+    "url": "https://github.com/make-github-pseudonymous-again/js-random",
     "type": "git"
   },
   "bugs": {
-    "url": "https://github.com/aureooms/js-random/issues"
+    "url": "https://github.com/make-github-pseudonymous-again/js-random/issues"
   },
   "keywords": [
     "javascript",
