@@ -72,7 +72,7 @@
     "@aureooms/js-red-black-tree": "9.0.0",
     "@aureooms/js-type": "1.0.4",
     "@babel/core": "7.14.0",
-    "@babel/preset-env": "7.14.0",
+    "@babel/preset-env": "7.14.1",
     "@babel/register": "7.13.16",
     "@commitlint/cli": "12.1.1",
     "@js-library/commitlint-config": "0.0.4",
