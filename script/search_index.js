@@ -1,98 +1,98 @@
 window.esdocSearchIndex = [
   [
-    "@aureooms/js-random/src/kernel/_choice.js~_choice",
+    "@randomized/random/src/kernel/_choice.js~_choice",
     "function/index.html#static-function-_choice",
-    "<span>_choice</span> <span class=\"search-result-import-path\">@aureooms/js-random/src/kernel/_choice.js</span>",
+    "<span>_choice</span> <span class=\"search-result-import-path\">@randomized/random/src/kernel/_choice.js</span>",
     "function"
   ],
   [
-    "@aureooms/js-random/src/kernel/_fisheryates.js~_fisheryates",
+    "@randomized/random/src/kernel/_fisheryates.js~_fisheryates",
     "function/index.html#static-function-_fisheryates",
-    "<span>_fisheryates</span> <span class=\"search-result-import-path\">@aureooms/js-random/src/kernel/_fisheryates.js</span>",
+    "<span>_fisheryates</span> <span class=\"search-result-import-path\">@randomized/random/src/kernel/_fisheryates.js</span>",
     "function"
   ],
   [
-    "@aureooms/js-random/src/kernel/_fisheryates_inside_out.js~_fisheryates_inside_out",
+    "@randomized/random/src/kernel/_fisheryates_inside_out.js~_fisheryates_inside_out",
     "function/index.html#static-function-_fisheryates_inside_out",
-    "<span>_fisheryates_inside_out</span> <span class=\"search-result-import-path\">@aureooms/js-random/src/kernel/_fisheryates_inside_out.js</span>",
+    "<span>_fisheryates_inside_out</span> <span class=\"search-result-import-path\">@randomized/random/src/kernel/_fisheryates_inside_out.js</span>",
     "function"
   ],
   [
-    "@aureooms/js-random/src/kernel/_randfloat.js~_randfloat",
+    "@randomized/random/src/kernel/_randfloat.js~_randfloat",
     "function/index.html#static-function-_randfloat",
-    "<span>_randfloat</span> <span class=\"search-result-import-path\">@aureooms/js-random/src/kernel/_randfloat.js</span>",
+    "<span>_randfloat</span> <span class=\"search-result-import-path\">@randomized/random/src/kernel/_randfloat.js</span>",
     "function"
   ],
   [
-    "@aureooms/js-random/src/kernel/_randint.js~_randint",
+    "@randomized/random/src/kernel/_randint.js~_randint",
     "function/index.html#static-function-_randint",
-    "<span>_randint</span> <span class=\"search-result-import-path\">@aureooms/js-random/src/kernel/_randint.js</span>",
+    "<span>_randint</span> <span class=\"search-result-import-path\">@randomized/random/src/kernel/_randint.js</span>",
     "function"
   ],
   [
-    "@aureooms/js-random/src/kernel/_shuffle.js~_shuffle",
+    "@randomized/random/src/kernel/_shuffle.js~_shuffle",
     "function/index.html#static-function-_shuffle",
-    "<span>_shuffle</span> <span class=\"search-result-import-path\">@aureooms/js-random/src/kernel/_shuffle.js</span>",
+    "<span>_shuffle</span> <span class=\"search-result-import-path\">@randomized/random/src/kernel/_shuffle.js</span>",
     "function"
   ],
   [
-    "@aureooms/js-random/src/kernel/_waterman.js~_waterman",
+    "@randomized/random/src/kernel/_waterman.js~_waterman",
     "function/index.html#static-function-_waterman",
-    "<span>_waterman</span> <span class=\"search-result-import-path\">@aureooms/js-random/src/kernel/_waterman.js</span>",
+    "<span>_waterman</span> <span class=\"search-result-import-path\">@randomized/random/src/kernel/_waterman.js</span>",
     "function"
   ],
   [
-    "@aureooms/js-random/src/api/choice.js~choice",
+    "@randomized/random/src/api/choice.js~choice",
     "variable/index.html#static-variable-choice",
-    "<span>choice</span> <span class=\"search-result-import-path\">@aureooms/js-random/src/api/choice.js</span>",
+    "<span>choice</span> <span class=\"search-result-import-path\">@randomized/random/src/api/choice.js</span>",
     "variable"
   ],
   [
-    "@aureooms/js-random/src/api/randfloat.js~randfloat",
+    "@randomized/random/src/api/randfloat.js~randfloat",
     "variable/index.html#static-variable-randfloat",
-    "<span>randfloat</span> <span class=\"search-result-import-path\">@aureooms/js-random/src/api/randfloat.js</span>",
+    "<span>randfloat</span> <span class=\"search-result-import-path\">@randomized/random/src/api/randfloat.js</span>",
     "variable"
   ],
   [
-    "@aureooms/js-random/src/api/randint.js~randint",
+    "@randomized/random/src/api/randint.js~randint",
     "variable/index.html#static-variable-randint",
-    "<span>randint</span> <span class=\"search-result-import-path\">@aureooms/js-random/src/api/randint.js</span>",
+    "<span>randint</span> <span class=\"search-result-import-path\">@randomized/random/src/api/randint.js</span>",
     "variable"
   ],
   [
-    "@aureooms/js-random/src/api/random.js~random",
+    "@randomized/random/src/api/random.js~random",
     "function/index.html#static-function-random",
-    "<span>random</span> <span class=\"search-result-import-path\">@aureooms/js-random/src/api/random.js</span>",
+    "<span>random</span> <span class=\"search-result-import-path\">@randomized/random/src/api/random.js</span>",
     "function"
   ],
   [
-    "@aureooms/js-random/src/api/randrange.js~randrange",
+    "@randomized/random/src/api/randrange.js~randrange",
     "function/index.html#static-function-randrange",
-    "<span>randrange</span> <span class=\"search-result-import-path\">@aureooms/js-random/src/api/randrange.js</span>",
+    "<span>randrange</span> <span class=\"search-result-import-path\">@randomized/random/src/api/randrange.js</span>",
     "function"
   ],
   [
-    "@aureooms/js-random/src/api/reservoir.js~reservoir",
+    "@randomized/random/src/api/reservoir.js~reservoir",
     "variable/index.html#static-variable-reservoir",
-    "<span>reservoir</span> <span class=\"search-result-import-path\">@aureooms/js-random/src/api/reservoir.js</span>",
+    "<span>reservoir</span> <span class=\"search-result-import-path\">@randomized/random/src/api/reservoir.js</span>",
     "variable"
   ],
   [
-    "@aureooms/js-random/src/api/sample.js~sample",
+    "@randomized/random/src/api/sample.js~sample",
     "variable/index.html#static-variable-sample",
-    "<span>sample</span> <span class=\"search-result-import-path\">@aureooms/js-random/src/api/sample.js</span>",
+    "<span>sample</span> <span class=\"search-result-import-path\">@randomized/random/src/api/sample.js</span>",
     "variable"
   ],
   [
-    "@aureooms/js-random/src/api/shuffle.js~shuffle",
+    "@randomized/random/src/api/shuffle.js~shuffle",
     "variable/index.html#static-variable-shuffle",
-    "<span>shuffle</span> <span class=\"search-result-import-path\">@aureooms/js-random/src/api/shuffle.js</span>",
+    "<span>shuffle</span> <span class=\"search-result-import-path\">@randomized/random/src/api/shuffle.js</span>",
     "variable"
   ],
   [
-    "@aureooms/js-random/src/api/shuffled.js~shuffled",
+    "@randomized/random/src/api/shuffled.js~shuffled",
     "variable/index.html#static-variable-shuffled",
-    "<span>shuffled</span> <span class=\"search-result-import-path\">@aureooms/js-random/src/api/shuffled.js</span>",
+    "<span>shuffled</span> <span class=\"search-result-import-path\">@randomized/random/src/api/shuffled.js</span>",
     "variable"
   ],
   [
