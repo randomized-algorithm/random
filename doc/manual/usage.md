@@ -5,14 +5,14 @@
 > [regenerator-runtime/runtime](https://www.npmjs.com/package/regenerator-runtime).
 
 ```js
-require( 'regenerator-runtime/runtime' ) ;
+await import( 'regenerator-runtime/runtime.js' ) ;
 // or
 import 'regenerator-runtime/runtime.js' ;
 ```
 
 Then
 ```js
-const { ... } = require( '@randomized/random' ) ;
+const { ... } = await import( '@randomized/random' ) ;
 // or
 import { ... } from '@randomized/random' ;
 ```
