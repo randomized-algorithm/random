@@ -2,56 +2,6 @@
 # yarn lockfile v1
 
 
-"@aureooms/js-array@4.0.0":
-  version "4.0.0"
-  resolved "https://registry.yarnpkg.com/@aureooms/js-array/-/js-array-4.0.0.tgz#ea64b7c788644f40bbb92259a6098ac14a4eca6c"
-  integrity sha1-6mS3x4hkT0C7uSJZpgmKwUpOymw=
-
-"@aureooms/js-collections-deque@^7.0.0":
-  version "7.0.0"
-  resolved "https://registry.yarnpkg.com/@aureooms/js-collections-deque/-/js-collections-deque-7.0.0.tgz#ff03a4901c956d277fa9d6a149104dc65c85f9ae"
-  integrity sha512-zWtMs1sTLGHBtKrjhJ4hZKcG54o4VSthCYn6sLA7pJeOc1FSEwKFyCaJq/BuSjY7rmhNVklTGhENjLyTl7ESVA==
-  dependencies:
-    "@aureooms/js-error" "^5.0.3"
-
-"@aureooms/js-compare@2.0.1":
-  version "2.0.1"
-  resolved "https://registry.yarnpkg.com/@aureooms/js-compare/-/js-compare-2.0.1.tgz#4636ea0736945abbcca38d5bd56a1f405034b2f9"
-  integrity sha512-J+gG1wlwF401ySv0mOYhIIVUuoukvZaRkIwYNH9xZTLhRyI4VxoaFi3k8GA0ebjHqndLGYJS9uEeG3cuQcg+7w==
-
-"@aureooms/js-error@^5.0.3":
-  version "5.0.3"
-  resolved "https://registry.yarnpkg.com/@aureooms/js-error/-/js-error-5.0.3.tgz#e4cb52e3525028e4725a5886663a67a0749abf6b"
-  integrity sha512-hGLMr9UIgPubX72V7vS69N8toMoK52emuA9jV/EOleK4m7HUF0HjdssNXZytd+udyY3996CBre89MOgTEn0Udw==
-
-"@aureooms/js-functools@2.0.3":
-  version "2.0.3"
-  resolved "https://registry.yarnpkg.com/@aureooms/js-functools/-/js-functools-2.0.3.tgz#5139d6245278193da4cf21c44666797bf40a1d6e"
-  integrity sha1-UTnWJFJ4GT2kzyHERmZ5e/QKHW4=
-
-"@aureooms/js-itertools@5.1.1":
-  version "5.1.1"
-  resolved "https://registry.yarnpkg.com/@aureooms/js-itertools/-/js-itertools-5.1.1.tgz#cebca2e4ccfcbbfbb447f60a90a86dac8f457166"
-  integrity sha512-WP+/gtDOJeYSa1ICRSUKtJNQs+2emU25eBnR1G+HPko5m8vbzdFBo1iHbl1IHfRDOyMn40oMvpYovC1Fh6VJwA==
-  dependencies:
-    "@aureooms/js-collections-deque" "^7.0.0"
-    "@aureooms/js-error" "^5.0.3"
-
-"@aureooms/js-memory@4.0.0":
-  version "4.0.0"
-  resolved "https://registry.yarnpkg.com/@aureooms/js-memory/-/js-memory-4.0.0.tgz#db87dc64b948f672d73b434ebde047b05869712c"
-  integrity sha1-24fcZLlI9nLXO0NOveBHsFhpcSw=
-
-"@aureooms/js-red-black-tree@9.0.0":
-  version "9.0.0"
-  resolved "https://registry.yarnpkg.com/@aureooms/js-red-black-tree/-/js-red-black-tree-9.0.0.tgz#ee006f24af42749546232b2d0baa13910c98f7b2"
-  integrity sha512-sUtY0HnwQnBUjrfwysKc6H4BJO4O2+NnrUHLqTYJyT1l1VSI+oXGffjjmMJTFpIl4L/4FEZAN0L3BiQxgR1T8g==
-
-"@aureooms/js-type@1.0.4":
-  version "1.0.4"
-  resolved "https://registry.yarnpkg.com/@aureooms/js-type/-/js-type-1.0.4.tgz#7f9de5f5f8506ff9c8958731744b7427b62e92b7"
-  integrity sha1-f53l9fhQb/nIlYcxdEt0J7Yukrc=
-
 "@babel/code-frame@7.12.11":
   version "7.12.11"
   resolved "https://registry.yarnpkg.com/@babel/code-frame/-/code-frame-7.12.11.tgz#f4ad435aa263db935b8f10f2c552d23fb716a63f"
@@ -2229,6 +2179,23 @@
   resolved "https://registry.yarnpkg.com/@istanbuljs/schema/-/schema-0.1.2.tgz#26520bf09abe4a5644cd5414e37125a8954241dd"
   integrity sha512-tsAQNx32a8CoFhjhijUIhI4kccIAgmGhy8LZMZgGfmXcpMbPRUqn5LWmgRttILi6yeGmBJd2xsPkFMs0PzgPCw==
 
+"@iterable-iterator/list@^1.0.0", "@iterable-iterator/list@^1.0.1":
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/@iterable-iterator/list/-/list-1.0.1.tgz#e84fd841d7d58c2ad6d0c026f0612c8228dc97f5"
+  integrity sha512-234a2cf0a0YhD1Ofb3F0xSjXDkqDK1xCiLnXoMUt/DWAt/odAvJToaxEFMemiKlAUvqF6E8MSi2v2UvlIOpBUA==
+
+"@iterable-iterator/range@^2.0.1":
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/@iterable-iterator/range/-/range-2.0.1.tgz#3d566aa26e3df496f2ba18a2f67de4c65518e81c"
+  integrity sha512-JPkPH/u4AQxWyqXDOqHk4DZeQJANv67cXuiE0DLC0FTaRgExQASlbhPZJo+JVxZRXW2EOBXSzdKdJQe5w9XghA==
+
+"@iterable-iterator/sorted@^1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@iterable-iterator/sorted/-/sorted-1.0.0.tgz#d1b93cb1bb50fe6af2851b4505d2ee2df0d406dc"
+  integrity sha512-raMmDjKLp25F51NGnnq3fK4lvkaHZdzB5Pt9AiMKoZKgU8gX0yM+FrdKzMG+RZswtVxre+nrR3Z6E1oGESRfzg==
+  dependencies:
+    "@iterable-iterator/list" "^1.0.0"
+
 "@js-library/commitlint-config@0.0.4":
   version "0.0.4"
   resolved "https://registry.yarnpkg.com/@js-library/commitlint-config/-/commitlint-config-0.0.4.tgz#5243a58b0d4ad36999d4b944c7770c50658c68f5"
@@ -2359,6 +2326,11 @@
   integrity sha512-PyRA9sm1Yayuj5OIoJ1hGt2YISX45w9WcFbh6ddT0Z/0yaFxOtGLInr4jUfU1EAFVs0Yfyfev4RNwBlUaHdlDQ==
   dependencies:
     defer-to-connect "^2.0.0"
+
+"@total-order/primitive@^1.0.1":
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/@total-order/primitive/-/primitive-1.0.1.tgz#7e409d303a2a3b24ed2af30bd9068027d6a4a326"
+  integrity sha512-BXCXyXoQIpdwFkplPRTuxFB0I1GHHia4t22bLAEqjdk48DFwQMwSbHq1EdLA81X/eFC/b6RdVxG4Q+WEcfs0aA==
 
 "@types/cacheable-request@^6.0.1":
   version "6.0.1"

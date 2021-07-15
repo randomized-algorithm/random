@@ -7,19 +7,13 @@ import {
 	randint,
 } from '../../src/index.js';
 
-import {_calloc} from '@aureooms/js-memory';
-import {iota, copy} from '@aureooms/js-array';
-import {increasing} from '@aureooms/js-compare';
+import {range} from '@iterable-iterator/range';
+import {increasing} from '@total-order/primitive';
 
 const macro = (t, type, _, shuffle, n, i, j) => {
-	const calloc = _calloc(type);
+	const a = type.from(range(n));
+	const b = type.from(a);
 
-	const a = calloc(n);
-	const b = calloc(n);
-
-	iota(a, 0, n, 0);
-
-	copy(a, 0, n, b, 0);
 	shuffle(b, i, j);
 
 	for (let it = 0; it < i; ++it) {

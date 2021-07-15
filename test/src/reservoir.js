@@ -1,17 +1,13 @@
 import test from 'ava';
-import {range} from '@aureooms/js-itertools';
-import {increasing} from '@aureooms/js-compare';
-import {RedBlackTree} from '@aureooms/js-red-black-tree';
+import {range} from '@iterable-iterator/range';
 import {reservoir, _waterman, randint} from '../../src/index.js';
 
 const macro = (t, _, reservoir, k, n) => {
 	const sample = reservoir(k, range(n));
-	const source = RedBlackTree.from(increasing, range(n));
-	// We cannot use a Set as it would smoosh input duplicates
+	const source = new Set(range(n));
 
-	console.debug({sample});
 	t.is(sample.length, k);
-	for (const i of range(Math.min(k, n))) t.true(source.remove(sample[i]));
+	for (const i of range(Math.min(k, n))) t.true(source.delete(sample[i]));
 	for (const i of range(n, k)) t.true(sample[i] === undefined);
 };
 

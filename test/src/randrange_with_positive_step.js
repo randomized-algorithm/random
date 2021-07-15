@@ -1,8 +1,6 @@
 import test from 'ava';
 import {randrange} from '../../src/index.js';
 
-import type from '@aureooms/js-type';
-
 test('randrange with positive step', (t) => {
 	let r;
 	let step;
@@ -15,7 +13,7 @@ test('randrange with positive step', (t) => {
 		t.true(r < rj, `${r} < ${rj}`);
 		t.true(r >= ri, `${r} >= ${ri}`);
 		t.true((r - ri) % step === 0, `(${r} - ${ri}) % ${step} === 0`);
-		t.true(type.isint(r), `type.isint(${r})`);
+		t.true(Number.isInteger(r), `Number.isInteger(${r})`);
 	};
 
 	for (step = 1; step <= 3; ++step) {

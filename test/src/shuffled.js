@@ -1,8 +1,10 @@
 import test from 'ava';
 import {shuffled, _fisheryates_inside_out, randint} from '../../src/index.js';
 
-import {list, range, sorted} from '@aureooms/js-itertools';
-import {increasing} from '@aureooms/js-compare';
+import {list} from '@iterable-iterator/list';
+import {range} from '@iterable-iterator/range';
+import {sorted} from '@iterable-iterator/sorted';
+import {increasing} from '@total-order/primitive';
 
 const macro = (t, _, shuffle, i, j) => {
 	const input = list(range(i, j));

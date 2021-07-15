@@ -1,16 +1,11 @@
 import test from 'ava';
 import {choice, _choice, randint} from '../../src/index.js';
 
-import {_calloc} from '@aureooms/js-memory';
-import {iota, copy} from '@aureooms/js-array';
+import {range} from '@iterable-iterator/range';
 
 const macro = (t, type, _, choice, n, i, j) => {
-	const calloc = _calloc(type);
-	const a = calloc(n);
-	const b = calloc(n);
-
-	iota(a, 0, n, 0);
-	copy(a, 0, n, b, 0);
+	const a = type.from(range(n));
+	const b = type.from(a);
 
 	const x = choice(b, i, j);
 

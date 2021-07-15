@@ -1,8 +1,6 @@
 import test from 'ava';
 import {randfloat} from '../../src/index.js';
 
-import type from '@aureooms/js-type';
-
 test('randfloat', (t) => {
 	let r;
 
@@ -13,7 +11,7 @@ test('randfloat', (t) => {
 	const check = () => {
 		t.true(r < rj, `${r} < ${rj}`);
 		t.true(r >= ri, `${r} >= ${ri}`);
-		t.true(type.isfinite(r), `type.isfinite(${r})`);
+		t.true(Number.isFinite(r), `Number.isFinite(${r})`);
 	};
 
 	for (let i = 0; i < n; ++i) {
