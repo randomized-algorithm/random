@@ -1,16 +1,16 @@
 {
-  "name": "@aureooms/js-random",
+  "name": "@randomized/random",
   "description": "Randomness algorithms for JavaScript",
   "version": "3.4.0",
   "license": "AGPL-3.0",
-  "author": "Aurélien Ooms <aurelien.ooms@gmail.com>",
-  "homepage": "https://make-github-pseudonymous-again.github.io/js-random",
+  "author": "make-github-pseudonymous-again",
+  "homepage": "https://randomized-algorithm.github.io/random",
   "repository": {
-    "url": "https://github.com/make-github-pseudonymous-again/js-random",
+    "url": "https://github.com/randomized-algorithm/random",
     "type": "git"
   },
   "bugs": {
-    "url": "https://github.com/make-github-pseudonymous-again/js-random/issues"
+    "url": "https://github.com/randomized-algorithm/random/issues"
   },
   "keywords": [
     "javascript",

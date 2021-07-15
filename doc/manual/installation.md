@@ -5,10 +5,10 @@ or [npm](https://github.com/npm/npm).
 
 ### jspm
 ```terminal
-jspm install npm:@aureooms/js-random
+jspm install npm:@randomized/random
 ```
 
 ### npm
 ```terminal
-npm install @aureooms/js-random --save
+npm install @randomized/random --save
 ```

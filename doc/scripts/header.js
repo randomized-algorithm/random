@@ -10,15 +10,14 @@ const domReady = function (callback) {
 domReady(() => {
 	const projectname = document.createElement('a');
 	projectname.classList.add('project-name');
-	projectname.text = 'aureooms/js-random';
+	projectname.text = 'randomized/random';
 	projectname.href = './index.html';
 
 	const header = document.querySelector('header');
 	header.insertBefore(projectname, header.firstChild);
 
 	const testlink = document.querySelector('header > a[data-ice="testLink"]');
-	testlink.href =
-		'https://coveralls.io/github/make-github-pseudonymous-again/js-random';
+	testlink.href = 'https://coveralls.io/github/randomized-algorithm/random';
 	testlink.target = '_BLANK';
 
 	const searchBox = document.querySelector('.search-box');

@@ -12,7 +12,7 @@ import 'regenerator-runtime/runtime.js' ;
 
 Then
 ```js
-const { ... } = require( '@aureooms/js-random' ) ;
+const { ... } = require( '@randomized/random' ) ;
 // or
-import { ... } from '@aureooms/js-random' ;
+import { ... } from '@randomized/random' ;
 ```

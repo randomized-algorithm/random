@@ -1,6 +1,6 @@
 # Examples
 ```js
-import { randint , randfloat , sample , shuffle } from '@aureooms/js-random' ;
+import { randint , randfloat , sample , shuffle } from '@randomized/random' ;
 
 randfloat( 0 , 1 ) ; // 0.19876947347074747
 randfloat( 0 , 1 ) ; // 0.23755912738852203
