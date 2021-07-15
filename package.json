@@ -150,6 +150,12 @@
           "babel-preset-power-assert"
         ]
       },
+      "cover": {
+        "sourceMaps": "both",
+        "presets": [
+          "babel-preset-power-assert"
+        ]
+      },
       "development": {
         "presets": [
           [
@@ -178,12 +184,6 @@
         ],
         "plugins": [
           "babel-plugin-unassert"
-        ]
-      },
-      "cover": {
-        "sourceMaps": "both",
-        "presets": [
-          "babel-preset-power-assert"
         ]
       }
     }
