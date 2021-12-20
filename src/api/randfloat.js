@@ -1,5 +1,5 @@
-import random from './random.js';
 import _randfloat from '../kernel/_randfloat.js';
+import random from './random.js';
 
 /**
  * Returns a double in interval [i, j[ (i included, j excluded)

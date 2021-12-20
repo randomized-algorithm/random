@@ -1,8 +1,8 @@
 import test from 'ava';
-import {sample, _fisheryates, randint} from '../../src/index.js';
 
 import {range} from '@iterable-iterator/range';
 import {increasing} from '@total-order/primitive';
+import {sample, _fisheryates, randint} from '../../src/index.js';
 
 const macro = (t, type, _, sample, n, k, i, j) => {
 	const a = type.from(range(n));

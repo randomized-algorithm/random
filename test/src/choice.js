@@ -1,7 +1,6 @@
 import test from 'ava';
-import {choice, _choice, randint} from '../../src/index.js';
-
 import {range} from '@iterable-iterator/range';
+import {choice, _choice, randint} from '../../src/index.js';
 
 const macro = (t, type, _, choice, n, i, j) => {
 	const a = type.from(range(n));

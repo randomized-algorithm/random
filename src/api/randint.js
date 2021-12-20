@@ -1,5 +1,5 @@
-import random from './random.js';
 import _randint from '../kernel/_randint.js';
+import random from './random.js';
 
 /**
  * Returns an integer in interval [i, j[ (i included, j excluded)

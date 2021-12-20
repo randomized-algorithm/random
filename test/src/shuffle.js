@@ -1,4 +1,7 @@
 import test from 'ava';
+
+import {range} from '@iterable-iterator/range';
+import {increasing} from '@total-order/primitive';
 import {
 	shuffle,
 	_shuffle,
@@ -6,9 +9,6 @@ import {
 	_fisheryates,
 	randint,
 } from '../../src/index.js';
-
-import {range} from '@iterable-iterator/range';
-import {increasing} from '@total-order/primitive';
 
 const macro = (t, type, _, shuffle, n, i, j) => {
 	const a = type.from(range(n));

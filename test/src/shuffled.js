@@ -1,10 +1,10 @@
 import test from 'ava';
-import {shuffled, _fisheryates_inside_out, randint} from '../../src/index.js';
 
 import {list} from '@iterable-iterator/list';
 import {range} from '@iterable-iterator/range';
 import {sorted} from '@iterable-iterator/sorted';
 import {increasing} from '@total-order/primitive';
+import {shuffled, _fisheryates_inside_out, randint} from '../../src/index.js';
 
 const macro = (t, _, shuffle, i, j) => {
 	const input = list(range(i, j));
