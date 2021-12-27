@@ -1,3 +1,4 @@
+import _randrange from '../kernel/_randrange.js';
 import randint from './randint.js';
 
 /**
@@ -13,20 +14,11 @@ import randint from './randint.js';
  *
  * TODO: Handle empty ranges.
  *
+ * @function
  * @param {number} [start=0] - The starting value.
  * @param {number} stop - The stopping value.
  * @param {number} [step=1] - The step value.
  * @return {number} The picked element.
  */
-const randrange = (start, stop, step) => {
-	if (stop === undefined) return randint(0, start);
-	if (step === undefined) step = 1;
-
-	if (stop >= start) {
-		return start + step * randint(0, Math.floor((stop - start) / step));
-	}
-
-	return start + step * randint(0, Math.floor((start - stop) / -step));
-};
-
+const randrange = _randrange(randint);
 export default randrange;

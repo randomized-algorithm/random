@@ -12,5 +12,6 @@ export {default as _fisheryates} from './kernel/_fisheryates.js';
 export {default as _fisheryates_inside_out} from './kernel/_fisheryates_inside_out.js';
 export {default as _randfloat} from './kernel/_randfloat.js';
 export {default as _randint} from './kernel/_randint.js';
+export {default as _randrange} from './kernel/_randrange.js';
 export {default as _shuffle} from './kernel/_shuffle.js';
 export {default as _waterman} from './kernel/_waterman.js';
