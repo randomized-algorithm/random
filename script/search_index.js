@@ -30,6 +30,12 @@ window.esdocSearchIndex = [
     "function"
   ],
   [
+    "@randomized/random/src/kernel/_randrange.js~_randrange",
+    "function/index.html#static-function-_randrange",
+    "<span>_randrange</span> <span class=\"search-result-import-path\">@randomized/random/src/kernel/_randrange.js</span>",
+    "function"
+  ],
+  [
     "@randomized/random/src/kernel/_shuffle.js~_shuffle",
     "function/index.html#static-function-_shuffle",
     "<span>_shuffle</span> <span class=\"search-result-import-path\">@randomized/random/src/kernel/_shuffle.js</span>",
@@ -67,9 +73,9 @@ window.esdocSearchIndex = [
   ],
   [
     "@randomized/random/src/api/randrange.js~randrange",
-    "function/index.html#static-function-randrange",
+    "variable/index.html#static-variable-randrange",
     "<span>randrange</span> <span class=\"search-result-import-path\">@randomized/random/src/api/randrange.js</span>",
-    "function"
+    "variable"
   ],
   [
     "@randomized/random/src/api/reservoir.js~reservoir",
@@ -465,6 +471,12 @@ window.esdocSearchIndex = [
     "src/kernel/_randint.js",
     "file/src/kernel/_randint.js.html",
     "src/kernel/_randint.js",
+    "file"
+  ],
+  [
+    "src/kernel/_randrange.js",
+    "file/src/kernel/_randrange.js.html",
+    "src/kernel/_randrange.js",
     "file"
   ],
   [

@@ -31,7 +31,7 @@
       {
         "type": "ImportDeclaration",
         "start": 0,
-        "end": 33,
+        "end": 49,
         "loc": {
           "start": {
             "line": 1,
@@ -39,104 +39,35 @@
           },
           "end": {
             "line": 1,
-            "column": 33
-          }
-        },
-        "specifiers": [
-          {
-            "type": "ImportDefaultSpecifier",
-            "start": 7,
-            "end": 13,
-            "loc": {
-              "start": {
-                "line": 1,
-                "column": 7
-              },
-              "end": {
-                "line": 1,
-                "column": 13
-              }
-            },
-            "local": {
-              "type": "Identifier",
-              "start": 7,
-              "end": 13,
-              "loc": {
-                "start": {
-                  "line": 1,
-                  "column": 7
-                },
-                "end": {
-                  "line": 1,
-                  "column": 13
-                },
-                "identifierName": "random"
-              },
-              "name": "random"
-            }
-          }
-        ],
-        "source": {
-          "type": "StringLiteral",
-          "start": 19,
-          "end": 32,
-          "loc": {
-            "start": {
-              "line": 1,
-              "column": 19
-            },
-            "end": {
-              "line": 1,
-              "column": 32
-            }
-          },
-          "extra": {
-            "rawValue": "./random.js",
-            "raw": "'./random.js'"
-          },
-          "value": "./random.js"
-        }
-      },
-      {
-        "type": "ImportDeclaration",
-        "start": 34,
-        "end": 83,
-        "loc": {
-          "start": {
-            "line": 2,
-            "column": 0
-          },
-          "end": {
-            "line": 2,
             "column": 49
           }
         },
         "specifiers": [
           {
             "type": "ImportDefaultSpecifier",
-            "start": 41,
-            "end": 51,
+            "start": 7,
+            "end": 17,
             "loc": {
               "start": {
-                "line": 2,
+                "line": 1,
                 "column": 7
               },
               "end": {
-                "line": 2,
+                "line": 1,
                 "column": 17
               }
             },
             "local": {
               "type": "Identifier",
-              "start": 41,
-              "end": 51,
+              "start": 7,
+              "end": 17,
               "loc": {
                 "start": {
-                  "line": 2,
+                  "line": 1,
                   "column": 7
                 },
                 "end": {
-                  "line": 2,
+                  "line": 1,
                   "column": 17
                 },
                 "identifierName": "_randfloat"
@@ -147,15 +78,15 @@
         ],
         "source": {
           "type": "StringLiteral",
-          "start": 57,
-          "end": 82,
+          "start": 23,
+          "end": 48,
           "loc": {
             "start": {
-              "line": 2,
+              "line": 1,
               "column": 23
             },
             "end": {
-              "line": 2,
+              "line": 1,
               "column": 48
             }
           },
@@ -164,6 +95,75 @@
             "raw": "'../kernel/_randfloat.js'"
           },
           "value": "../kernel/_randfloat.js"
+        }
+      },
+      {
+        "type": "ImportDeclaration",
+        "start": 50,
+        "end": 83,
+        "loc": {
+          "start": {
+            "line": 2,
+            "column": 0
+          },
+          "end": {
+            "line": 2,
+            "column": 33
+          }
+        },
+        "specifiers": [
+          {
+            "type": "ImportDefaultSpecifier",
+            "start": 57,
+            "end": 63,
+            "loc": {
+              "start": {
+                "line": 2,
+                "column": 7
+              },
+              "end": {
+                "line": 2,
+                "column": 13
+              }
+            },
+            "local": {
+              "type": "Identifier",
+              "start": 57,
+              "end": 63,
+              "loc": {
+                "start": {
+                  "line": 2,
+                  "column": 7
+                },
+                "end": {
+                  "line": 2,
+                  "column": 13
+                },
+                "identifierName": "random"
+              },
+              "name": "random"
+            }
+          }
+        ],
+        "source": {
+          "type": "StringLiteral",
+          "start": 69,
+          "end": 82,
+          "loc": {
+            "start": {
+              "line": 2,
+              "column": 19
+            },
+            "end": {
+              "line": 2,
+              "column": 32
+            }
+          },
+          "extra": {
+            "rawValue": "./random.js",
+            "raw": "'./random.js'"
+          },
+          "value": "./random.js"
         },
         "trailingComments": [
           {
@@ -524,9 +524,9 @@
         "postfix": false,
         "binop": null
       },
-      "value": "random",
+      "value": "_randfloat",
       "start": 7,
-      "end": 13,
+      "end": 17,
       "loc": {
         "start": {
           "line": 1,
@@ -534,7 +534,7 @@
         },
         "end": {
           "line": 1,
-          "column": 13
+          "column": 17
         }
       }
     },
@@ -551,16 +551,16 @@
         "binop": null
       },
       "value": "from",
-      "start": 14,
-      "end": 18,
+      "start": 18,
+      "end": 22,
       "loc": {
         "start": {
           "line": 1,
-          "column": 14
+          "column": 18
         },
         "end": {
           "line": 1,
-          "column": 18
+          "column": 22
         }
       }
     },
@@ -577,17 +577,17 @@
         "binop": null,
         "updateContext": null
       },
-      "value": "./random.js",
-      "start": 19,
-      "end": 32,
+      "value": "../kernel/_randfloat.js",
+      "start": 23,
+      "end": 48,
       "loc": {
         "start": {
           "line": 1,
-          "column": 19
+          "column": 23
         },
         "end": {
           "line": 1,
-          "column": 32
+          "column": 48
         }
       }
     },
@@ -604,16 +604,16 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 32,
-      "end": 33,
+      "start": 48,
+      "end": 49,
       "loc": {
         "start": {
           "line": 1,
-          "column": 32
+          "column": 48
         },
         "end": {
           "line": 1,
-          "column": 33
+          "column": 49
         }
       }
     },
@@ -632,8 +632,8 @@
         "updateContext": null
       },
       "value": "import",
-      "start": 34,
-      "end": 40,
+      "start": 50,
+      "end": 56,
       "loc": {
         "start": {
           "line": 2,
@@ -657,9 +657,9 @@
         "postfix": false,
         "binop": null
       },
-      "value": "_randfloat",
-      "start": 41,
-      "end": 51,
+      "value": "random",
+      "start": 57,
+      "end": 63,
       "loc": {
         "start": {
           "line": 2,
@@ -667,7 +667,7 @@
         },
         "end": {
           "line": 2,
-          "column": 17
+          "column": 13
         }
       }
     },
@@ -684,16 +684,16 @@
         "binop": null
       },
       "value": "from",
-      "start": 52,
-      "end": 56,
+      "start": 64,
+      "end": 68,
       "loc": {
         "start": {
           "line": 2,
-          "column": 18
+          "column": 14
         },
         "end": {
           "line": 2,
-          "column": 22
+          "column": 18
         }
       }
     },
@@ -710,17 +710,17 @@
         "binop": null,
         "updateContext": null
       },
-      "value": "../kernel/_randfloat.js",
-      "start": 57,
+      "value": "./random.js",
+      "start": 69,
       "end": 82,
       "loc": {
         "start": {
           "line": 2,
-          "column": 23
+          "column": 19
         },
         "end": {
           "line": 2,
-          "column": 48
+          "column": 32
         }
       }
     },
@@ -742,11 +742,11 @@
       "loc": {
         "start": {
           "line": 2,
-          "column": 48
+          "column": 32
         },
         "end": {
           "line": 2,
-          "column": 49
+          "column": 33
         }
       }
     },
