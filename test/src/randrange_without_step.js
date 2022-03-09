@@ -1,5 +1,5 @@
 import test from 'ava';
-import {randrange} from '../../src/index.js';
+import {randrange} from '#module';
 
 test('randrange without step', (t) => {
 	let r;

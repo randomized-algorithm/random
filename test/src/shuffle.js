@@ -8,7 +8,7 @@ import {
 	sample,
 	_fisheryates,
 	randint,
-} from '../../src/index.js';
+} from '#module';
 
 const macro = (t, type, _, shuffle, n, i, j) => {
 	const a = type.from(range(n));

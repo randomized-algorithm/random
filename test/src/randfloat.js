@@ -1,5 +1,5 @@
 import test from 'ava';
-import {randfloat} from '../../src/index.js';
+import {randfloat} from '#module';
 
 test('randfloat', (t) => {
 	let r;

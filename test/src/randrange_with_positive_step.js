@@ -1,5 +1,5 @@
 import test from 'ava';
-import {randrange} from '../../src/index.js';
+import {randrange} from '#module';
 
 test('randrange with positive step', (t) => {
 	let r;

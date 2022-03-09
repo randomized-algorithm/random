@@ -2,7 +2,7 @@ import test from 'ava';
 
 import {range} from '@iterable-iterator/range';
 import {increasing} from '@total-order/primitive';
-import {sample, _fisheryates, randint} from '../../src/index.js';
+import {sample, _fisheryates, randint} from '#module';
 
 const macro = (t, type, _, sample, n, k, i, j) => {
 	const a = type.from(range(n));

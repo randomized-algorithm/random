@@ -1,6 +1,6 @@
 import test from 'ava';
 import {range} from '@iterable-iterator/range';
-import {reservoir, _waterman, randint} from '../../src/index.js';
+import {reservoir, _waterman, randint} from '#module';
 
 const macro = (t, _, reservoir, k, n) => {
 	const sample = reservoir(k, range(n));

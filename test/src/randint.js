@@ -1,5 +1,5 @@
 import test from 'ava';
-import {randint} from '../../src/index.js';
+import {randint} from '#module';
 
 test('randint', (t) => {
 	let r;
