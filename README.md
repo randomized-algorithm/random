@@ -9,7 +9,7 @@
 </p>
 
 Randomness algorithms for JavaScript.
-See [docs](https://randomized-algorithm.github.io/random).
+See [docs](https://randomized-algorithm.github.io/random/index.html).
 Parent is [js-algorithms](https://make-github-pseudonymous-again.github.io/js-algorithms).
 
 > :warning: Depending on your environment, the code may require

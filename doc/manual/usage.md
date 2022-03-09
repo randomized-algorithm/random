@@ -4,15 +4,16 @@
 > `regeneratorRuntime` to be defined, for instance by importing
 > [regenerator-runtime/runtime](https://www.npmjs.com/package/regenerator-runtime).
 
+First, require the polyfill at the entry point of your application
 ```js
-await import( 'regenerator-runtime/runtime.js' ) ;
+await import('regenerator-runtime/runtime.js');
 // or
-import 'regenerator-runtime/runtime.js' ;
+import 'regenerator-runtime/runtime.js';
 ```
 
-Then
+Then, import the library where needed
 ```js
-const { ... } = await import( '@randomized/random' ) ;
+const { ... } = await import('@randomized/random');
 // or
-import { ... } from '@randomized/random' ;
+import { ... } from '@randomized/random';
 ```
