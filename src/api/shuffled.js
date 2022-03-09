@@ -7,6 +7,7 @@ import randint from './randint.js';
  *
  * @function
  * @param {Iterable} iterable The input iterable.
+ * @param {Array} [output=[]] The constructed array.
  * @return {Array} The constructed array.
  */
 const shuffled = _fisheryates_inside_out(randint);

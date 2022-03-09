@@ -7,7 +7,7 @@
  * for the third, etc., the number of outcomes of a loop being the product of
  * the number of outcomes for each iteration. Given a perfect randint function,
  * each iteration's outcomes are equally likely, and independent of other
- * iterations outcomes.  The proof below shows that these outcomes are
+ * iterations outcomes. The proof below shows that these outcomes are
  * distinct.
  *
  * To see that this method yields the correct result (assume perfect randint):

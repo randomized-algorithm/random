@@ -18,11 +18,26 @@ Parent is [js-algorithms](https://make-github-pseudonymous-again.github.io/js-al
 
 ```js
 import {
-	randint , // randint(i, j) -> [i, j[ \cap ZZ
-	randfloat , // randfloat(i, j) -> [i, j[
-	sample , // /!\ in-place
-	shuffle , // /!\ in-place
+	randint , // randint(i, j) => [i, j[ \cap ZZ
+	randfloat , // randfloat(i, j) => [i, j[
+	sample , // sample(k, array, i, j) /!\ in-place (output is items i through i + k - 1)
+	shuffle , // shuffle(array, i, j) /!\ in-place
+	reservoir as sampled , // sampled(k, iterable[, output = []]) => sample array
+	shuffled , // shuffled(iterable[, output = []]) => shuffled array
+	choice , // choice(array, i, j) => item
+	randrange , // randrange([start = 0,] stop[, step = 1]) => item
 } from '@randomized/random' ;
+
+// NOTE a specific entropy source can be used by constructing these functions
+// from their low-level implementation, for instance
+
+import {_fisheryates, _randint} from '@randomized/random';
+import {splitmix64, nextFloat64} from '@entropy-source/pseudo-random';
+
+const prng = splitmix64([123, 456]);
+const random = () => nextFloat64(prng);
+const randint = _randint(random);
+const sample = _fisheryates(randint);
 ```
 
 [![License](https://img.shields.io/github/license/randomized-algorithm/random.svg)](https://raw.githubusercontent.com/randomized-algorithm/random/main/LICENSE)
