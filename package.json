@@ -71,12 +71,12 @@
   "devDependencies": {
     "@babel/core": "7.17.5",
     "@babel/preset-env": "7.16.11",
-    "@babel/register": "7.17.0",
     "@commitlint/cli": "16.2.1",
     "@iterable-iterator/list": "1.0.1",
     "@iterable-iterator/range": "2.1.0",
     "@iterable-iterator/sorted": "1.0.0",
     "@js-library/commitlint-config": "0.0.4",
+    "@node-loader/babel": "2.0.1",
     "@total-order/primitive": "1.0.1",
     "ava": "4.1.0",
     "babel-plugin-transform-remove-console": "6.9.4",
@@ -102,22 +102,16 @@
       "test/src/**/*"
     ],
     "require": [
-      "regenerator-runtime/runtime",
-      "@babel/register"
+      "regenerator-runtime/runtime"
     ],
     "timeout": "1m",
-    "concurrency": 8
+    "concurrency": 8,
+    "nodeArguments": [
+      "--experimental-loader=@node-loader/babel"
+    ]
   },
   "babel": {
     "sourceMaps": true,
-    "presets": [
-      [
-        "@babel/preset-env",
-        {
-          "targets": "current node"
-        }
-      ]
-    ],
     "plugins": [
       [
         "transform-remove-console",
