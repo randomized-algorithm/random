@@ -27,11 +27,7 @@ const _randrange = (randint) => {
 		if (stop === undefined) return randint(0, start);
 		if (step === undefined) step = 1;
 
-		if (stop >= start) {
-			return start + step * randint(0, Math.floor((stop - start) / step));
-		}
-
-		return start + step * randint(0, Math.floor((start - stop) / -step));
+		return start + step * randint(0, Math.floor((stop - start) / step));
 	};
 
 	return randrange;
