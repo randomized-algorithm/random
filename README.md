@@ -42,7 +42,7 @@ const sample = _fisheryates(randint);
 
 [![License](https://img.shields.io/github/license/randomized-algorithm/random.svg)](https://raw.githubusercontent.com/randomized-algorithm/random/main/LICENSE)
 [![Version](https://img.shields.io/npm/v/@randomized/random.svg)](https://www.npmjs.org/package/@randomized/random)
-[![Tests](https://img.shields.io/github/workflow/status/randomized-algorithm/random/ci?event=push&label=tests)](https://github.com/randomized-algorithm/random/actions/workflows/ci.yml?query=branch:main)
+[![Tests](https://img.shields.io/github/actions/workflow/status/randomized-algorithm/random/ci.yml?branch=main&event=push&label=tests)](https://github.com/randomized-algorithm/random/actions/workflows/ci.yml?query=branch:main)
 [![Dependencies](https://img.shields.io/librariesio/github/randomized-algorithm/random.svg)](https://github.com/randomized-algorithm/random/network/dependencies)
 [![GitHub issues](https://img.shields.io/github/issues/randomized-algorithm/random.svg)](https://github.com/randomized-algorithm/random/issues)
 [![Downloads](https://img.shields.io/npm/dm/@randomized/random.svg)](https://www.npmjs.org/package/@randomized/random)
