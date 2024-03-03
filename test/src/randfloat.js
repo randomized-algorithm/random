@@ -1,4 +1,5 @@
 import test from 'ava';
+
 import {randfloat} from '#module';
 
 test('randfloat', (t) => {

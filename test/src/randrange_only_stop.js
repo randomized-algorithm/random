@@ -1,4 +1,5 @@
 import test from 'ava';
+
 import {randrange} from '#module';
 
 test('randrange only stop', (t) => {

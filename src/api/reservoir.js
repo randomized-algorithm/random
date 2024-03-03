@@ -1,4 +1,5 @@
 import _waterman from '../kernel/_waterman.js';
+
 import randint from './randint.js';
 
 /**

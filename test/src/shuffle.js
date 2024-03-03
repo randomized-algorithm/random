@@ -2,6 +2,7 @@ import test from 'ava';
 
 import {range} from '@iterable-iterator/range';
 import {increasing} from '@total-order/primitive';
+
 import {shuffle, _shuffle, sample, _fisheryates, randint} from '#module';
 
 const macro = (t, type, _, shuffle, n, i, j) => {

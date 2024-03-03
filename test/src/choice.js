@@ -1,5 +1,7 @@
 import test from 'ava';
+
 import {range} from '@iterable-iterator/range';
+
 import {choice, _choice, randint} from '#module';
 
 const macro = (t, type, _, choice, n, i, j) => {

@@ -1,4 +1,5 @@
 import test from 'ava';
+
 import {randrange} from '#module';
 
 test('randrange with positive step', (t) => {

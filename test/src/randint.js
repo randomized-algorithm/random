@@ -1,4 +1,5 @@
 import test from 'ava';
+
 import {randint} from '#module';
 
 test('randint', (t) => {

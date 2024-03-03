@@ -1,5 +1,7 @@
 import test from 'ava';
+
 import {range} from '@iterable-iterator/range';
+
 import {reservoir, _waterman, randint} from '#module';
 
 const macro = (t, _, reservoir, k, n) => {

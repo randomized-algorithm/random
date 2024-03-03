@@ -1,4 +1,5 @@
 import _fisheryates_inside_out from '../kernel/_fisheryates_inside_out.js';
+
 import randint from './randint.js';
 
 /**

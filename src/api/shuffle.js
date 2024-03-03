@@ -1,4 +1,5 @@
 import _shuffle from '../kernel/_shuffle.js';
+
 import sample from './sample.js';
 
 /**

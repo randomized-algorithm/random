@@ -1,4 +1,5 @@
 import _choice from '../kernel/_choice.js';
+
 import randint from './randint.js';
 
 /**

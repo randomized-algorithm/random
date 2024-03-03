@@ -4,6 +4,7 @@ import {list} from '@iterable-iterator/list';
 import {range} from '@iterable-iterator/range';
 import {sorted} from '@iterable-iterator/sorted';
 import {increasing} from '@total-order/primitive';
+
 import {shuffled, _fisheryates_inside_out, randint} from '#module';
 
 const macro = (t, _, shuffle, i, j) => {
